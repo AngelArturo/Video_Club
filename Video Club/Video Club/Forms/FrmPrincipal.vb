@@ -1,4 +1,9 @@
-﻿Public Class FrmLogin
+﻿Public Class FrmPrincipal
+    'Funciones del Form Principal'
+    Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
     'Funcionalidaes del boton cerrar X'
     Private Sub X_Click(sender As Object, e As EventArgs) Handles X.Click
         Me.Close()
@@ -23,14 +28,5 @@
 
     Private Sub Minimizar_MouseLeave(sender As Object, e As EventArgs) Handles Minimizar.MouseLeave
         Minimizar.Image = (My.Resources.__)
-    End Sub
-
-    'Funcionalidades del boton Ingresar'
-    Private Sub BtnIngresar_MouseHover(sender As Object, e As EventArgs) Handles BtnIngresar.MouseHover
-        BtnIngresar.Image = (My.Resources.BtnIngresar2)
-    End Sub
-
-    Private Sub BtnIngresar_MouseLeave(sender As Object, e As EventArgs) Handles BtnIngresar.MouseLeave
-        BtnIngresar.Image = (My.Resources.Ingresar)
     End Sub
 End Class

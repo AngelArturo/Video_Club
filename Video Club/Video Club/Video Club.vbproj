@@ -78,6 +78,12 @@
     <Compile Include="Forms\FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\FrmPrincipal.Designer.vb">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -97,6 +103,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -118,13 +127,46 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Login3.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Fondo_Login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnIngresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ingresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnIngresar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo_Pricipal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo_Pricipal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ResX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Res_.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_VideoClub.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
