@@ -47,6 +47,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -57,6 +59,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -72,6 +75,30 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\CUDistribuidor.Designer.vb">
+      <DependentUpon>CUDistribuidor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CUDistribuidor.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CUEmpleado.Designer.vb">
+      <DependentUpon>CUEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CUEmpleado.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CUInicio.Designer.vb">
+      <DependentUpon>CUInicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CUInicio.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CUPelicula.Designer.vb">
+      <DependentUpon>CUPelicula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CUPelicula.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Forms\FrmLogin.Designer.vb">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </Compile>
@@ -82,6 +109,18 @@
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRenta.Designer.vb">
+      <DependentUpon>FrmRenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSocio.Designer.vb">
+      <DependentUpon>FrmSocio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSocio.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -101,11 +140,29 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\CUDistribuidor.resx">
+      <DependentUpon>CUDistribuidor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CUEmpleado.resx">
+      <DependentUpon>CUEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CUInicio.resx">
+      <DependentUpon>CUInicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CUPelicula.resx">
+      <DependentUpon>CUPelicula.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRenta.resx">
+      <DependentUpon>FrmRenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSocio.resx">
+      <DependentUpon>FrmSocio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -145,9 +202,6 @@
     <None Include="Resources\Fondo_Pricipal.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fondo_Pricipal.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\x1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +221,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo_VideoClub.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnSocio2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo_Pricipal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoInicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoEmpleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoPelicula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoDistribuidor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoCortedecaja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_VideoClub1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnSocio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnRenta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnVenta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnDevoluciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnPagar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImagenSocio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnAgregarPelicula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnAgregarDistribuidor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnAgregar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
