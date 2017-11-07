@@ -52,7 +52,7 @@ Partial Class FrmPrincipal
         Me.X.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.X.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.X.Image = CType(resources.GetObject("X.Image"), System.Drawing.Image)
-        Me.X.Location = New System.Drawing.Point(1033, 1)
+        Me.X.Location = New System.Drawing.Point(1032, 1)
         Me.X.Name = "X"
         Me.X.Size = New System.Drawing.Size(25, 25)
         Me.X.TabIndex = 1
@@ -68,7 +68,7 @@ Partial Class FrmPrincipal
         Me.Minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Minimizar.Image = Global.Video_Club.My.Resources.Resources.__
         Me.Minimizar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Minimizar.Location = New System.Drawing.Point(999, 0)
+        Me.Minimizar.Location = New System.Drawing.Point(998, 0)
         Me.Minimizar.Name = "Minimizar"
         Me.Minimizar.Size = New System.Drawing.Size(26, 25)
         Me.Minimizar.TabIndex = 2
