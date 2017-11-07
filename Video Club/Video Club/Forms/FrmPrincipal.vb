@@ -2,6 +2,8 @@
     'Funciones del Form Principal'
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+        SlidePanel.Height = BtnInicio.Height
+        CuInicio1.BringToFront()
     End Sub
 
     'Funcionalidaes del boton cerrar X'
@@ -28,5 +30,29 @@
 
     Private Sub Minimizar_MouseLeave(sender As Object, e As EventArgs) Handles Minimizar.MouseLeave
         Minimizar.Image = (My.Resources.__)
+    End Sub
+
+    Private Sub BtnInicio_Click(sender As Object, e As EventArgs) Handles BtnInicio.Click
+        SlidePanel.Height = BtnInicio.Height
+        SlidePanel.Top = BtnInicio.Top
+        CuInicio1.BringToFront()
+    End Sub
+
+    Private Sub BtnEmpleado_Click(sender As Object, e As EventArgs) Handles BtnEmpleado.Click
+        SlidePanel.Height = BtnEmpleado.Height
+        SlidePanel.Top = BtnEmpleado.Top
+        CuEmpleado1.BringToFront()
+    End Sub
+
+    Private Sub BtnPeliculas_Click(sender As Object, e As EventArgs) Handles BtnPeliculas.Click
+        SlidePanel.Height = BtnPeliculas.Height
+        SlidePanel.Top = BtnPeliculas.Top
+        CuPelicula1.BringToFront()
+    End Sub
+
+    Private Sub BtnDistribuidor_Click(sender As Object, e As EventArgs) Handles BtnDistribuidor.Click
+        SlidePanel.Height = BtnDistribuidor.Height
+        SlidePanel.Top = BtnDistribuidor.Top
+        CuDistribuidor1.BringToFront()
     End Sub
 End Class
