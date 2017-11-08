@@ -46,7 +46,7 @@ Partial Class FrmSocio
         Me.paterno = New System.Windows.Forms.TextBox()
         Me.materno = New System.Windows.Forms.TextBox()
         Me.nombre = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.claveSocio = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -145,7 +145,7 @@ Partial Class FrmSocio
         Me.TabPage2.Controls.Add(Me.paterno)
         Me.TabPage2.Controls.Add(Me.materno)
         Me.TabPage2.Controls.Add(Me.nombre)
-        Me.TabPage2.Controls.Add(Me.TextBox1)
+        Me.TabPage2.Controls.Add(Me.claveSocio)
         Me.TabPage2.Controls.Add(Me.Label13)
         Me.TabPage2.Controls.Add(Me.Label11)
         Me.TabPage2.Controls.Add(Me.Label9)
@@ -307,13 +307,13 @@ Partial Class FrmSocio
         Me.nombre.Size = New System.Drawing.Size(175, 23)
         Me.nombre.TabIndex = 50
         '
-        'TextBox1
+        'claveSocio
         '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(431, 13)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(150, 23)
-        Me.TextBox1.TabIndex = 49
+        Me.claveSocio.Enabled = False
+        Me.claveSocio.Location = New System.Drawing.Point(431, 13)
+        Me.claveSocio.Name = "claveSocio"
+        Me.claveSocio.Size = New System.Drawing.Size(150, 23)
+        Me.claveSocio.TabIndex = 49
         '
         'Label13
         '
@@ -441,7 +441,7 @@ Partial Class FrmSocio
     Friend WithEvents paterno As TextBox
     Friend WithEvents materno As TextBox
     Friend WithEvents nombre As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents claveSocio As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label9 As Label
