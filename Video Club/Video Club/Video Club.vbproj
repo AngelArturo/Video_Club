@@ -283,10 +283,10 @@
     <None Include="Resources\BtnAgregar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BtnGuardar.png" />
+    <None Include="Resources\BtnEliminar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BtnEliminar.png" />
+    <None Include="Resources\BtnGuardar.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BtnModificar.png" />
