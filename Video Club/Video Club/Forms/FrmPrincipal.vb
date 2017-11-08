@@ -44,6 +44,12 @@
         CuEmpleado1.BringToFront()
     End Sub
 
+    Private Sub BtnSocio_Click(sender As Object, e As EventArgs) Handles BtnSocio.Click
+        SlidePanel.Height = BtnSocio.Height
+        SlidePanel.Top = BtnSocio.Top
+        'CuEmpleado1.BringToFront()
+    End Sub
+
     Private Sub BtnPeliculas_Click(sender As Object, e As EventArgs) Handles BtnPeliculas.Click
         SlidePanel.Height = BtnPeliculas.Height
         SlidePanel.Top = BtnPeliculas.Top

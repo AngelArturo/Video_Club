@@ -146,8 +146,8 @@ Partial Class FrmRenta
         Me.BtnVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVenta.Font = New System.Drawing.Font("Fineliner Script", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVenta.Image = Global.Video_Club.My.Resources.Resources.BtnAgregar
+        Me.BtnVenta.Font = New System.Drawing.Font("Fineliner Script", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVenta.Image = Global.Video_Club.My.Resources.Resources.BtnRentar
         Me.BtnVenta.Location = New System.Drawing.Point(495, 425)
         Me.BtnVenta.Name = "BtnVenta"
         Me.BtnVenta.Size = New System.Drawing.Size(125, 50)

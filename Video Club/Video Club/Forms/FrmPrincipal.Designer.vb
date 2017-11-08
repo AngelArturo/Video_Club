@@ -34,6 +34,7 @@ Partial Class FrmPrincipal
         Me.BtnPeliculas = New System.Windows.Forms.Button()
         Me.BtnDistribuidor = New System.Windows.Forms.Button()
         Me.BarraTop = New System.Windows.Forms.Panel()
+        Me.BtnSocio = New System.Windows.Forms.Button()
         Me.CuDistribuidor1 = New Video_Club.CUDistribuidor()
         Me.CuPelicula1 = New Video_Club.CUPelicula()
         Me.CuEmpleado1 = New Video_Club.CUEmpleado()
@@ -95,6 +96,7 @@ Partial Class FrmPrincipal
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.BtnSocio)
         Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.SlidePanel)
         Me.Panel1.Controls.Add(Me.BtnCortedeCaja)
@@ -135,7 +137,7 @@ Partial Class FrmPrincipal
         Me.BtnCortedeCaja.Font = New System.Drawing.Font("Century Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCortedeCaja.Image = Global.Video_Club.My.Resources.Resources.LogoCortedecaja
         Me.BtnCortedeCaja.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCortedeCaja.Location = New System.Drawing.Point(10, 440)
+        Me.BtnCortedeCaja.Location = New System.Drawing.Point(10, 500)
         Me.BtnCortedeCaja.Name = "BtnCortedeCaja"
         Me.BtnCortedeCaja.Size = New System.Drawing.Size(265, 60)
         Me.BtnCortedeCaja.TabIndex = 15
@@ -169,7 +171,7 @@ Partial Class FrmPrincipal
         Me.BtnPeliculas.Font = New System.Drawing.Font("Century Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnPeliculas.Image = Global.Video_Club.My.Resources.Resources.LogoPelicula
         Me.BtnPeliculas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnPeliculas.Location = New System.Drawing.Point(12, 320)
+        Me.BtnPeliculas.Location = New System.Drawing.Point(12, 380)
         Me.BtnPeliculas.Name = "BtnPeliculas"
         Me.BtnPeliculas.Size = New System.Drawing.Size(265, 60)
         Me.BtnPeliculas.TabIndex = 13
@@ -186,7 +188,7 @@ Partial Class FrmPrincipal
         Me.BtnDistribuidor.Font = New System.Drawing.Font("Century Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnDistribuidor.Image = Global.Video_Club.My.Resources.Resources.LogoDistribuidor
         Me.BtnDistribuidor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnDistribuidor.Location = New System.Drawing.Point(12, 380)
+        Me.BtnDistribuidor.Location = New System.Drawing.Point(12, 440)
         Me.BtnDistribuidor.Name = "BtnDistribuidor"
         Me.BtnDistribuidor.Size = New System.Drawing.Size(265, 60)
         Me.BtnDistribuidor.TabIndex = 12
@@ -204,6 +206,23 @@ Partial Class FrmPrincipal
         Me.BarraTop.Name = "BarraTop"
         Me.BarraTop.Size = New System.Drawing.Size(1095, 25)
         Me.BarraTop.TabIndex = 15
+        '
+        'BtnSocio
+        '
+        Me.BtnSocio.FlatAppearance.BorderSize = 0
+        Me.BtnSocio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnSocio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(8, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.BtnSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSocio.Font = New System.Drawing.Font("Century Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSocio.Image = Global.Video_Club.My.Resources.Resources.LogoEmpleado
+        Me.BtnSocio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnSocio.Location = New System.Drawing.Point(12, 320)
+        Me.BtnSocio.Name = "BtnSocio"
+        Me.BtnSocio.Size = New System.Drawing.Size(265, 60)
+        Me.BtnSocio.TabIndex = 18
+        Me.BtnSocio.Text = "     Socio"
+        Me.BtnSocio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnSocio.UseVisualStyleBackColor = True
         '
         'CuDistribuidor1
         '
@@ -274,4 +293,5 @@ Partial Class FrmPrincipal
     Friend WithEvents CuEmpleado1 As CUEmpleado
     Friend WithEvents CuPelicula1 As CUPelicula
     Friend WithEvents CuDistribuidor1 As CUDistribuidor
+    Friend WithEvents BtnSocio As Button
 End Class
