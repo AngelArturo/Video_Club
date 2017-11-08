@@ -31,18 +31,18 @@ Partial Class FrmSocio
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.sexo = New System.Windows.Forms.ComboBox()
+        Me.numEx = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.colonia = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.numIn = New System.Windows.Forms.TextBox()
+        Me.calle = New System.Windows.Forms.TextBox()
+        Me.paterno = New System.Windows.Forms.TextBox()
+        Me.materno = New System.Windows.Forms.TextBox()
+        Me.nombre = New System.Windows.Forms.TextBox()
+        Me.claveSocio = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -50,13 +50,18 @@ Partial Class FrmSocio
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.radioDeselecion = New System.Windows.Forms.RadioButton()
+        Me.RadioB = New System.Windows.Forms.RadioButton()
+        Me.Radio = New System.Windows.Forms.RadioButton()
+        Me.celular = New System.Windows.Forms.TextBox()
+        Me.telefono = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.DGV_socios = New System.Windows.Forms.DataGridView()
         Me.BarraTop.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        CType(Me.DGV_socios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -68,7 +73,7 @@ Partial Class FrmSocio
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(669, 0)
+        Me.Button1.Location = New System.Drawing.Point(889, 0)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(25, 25)
         Me.Button1.TabIndex = 17
@@ -84,7 +89,7 @@ Partial Class FrmSocio
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Image = Global.Video_Club.My.Resources.Resources.__
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button2.Location = New System.Drawing.Point(635, -1)
+        Me.Button2.Location = New System.Drawing.Point(857, 0)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(26, 25)
         Me.Button2.TabIndex = 18
@@ -101,7 +106,7 @@ Partial Class FrmSocio
         Me.BarraTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.BarraTop.Location = New System.Drawing.Point(0, 0)
         Me.BarraTop.Name = "BarraTop"
-        Me.BarraTop.Size = New System.Drawing.Size(700, 25)
+        Me.BarraTop.Size = New System.Drawing.Size(940, 25)
         Me.BarraTop.TabIndex = 17
         '
         'X
@@ -144,7 +149,7 @@ Partial Class FrmSocio
         Me.TabControl1.Location = New System.Drawing.Point(40, 55)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(600, 400)
+        Me.TabControl1.Size = New System.Drawing.Size(874, 400)
         Me.TabControl1.TabIndex = 37
         '
         'TabPage1
@@ -159,22 +164,26 @@ Partial Class FrmSocio
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.TextBox8)
-        Me.TabPage2.Controls.Add(Me.Label4)
-        Me.TabPage2.Controls.Add(Me.TextBox7)
-        Me.TabPage2.Controls.Add(Me.Label3)
-        Me.TabPage2.Controls.Add(Me.TextBox6)
-        Me.TabPage2.Controls.Add(Me.TextBox5)
-        Me.TabPage2.Controls.Add(Me.ComboBox1)
-        Me.TabPage2.Controls.Add(Me.TextBox4)
-        Me.TabPage2.Controls.Add(Me.TextBox3)
-        Me.TabPage2.Controls.Add(Me.TextBox2)
-        Me.TabPage2.Controls.Add(Me.TextBox1)
-        Me.TabPage2.Controls.Add(Me.DateTimePicker1)
-        Me.TabPage2.Controls.Add(Me.Label14)
-        Me.TabPage2.Controls.Add(Me.Label13)
-        Me.TabPage2.Controls.Add(Me.Label11)
+        Me.TabPage2.Controls.Add(Me.DGV_socios)
+        Me.TabPage2.Controls.Add(Me.BtnGuardar)
+        Me.TabPage2.Controls.Add(Me.radioDeselecion)
+        Me.TabPage2.Controls.Add(Me.RadioB)
+        Me.TabPage2.Controls.Add(Me.Radio)
+        Me.TabPage2.Controls.Add(Me.celular)
+        Me.TabPage2.Controls.Add(Me.telefono)
         Me.TabPage2.Controls.Add(Me.Label10)
+        Me.TabPage2.Controls.Add(Me.sexo)
+        Me.TabPage2.Controls.Add(Me.numEx)
+        Me.TabPage2.Controls.Add(Me.Label4)
+        Me.TabPage2.Controls.Add(Me.colonia)
+        Me.TabPage2.Controls.Add(Me.Label3)
+        Me.TabPage2.Controls.Add(Me.numIn)
+        Me.TabPage2.Controls.Add(Me.calle)
+        Me.TabPage2.Controls.Add(Me.paterno)
+        Me.TabPage2.Controls.Add(Me.materno)
+        Me.TabPage2.Controls.Add(Me.nombre)
+        Me.TabPage2.Controls.Add(Me.claveSocio)
+        Me.TabPage2.Controls.Add(Me.Label13)
         Me.TabPage2.Controls.Add(Me.Label9)
         Me.TabPage2.Controls.Add(Me.Label8)
         Me.TabPage2.Controls.Add(Me.Label7)
@@ -185,77 +194,94 @@ Partial Class FrmSocio
         Me.TabPage2.Location = New System.Drawing.Point(4, 26)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(592, 370)
+        Me.TabPage2.Size = New System.Drawing.Size(866, 370)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Nuevo Socio"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'TextBox6
+        'sexo
         '
-        Me.TextBox6.Location = New System.Drawing.Point(200, 200)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(75, 23)
-        Me.TextBox6.TabIndex = 55
+        Me.sexo.FormattingEnabled = True
+        Me.sexo.Items.AddRange(New Object() {"F", "M"})
+        Me.sexo.Location = New System.Drawing.Point(446, 143)
+        Me.sexo.Name = "sexo"
+        Me.sexo.Size = New System.Drawing.Size(135, 25)
+        Me.sexo.TabIndex = 60
+        Me.sexo.Text = "Seleccione"
         '
-        'TextBox5
+        'numEx
         '
-        Me.TextBox5.Location = New System.Drawing.Point(11, 200)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(175, 23)
-        Me.TextBox5.TabIndex = 54
+        Me.numEx.Location = New System.Drawing.Point(280, 200)
+        Me.numEx.Name = "numEx"
+        Me.numEx.Size = New System.Drawing.Size(75, 23)
+        Me.numEx.TabIndex = 59
         '
-        'ComboBox1
+        'Label4
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(446, 143)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(135, 25)
-        Me.ComboBox1.TabIndex = 53
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(370, 200)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(0, 21)
+        Me.Label4.TabIndex = 58
         '
-        'TextBox4
+        'colonia
         '
-        Me.TextBox4.Location = New System.Drawing.Point(171, 76)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(175, 23)
-        Me.TextBox4.TabIndex = 52
+        Me.colonia.Location = New System.Drawing.Point(375, 200)
+        Me.colonia.Name = "colonia"
+        Me.colonia.Size = New System.Drawing.Size(180, 23)
+        Me.colonia.TabIndex = 57
         '
-        'TextBox3
+        'Label3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(171, 106)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(175, 23)
-        Me.TextBox3.TabIndex = 51
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(200, 200)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(0, 21)
+        Me.Label3.TabIndex = 56
         '
-        'TextBox2
+        'numIn
         '
-        Me.TextBox2.Location = New System.Drawing.Point(171, 43)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(175, 23)
-        Me.TextBox2.TabIndex = 50
+        Me.numIn.Location = New System.Drawing.Point(200, 200)
+        Me.numIn.Name = "numIn"
+        Me.numIn.Size = New System.Drawing.Size(75, 23)
+        Me.numIn.TabIndex = 55
         '
-        'TextBox1
+        'calle
         '
-        Me.TextBox1.Location = New System.Drawing.Point(431, 13)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(150, 23)
-        Me.TextBox1.TabIndex = 49
+        Me.calle.Location = New System.Drawing.Point(11, 200)
+        Me.calle.Name = "calle"
+        Me.calle.Size = New System.Drawing.Size(175, 23)
+        Me.calle.TabIndex = 54
         '
-        'DateTimePicker1
+        'paterno
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(200, 144)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(150, 23)
-        Me.DateTimePicker1.TabIndex = 48
+        Me.paterno.Location = New System.Drawing.Point(171, 76)
+        Me.paterno.Name = "paterno"
+        Me.paterno.Size = New System.Drawing.Size(175, 23)
+        Me.paterno.TabIndex = 52
         '
-        'Label14
+        'materno
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(11, 337)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(67, 21)
-        Me.Label14.TabIndex = 47
-        Me.Label14.Text = "Correo:"
+        Me.materno.Location = New System.Drawing.Point(171, 106)
+        Me.materno.Name = "materno"
+        Me.materno.Size = New System.Drawing.Size(175, 23)
+        Me.materno.TabIndex = 51
+        '
+        'nombre
+        '
+        Me.nombre.Location = New System.Drawing.Point(171, 43)
+        Me.nombre.Name = "nombre"
+        Me.nombre.Size = New System.Drawing.Size(175, 23)
+        Me.nombre.TabIndex = 50
+        '
+        'claveSocio
+        '
+        Me.claveSocio.Location = New System.Drawing.Point(431, 13)
+        Me.claveSocio.Name = "claveSocio"
+        Me.claveSocio.Size = New System.Drawing.Size(150, 23)
+        Me.claveSocio.TabIndex = 49
         '
         'Label13
         '
@@ -266,26 +292,6 @@ Partial Class FrmSocio
         Me.Label13.Size = New System.Drawing.Size(95, 21)
         Me.Label13.TabIndex = 46
         Me.Label13.Text = "No.Celular:"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(11, 307)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(122, 21)
-        Me.Label11.TabIndex = 45
-        Me.Label11.Text = "Código Postal:"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(11, 143)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(183, 21)
-        Me.Label10.TabIndex = 44
-        Me.Label10.Text = "Fecha de Nacimiento:"
         '
         'Label9
         '
@@ -357,37 +363,82 @@ Partial Class FrmSocio
         Me.Label1.TabIndex = 37
         Me.Label1.Text = "Clave:"
         '
-        'Label3
+        'radioDeselecion
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(200, 200)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(0, 21)
-        Me.Label3.TabIndex = 56
+        Me.radioDeselecion.AutoSize = True
+        Me.radioDeselecion.Checked = True
+        Me.radioDeselecion.Location = New System.Drawing.Point(299, 309)
+        Me.radioDeselecion.Name = "radioDeselecion"
+        Me.radioDeselecion.Size = New System.Drawing.Size(47, 21)
+        Me.radioDeselecion.TabIndex = 73
+        Me.radioDeselecion.TabStop = True
+        Me.radioDeselecion.Tag = "Radio"
+        Me.radioDeselecion.Text = "NO"
+        Me.radioDeselecion.UseVisualStyleBackColor = True
+        Me.radioDeselecion.Visible = False
         '
-        'Label4
+        'RadioB
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(370, 200)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(0, 21)
-        Me.Label4.TabIndex = 58
+        Me.RadioB.AutoSize = True
+        Me.RadioB.Location = New System.Drawing.Point(203, 307)
+        Me.RadioB.Name = "RadioB"
+        Me.RadioB.Size = New System.Drawing.Size(47, 21)
+        Me.RadioB.TabIndex = 72
+        Me.RadioB.Tag = "Radio"
+        Me.RadioB.Text = "NO"
+        Me.RadioB.UseVisualStyleBackColor = True
         '
-        'TextBox7
+        'Radio
         '
-        Me.TextBox7.Location = New System.Drawing.Point(375, 200)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(180, 23)
-        Me.TextBox7.TabIndex = 57
+        Me.Radio.AutoSize = True
+        Me.Radio.Location = New System.Drawing.Point(162, 307)
+        Me.Radio.Name = "Radio"
+        Me.Radio.Size = New System.Drawing.Size(35, 21)
+        Me.Radio.TabIndex = 71
+        Me.Radio.Tag = "Radio"
+        Me.Radio.Text = "SI"
+        Me.Radio.UseVisualStyleBackColor = True
         '
-        'TextBox8
+        'celular
         '
-        Me.TextBox8.Location = New System.Drawing.Point(280, 200)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(75, 23)
-        Me.TextBox8.TabIndex = 59
+        Me.celular.Location = New System.Drawing.Point(133, 278)
+        Me.celular.Name = "celular"
+        Me.celular.Size = New System.Drawing.Size(213, 23)
+        Me.celular.TabIndex = 70
+        '
+        'telefono
+        '
+        Me.telefono.Location = New System.Drawing.Point(133, 248)
+        Me.telefono.Name = "telefono"
+        Me.telefono.Size = New System.Drawing.Size(213, 23)
+        Me.telefono.TabIndex = 69
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(2, 307)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(162, 21)
+        Me.Label10.TabIndex = 68
+        Me.Label10.Text = "Credencial Vigente"
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.Location = New System.Drawing.Point(405, 309)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnGuardar.TabIndex = 66
+        Me.BtnGuardar.Text = "Guardar"
+        Me.BtnGuardar.UseVisualStyleBackColor = True
+        '
+        'DGV_socios
+        '
+        Me.DGV_socios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGV_socios.Location = New System.Drawing.Point(610, 18)
+        Me.DGV_socios.Name = "DGV_socios"
+        Me.DGV_socios.Size = New System.Drawing.Size(240, 297)
+        Me.DGV_socios.TabIndex = 74
         '
         'FrmSocio
         '
@@ -395,7 +446,7 @@ Partial Class FrmSocio
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.MenuBar
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(700, 500)
+        Me.ClientSize = New System.Drawing.Size(940, 498)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.BarraTop)
         Me.ForeColor = System.Drawing.Color.Black
@@ -406,6 +457,7 @@ Partial Class FrmSocio
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.DGV_socios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -419,20 +471,15 @@ Partial Class FrmSocio
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents colonia As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Label14 As Label
+    Friend WithEvents numIn As TextBox
+    Friend WithEvents calle As TextBox
+    Friend WithEvents paterno As TextBox
+    Friend WithEvents materno As TextBox
+    Friend WithEvents nombre As TextBox
+    Friend WithEvents claveSocio As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
@@ -440,5 +487,14 @@ Partial Class FrmSocio
     Friend WithEvents Label5 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents numEx As TextBox
+    Friend WithEvents sexo As ComboBox
+    Friend WithEvents DGV_socios As DataGridView
+    Friend WithEvents BtnGuardar As Button
+    Friend WithEvents radioDeselecion As RadioButton
+    Friend WithEvents RadioB As RadioButton
+    Friend WithEvents Radio As RadioButton
+    Friend WithEvents celular As TextBox
+    Friend WithEvents telefono As TextBox
+    Friend WithEvents Label10 As Label
 End Class

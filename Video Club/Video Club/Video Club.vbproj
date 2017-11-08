@@ -47,6 +47,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\MySQL\MySQL Connector Net 6.9.10\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -75,6 +79,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\conexion.vb" />
+    <Compile Include="Clases\Globales.vb" />
+    <Compile Include="Clases\login.vb" />
+    <Compile Include="Clases\Socio.vb" />
     <Compile Include="Forms\CUDistribuidor.Designer.vb">
       <DependentUpon>CUDistribuidor.vb</DependentUpon>
     </Compile>
