@@ -1,7 +1,9 @@
 ﻿Public Class FrmSocio
+
+
     Dim cambio As Boolean
 
-    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) 
+    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
 
 
         If nombre.Text = "" Then
@@ -79,7 +81,7 @@
         'cnx.cerrar()
     End Sub
 
-    Private Sub DGVsocios_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) 
+    Private Sub DGVsocios_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGV_socios.CellContentClick
         Dim renglon As Integer
         cambio = True
 
@@ -100,7 +102,5 @@
 
 
     End Sub
-
-
 
 End Class
