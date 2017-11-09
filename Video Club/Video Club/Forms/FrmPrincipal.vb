@@ -70,6 +70,10 @@
         FrmAddPelicula.Show()
     End Sub
 
+    Private Sub BtnCortedeCaja_Click(sender As Object, e As EventArgs) Handles BtnCortedeCaja.Click
+        FrmCortedeCaja.Show()
+    End Sub
+
     Private Sub Btn_AddDistribuidor_Click(sender As Object, e As EventArgs) Handles Btn_AddDistribuidor.Click
         FrmAddDistribuidor.Show()
     End Sub

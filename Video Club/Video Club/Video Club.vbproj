@@ -84,12 +84,6 @@
     <Compile Include="Clases\Globales.vb" />
     <Compile Include="Clases\login.vb" />
     <Compile Include="Clases\Socio.vb" />
-    <Compile Include="Forms\CUEmpleado.Designer.vb">
-      <DependentUpon>CUEmpleado.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CUEmpleado.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Forms\FrmAddDistribuidor.Designer.vb">
       <DependentUpon>FrmAddDistribuidor.vb</DependentUpon>
     </Compile>
@@ -100,6 +94,12 @@
       <DependentUpon>FrmAddPelicula.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmAddPelicula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCortedeCaja.Designer.vb">
+      <DependentUpon>FrmCortedeCaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCortedeCaja.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmEmpleado.Designer.vb">
@@ -149,14 +149,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\CUEmpleado.resx">
-      <DependentUpon>CUEmpleado.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAddDistribuidor.resx">
       <DependentUpon>FrmAddDistribuidor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAddPelicula.resx">
       <DependentUpon>FrmAddPelicula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCortedeCaja.resx">
+      <DependentUpon>FrmCortedeCaja.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmEmpleado.resx">
       <DependentUpon>FrmEmpleado.vb</DependentUpon>
