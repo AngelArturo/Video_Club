@@ -59,7 +59,7 @@ Partial Class FrmAddDistribuidor
         Me.BarraTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.BarraTop.Location = New System.Drawing.Point(0, 0)
         Me.BarraTop.Name = "BarraTop"
-        Me.BarraTop.Size = New System.Drawing.Size(530, 25)
+        Me.BarraTop.Size = New System.Drawing.Size(876, 25)
         Me.BarraTop.TabIndex = 16
         '
         'Cerrar
@@ -71,7 +71,7 @@ Partial Class FrmAddDistribuidor
         Me.Cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Cerrar.Image = CType(resources.GetObject("Cerrar.Image"), System.Drawing.Image)
-        Me.Cerrar.Location = New System.Drawing.Point(502, 0)
+        Me.Cerrar.Location = New System.Drawing.Point(851, 0)
         Me.Cerrar.Name = "Cerrar"
         Me.Cerrar.Size = New System.Drawing.Size(25, 25)
         Me.Cerrar.TabIndex = 3
@@ -87,7 +87,7 @@ Partial Class FrmAddDistribuidor
         Me.Minimizar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Minimizar1.Image = Global.Video_Club.My.Resources.Resources.__
         Me.Minimizar1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Minimizar1.Location = New System.Drawing.Point(472, 1)
+        Me.Minimizar1.Location = New System.Drawing.Point(819, -3)
         Me.Minimizar1.Name = "Minimizar1"
         Me.Minimizar1.Size = New System.Drawing.Size(26, 25)
         Me.Minimizar1.TabIndex = 4
@@ -248,7 +248,7 @@ Partial Class FrmAddDistribuidor
         Me.Btn_Guardar.ForeColor = System.Drawing.Color.Black
         Me.Btn_Guardar.Image = Global.Video_Club.My.Resources.Resources.BtnGuardar
         Me.Btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Btn_Guardar.Location = New System.Drawing.Point(393, 545)
+        Me.Btn_Guardar.Location = New System.Drawing.Point(720, 419)
         Me.Btn_Guardar.Name = "Btn_Guardar"
         Me.Btn_Guardar.Size = New System.Drawing.Size(125, 50)
         Me.Btn_Guardar.TabIndex = 64
@@ -270,7 +270,7 @@ Partial Class FrmAddDistribuidor
         Me.Btn_Cancelar.ForeColor = System.Drawing.Color.Black
         Me.Btn_Cancelar.Image = Global.Video_Club.My.Resources.Resources.btnCancelar
         Me.Btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Btn_Cancelar.Location = New System.Drawing.Point(227, 545)
+        Me.Btn_Cancelar.Location = New System.Drawing.Point(557, 419)
         Me.Btn_Cancelar.Name = "Btn_Cancelar"
         Me.Btn_Cancelar.Size = New System.Drawing.Size(125, 50)
         Me.Btn_Cancelar.TabIndex = 65
@@ -300,9 +300,9 @@ Partial Class FrmAddDistribuidor
         'DGVdistri
         '
         Me.DGVdistri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVdistri.Location = New System.Drawing.Point(31, 352)
+        Me.DGVdistri.Location = New System.Drawing.Point(493, 70)
         Me.DGVdistri.Name = "DGVdistri"
-        Me.DGVdistri.Size = New System.Drawing.Size(442, 169)
+        Me.DGVdistri.Size = New System.Drawing.Size(352, 283)
         Me.DGVdistri.TabIndex = 69
         '
         'FrmAddDistribuidor
@@ -311,7 +311,7 @@ Partial Class FrmAddDistribuidor
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
         Me.CancelButton = Me.Btn_Cancelar
-        Me.ClientSize = New System.Drawing.Size(530, 618)
+        Me.ClientSize = New System.Drawing.Size(876, 499)
         Me.Controls.Add(Me.DGVdistri)
         Me.Controls.Add(Me.Txt_ID)
         Me.Controls.Add(Me.Lbl_id)
