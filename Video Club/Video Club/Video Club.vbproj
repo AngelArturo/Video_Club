@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\conexion.vb" />
+    <Compile Include="Clases\Distribuidor.vb" />
     <Compile Include="Clases\Empleado.vb" />
     <Compile Include="Clases\Globales.vb" />
     <Compile Include="Clases\login.vb" />
