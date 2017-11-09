@@ -103,6 +103,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property BtnBien() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("BtnBien", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property BtnBuscar() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("BtnBuscar", resourceCulture)
@@ -156,6 +166,16 @@ Namespace My.Resources
         Friend ReadOnly Property BtnIngresar2() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("BtnIngresar2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property BtnMal() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("BtnMal", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -226,6 +246,16 @@ Namespace My.Resources
         Friend ReadOnly Property BtnVenta() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("BtnVenta", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Fondo_CierreTurno() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Fondo_CierreTurno", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
