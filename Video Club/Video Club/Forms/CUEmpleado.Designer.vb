@@ -26,6 +26,7 @@ Partial Class CUEmpleado
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Btn_Guardar = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -46,7 +47,8 @@ Partial Class CUEmpleado
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Btn_Guardar = New System.Windows.Forms.Button()
+        Me.Txt_ApPaterno = New System.Windows.Forms.TextBox()
+        Me.Txt_ApMaterno = New System.Windows.Forms.TextBox()
         Me.TabEmpleados.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,6 +105,27 @@ Partial Class CUEmpleado
         Me.TabPage2.Text = "Nuevo Empleado"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Btn_Guardar
+        '
+        Me.Btn_Guardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Guardar.FlatAppearance.BorderSize = 0
+        Me.Btn_Guardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Guardar.Font = New System.Drawing.Font("Fineliner Script", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Guardar.ForeColor = System.Drawing.Color.Black
+        Me.Btn_Guardar.Image = Global.Video_Club.My.Resources.Resources.BtnGuardar
+        Me.Btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Btn_Guardar.Location = New System.Drawing.Point(800, 520)
+        Me.Btn_Guardar.Name = "Btn_Guardar"
+        Me.Btn_Guardar.Size = New System.Drawing.Size(125, 50)
+        Me.Btn_Guardar.TabIndex = 65
+        Me.Btn_Guardar.Text = "Guardar"
+        Me.Btn_Guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_Guardar.UseVisualStyleBackColor = False
+        '
         'GroupBox3
         '
         Me.GroupBox3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -158,6 +181,8 @@ Partial Class CUEmpleado
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Txt_ApMaterno)
+        Me.GroupBox1.Controls.Add(Me.Txt_ApPaterno)
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label12)
@@ -173,7 +198,7 @@ Partial Class CUEmpleado
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(40, 40)
+        Me.GroupBox1.Location = New System.Drawing.Point(40, 37)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(500, 500)
         Me.GroupBox1.TabIndex = 0
@@ -320,26 +345,20 @@ Partial Class CUEmpleado
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Clave:"
         '
-        'Btn_Guardar
+        'Txt_ApPaterno
         '
-        Me.Btn_Guardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Btn_Guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Guardar.FlatAppearance.BorderSize = 0
-        Me.Btn_Guardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Guardar.Font = New System.Drawing.Font("Fineliner Script", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Guardar.ForeColor = System.Drawing.Color.Black
-        Me.Btn_Guardar.Image = Global.Video_Club.My.Resources.Resources.BtnGuardar
-        Me.Btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Btn_Guardar.Location = New System.Drawing.Point(800, 520)
-        Me.Btn_Guardar.Name = "Btn_Guardar"
-        Me.Btn_Guardar.Size = New System.Drawing.Size(125, 50)
-        Me.Btn_Guardar.TabIndex = 65
-        Me.Btn_Guardar.Text = "Guardar"
-        Me.Btn_Guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Btn_Guardar.UseVisualStyleBackColor = False
+        Me.Txt_ApPaterno.Location = New System.Drawing.Point(180, 70)
+        Me.Txt_ApPaterno.Name = "Txt_ApPaterno"
+        Me.Txt_ApPaterno.Size = New System.Drawing.Size(250, 23)
+        Me.Txt_ApPaterno.TabIndex = 14
+        Me.Txt_ApPaterno.Text = "Texto"
+        '
+        'Txt_ApMaterno
+        '
+        Me.Txt_ApMaterno.Location = New System.Drawing.Point(180, 100)
+        Me.Txt_ApMaterno.Name = "Txt_ApMaterno"
+        Me.Txt_ApMaterno.Size = New System.Drawing.Size(250, 23)
+        Me.Txt_ApMaterno.TabIndex = 15
         '
         'CUEmpleado
         '
@@ -385,4 +404,6 @@ Partial Class CUEmpleado
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Btn_Guardar As Button
+    Friend WithEvents Txt_ApMaterno As TextBox
+    Friend WithEvents Txt_ApPaterno As TextBox
 End Class

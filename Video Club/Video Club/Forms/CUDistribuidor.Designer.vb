@@ -115,9 +115,9 @@ Partial Class CUDistribuidor
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(100, 60)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(185, 21)
+        Me.Label1.Size = New System.Drawing.Size(194, 21)
         Me.Label1.TabIndex = 19
-        Me.Label1.Text = "Nombre de la película:"
+        Me.Label1.Text = "Nombre del distribuidor:"
         '
         'CUDistribuidor
         '

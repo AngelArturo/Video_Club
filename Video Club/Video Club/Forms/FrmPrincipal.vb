@@ -3,7 +3,7 @@
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
         SlidePanel.Height = BtnInicio.Height
-        CuInicio1.BringToFront()
+        Panel_Inicio.BringToFront()
     End Sub
 
     'Funcionalidaes del boton cerrar X'
@@ -32,33 +32,41 @@
         Minimizar.Image = (My.Resources.__)
     End Sub
 
+    'Funcionalidades del Menu de Administrador
     Private Sub BtnInicio_Click(sender As Object, e As EventArgs) Handles BtnInicio.Click
         SlidePanel.Height = BtnInicio.Height
         SlidePanel.Top = BtnInicio.Top
-        CuInicio1.BringToFront()
+        Panel_Inicio.BringToFront()
     End Sub
 
     Private Sub BtnEmpleado_Click(sender As Object, e As EventArgs) Handles BtnEmpleado.Click
         SlidePanel.Height = BtnEmpleado.Height
         SlidePanel.Top = BtnEmpleado.Top
-        CuEmpleado1.BringToFront()
-    End Sub
-
-    Private Sub BtnSocio_Click(sender As Object, e As EventArgs) Handles BtnSocio.Click
-        SlidePanel.Height = BtnSocio.Height
-        SlidePanel.Top = BtnSocio.Top
         'CuEmpleado1.BringToFront()
     End Sub
 
     Private Sub BtnPeliculas_Click(sender As Object, e As EventArgs) Handles BtnPeliculas.Click
         SlidePanel.Height = BtnPeliculas.Height
         SlidePanel.Top = BtnPeliculas.Top
-        CuPelicula1.BringToFront()
+        Panel_Peliculas.BringToFront()
     End Sub
 
     Private Sub BtnDistribuidor_Click(sender As Object, e As EventArgs) Handles BtnDistribuidor.Click
         SlidePanel.Height = BtnDistribuidor.Height
         SlidePanel.Top = BtnDistribuidor.Top
-        CuDistribuidor1.BringToFront()
+        'CuDistribuidor1.BringToFront()
+    End Sub
+
+    'Funcionalidades del Menu Usuario
+    Private Sub Btn_Renta_Click(sender As Object, e As EventArgs) Handles Btn_Renta.Click
+        FrmRenta.Show()
+    End Sub
+
+    Private Sub Btn_Socio_Click(sender As Object, e As EventArgs) Handles Btn_Socio.Click
+        FrmSocio.Show()
+    End Sub
+
+    Private Sub Btn_AddPelicula_Click(sender As Object, e As EventArgs) Handles Btn_AddPelicula.Click
+        FrmAddPelicula.Show()
     End Sub
 End Class

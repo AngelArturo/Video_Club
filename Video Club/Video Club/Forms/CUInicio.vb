@@ -6,4 +6,5 @@
     Private Sub BtnSocio_Click(sender As Object, e As EventArgs) Handles BtnSocio.Click
         FrmSocio.Show()
     End Sub
+
 End Class

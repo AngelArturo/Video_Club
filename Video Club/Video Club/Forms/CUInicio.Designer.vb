@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class CUInicio
     Inherits System.Windows.Forms.UserControl
 
@@ -24,6 +26,7 @@ Partial Class CUInicio
     Private Sub InitializeComponent()
         Me.TImporte = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -56,6 +59,7 @@ Partial Class CUInicio
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.RichTextBox1)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.TextBox4)
@@ -73,6 +77,16 @@ Partial Class CUInicio
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1095, 180)
         Me.Panel1.TabIndex = 18
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(233, 20)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(34, 22)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "ID:"
         '
         'RichTextBox1
         '
@@ -103,7 +117,7 @@ Partial Class CUInicio
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(178, 110)
+        Me.Label4.Location = New System.Drawing.Point(178, 140)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(89, 22)
         Me.Label4.TabIndex = 8
@@ -127,7 +141,7 @@ Partial Class CUInicio
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(94, 80)
+        Me.Label3.Location = New System.Drawing.Point(94, 110)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(173, 22)
         Me.Label3.TabIndex = 5
@@ -137,7 +151,7 @@ Partial Class CUInicio
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(100, 50)
+        Me.Label2.Location = New System.Drawing.Point(100, 80)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(167, 22)
         Me.Label2.TabIndex = 4
@@ -163,7 +177,7 @@ Partial Class CUInicio
         '
         Me.LblNombre.AutoSize = True
         Me.LblNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNombre.Location = New System.Drawing.Point(157, 20)
+        Me.LblNombre.Location = New System.Drawing.Point(157, 50)
         Me.LblNombre.Name = "LblNombre"
         Me.LblNombre.Size = New System.Drawing.Size(110, 22)
         Me.LblNombre.TabIndex = 1
@@ -301,4 +315,5 @@ Partial Class CUInicio
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label6 As Label
 End Class

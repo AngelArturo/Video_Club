@@ -36,11 +36,14 @@ Partial Class FrmAddDistribuidor
         Me.Lbl_Telefono = New System.Windows.Forms.Label()
         Me.Lbl_Direccion = New System.Windows.Forms.Label()
         Me.Txt_Encargado = New System.Windows.Forms.TextBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.RichTxt_Direccion = New System.Windows.Forms.RichTextBox()
+        Me.Txt_Telefono = New System.Windows.Forms.TextBox()
+        Me.Txt_Celular = New System.Windows.Forms.TextBox()
+        Me.Txt_Correo = New System.Windows.Forms.TextBox()
         Me.Btn_Guardar = New System.Windows.Forms.Button()
+        Me.Btn_Cancelar = New System.Windows.Forms.Button()
+        Me.Lbl_id = New System.Windows.Forms.Label()
+        Me.Txt_ID = New System.Windows.Forms.TextBox()
         Me.BarraTop.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -66,7 +69,7 @@ Partial Class FrmAddDistribuidor
         Me.Cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Cerrar.Image = CType(resources.GetObject("Cerrar.Image"), System.Drawing.Image)
-        Me.Cerrar.Location = New System.Drawing.Point(493, 0)
+        Me.Cerrar.Location = New System.Drawing.Point(502, 0)
         Me.Cerrar.Name = "Cerrar"
         Me.Cerrar.Size = New System.Drawing.Size(25, 25)
         Me.Cerrar.TabIndex = 3
@@ -82,7 +85,7 @@ Partial Class FrmAddDistribuidor
         Me.Minimizar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Minimizar1.Image = Global.Video_Club.My.Resources.Resources.__
         Me.Minimizar1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Minimizar1.Location = New System.Drawing.Point(459, -1)
+        Me.Minimizar1.Location = New System.Drawing.Point(472, 1)
         Me.Minimizar1.Name = "Minimizar1"
         Me.Minimizar1.Size = New System.Drawing.Size(26, 25)
         Me.Minimizar1.TabIndex = 4
@@ -125,7 +128,7 @@ Partial Class FrmAddDistribuidor
         '
         Me.Lbl_NombreDistribuior.AutoSize = True
         Me.Lbl_NombreDistribuior.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_NombreDistribuior.Location = New System.Drawing.Point(50, 70)
+        Me.Lbl_NombreDistribuior.Location = New System.Drawing.Point(50, 100)
         Me.Lbl_NombreDistribuior.Name = "Lbl_NombreDistribuior"
         Me.Lbl_NombreDistribuior.Size = New System.Drawing.Size(194, 21)
         Me.Lbl_NombreDistribuior.TabIndex = 40
@@ -134,7 +137,7 @@ Partial Class FrmAddDistribuidor
         'Txt_NombreDistribuidor
         '
         Me.Txt_NombreDistribuidor.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_NombreDistribuidor.Location = New System.Drawing.Point(250, 70)
+        Me.Txt_NombreDistribuidor.Location = New System.Drawing.Point(250, 100)
         Me.Txt_NombreDistribuidor.Name = "Txt_NombreDistribuidor"
         Me.Txt_NombreDistribuidor.Size = New System.Drawing.Size(200, 24)
         Me.Txt_NombreDistribuidor.TabIndex = 51
@@ -143,7 +146,7 @@ Partial Class FrmAddDistribuidor
         '
         Me.Lbl_Encargado.AutoSize = True
         Me.Lbl_Encargado.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_Encargado.Location = New System.Drawing.Point(142, 100)
+        Me.Lbl_Encargado.Location = New System.Drawing.Point(142, 130)
         Me.Lbl_Encargado.Name = "Lbl_Encargado"
         Me.Lbl_Encargado.Size = New System.Drawing.Size(102, 21)
         Me.Lbl_Encargado.TabIndex = 52
@@ -153,7 +156,7 @@ Partial Class FrmAddDistribuidor
         '
         Me.Lbl_Correo.AutoSize = True
         Me.Lbl_Correo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_Correo.Location = New System.Drawing.Point(177, 280)
+        Me.Lbl_Correo.Location = New System.Drawing.Point(177, 310)
         Me.Lbl_Correo.Name = "Lbl_Correo"
         Me.Lbl_Correo.Size = New System.Drawing.Size(67, 21)
         Me.Lbl_Correo.TabIndex = 54
@@ -163,7 +166,7 @@ Partial Class FrmAddDistribuidor
         '
         Me.Lbl_Celular.AutoSize = True
         Me.Lbl_Celular.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_Celular.Location = New System.Drawing.Point(175, 250)
+        Me.Lbl_Celular.Location = New System.Drawing.Point(175, 280)
         Me.Lbl_Celular.Name = "Lbl_Celular"
         Me.Lbl_Celular.Size = New System.Drawing.Size(69, 21)
         Me.Lbl_Celular.TabIndex = 55
@@ -173,7 +176,7 @@ Partial Class FrmAddDistribuidor
         '
         Me.Lbl_Telefono.AutoSize = True
         Me.Lbl_Telefono.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_Telefono.Location = New System.Drawing.Point(164, 220)
+        Me.Lbl_Telefono.Location = New System.Drawing.Point(164, 250)
         Me.Lbl_Telefono.Name = "Lbl_Telefono"
         Me.Lbl_Telefono.Size = New System.Drawing.Size(80, 21)
         Me.Lbl_Telefono.TabIndex = 56
@@ -183,7 +186,7 @@ Partial Class FrmAddDistribuidor
         '
         Me.Lbl_Direccion.AutoSize = True
         Me.Lbl_Direccion.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_Direccion.Location = New System.Drawing.Point(157, 130)
+        Me.Lbl_Direccion.Location = New System.Drawing.Point(157, 160)
         Me.Lbl_Direccion.Name = "Lbl_Direccion"
         Me.Lbl_Direccion.Size = New System.Drawing.Size(87, 21)
         Me.Lbl_Direccion.TabIndex = 57
@@ -192,43 +195,43 @@ Partial Class FrmAddDistribuidor
         'Txt_Encargado
         '
         Me.Txt_Encargado.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_Encargado.Location = New System.Drawing.Point(250, 100)
+        Me.Txt_Encargado.Location = New System.Drawing.Point(250, 130)
         Me.Txt_Encargado.Name = "Txt_Encargado"
         Me.Txt_Encargado.Size = New System.Drawing.Size(200, 24)
         Me.Txt_Encargado.TabIndex = 58
         '
-        'RichTextBox1
+        'RichTxt_Direccion
         '
-        Me.RichTextBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(250, 130)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(200, 85)
-        Me.RichTextBox1.TabIndex = 60
-        Me.RichTextBox1.Text = "Calle, #Exterior, #Interior, Colonia, C.P"
+        Me.RichTxt_Direccion.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTxt_Direccion.Location = New System.Drawing.Point(250, 160)
+        Me.RichTxt_Direccion.Name = "RichTxt_Direccion"
+        Me.RichTxt_Direccion.Size = New System.Drawing.Size(200, 85)
+        Me.RichTxt_Direccion.TabIndex = 60
+        Me.RichTxt_Direccion.Text = "Calle, #Exterior, #Interior, Colonia, C.P"
         '
-        'TextBox1
+        'Txt_Telefono
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(250, 220)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(200, 24)
-        Me.TextBox1.TabIndex = 61
+        Me.Txt_Telefono.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_Telefono.Location = New System.Drawing.Point(250, 250)
+        Me.Txt_Telefono.Name = "Txt_Telefono"
+        Me.Txt_Telefono.Size = New System.Drawing.Size(200, 24)
+        Me.Txt_Telefono.TabIndex = 61
         '
-        'TextBox2
+        'Txt_Celular
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(250, 250)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(200, 24)
-        Me.TextBox2.TabIndex = 62
+        Me.Txt_Celular.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_Celular.Location = New System.Drawing.Point(250, 280)
+        Me.Txt_Celular.Name = "Txt_Celular"
+        Me.Txt_Celular.Size = New System.Drawing.Size(200, 24)
+        Me.Txt_Celular.TabIndex = 62
         '
-        'TextBox3
+        'Txt_Correo
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(250, 280)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(200, 24)
-        Me.TextBox3.TabIndex = 63
+        Me.Txt_Correo.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_Correo.Location = New System.Drawing.Point(250, 310)
+        Me.Txt_Correo.Name = "Txt_Correo"
+        Me.Txt_Correo.Size = New System.Drawing.Size(200, 24)
+        Me.Txt_Correo.TabIndex = 63
         '
         'Btn_Guardar
         '
@@ -243,7 +246,7 @@ Partial Class FrmAddDistribuidor
         Me.Btn_Guardar.ForeColor = System.Drawing.Color.Black
         Me.Btn_Guardar.Image = Global.Video_Club.My.Resources.Resources.BtnGuardar
         Me.Btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Btn_Guardar.Location = New System.Drawing.Point(350, 345)
+        Me.Btn_Guardar.Location = New System.Drawing.Point(305, 375)
         Me.Btn_Guardar.Name = "Btn_Guardar"
         Me.Btn_Guardar.Size = New System.Drawing.Size(125, 50)
         Me.Btn_Guardar.TabIndex = 64
@@ -251,17 +254,60 @@ Partial Class FrmAddDistribuidor
         Me.Btn_Guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.Btn_Guardar.UseVisualStyleBackColor = False
         '
+        'Btn_Cancelar
+        '
+        Me.Btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Cancelar.FlatAppearance.BorderSize = 0
+        Me.Btn_Cancelar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Cancelar.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Cancelar.ForeColor = System.Drawing.Color.Black
+        Me.Btn_Cancelar.Image = Global.Video_Club.My.Resources.Resources.btnCancelar
+        Me.Btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Btn_Cancelar.Location = New System.Drawing.Point(100, 375)
+        Me.Btn_Cancelar.Name = "Btn_Cancelar"
+        Me.Btn_Cancelar.Size = New System.Drawing.Size(125, 50)
+        Me.Btn_Cancelar.TabIndex = 65
+        Me.Btn_Cancelar.Text = "Cancelar"
+        Me.Btn_Cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_Cancelar.UseVisualStyleBackColor = False
+        '
+        'Lbl_id
+        '
+        Me.Lbl_id.AutoSize = True
+        Me.Lbl_id.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_id.Location = New System.Drawing.Point(213, 70)
+        Me.Lbl_id.Name = "Lbl_id"
+        Me.Lbl_id.Size = New System.Drawing.Size(31, 21)
+        Me.Lbl_id.TabIndex = 66
+        Me.Lbl_id.Text = "ID:"
+        '
+        'Txt_ID
+        '
+        Me.Txt_ID.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_ID.Location = New System.Drawing.Point(250, 70)
+        Me.Txt_ID.Name = "Txt_ID"
+        Me.Txt_ID.Size = New System.Drawing.Size(200, 24)
+        Me.Txt_ID.TabIndex = 67
+        '
         'FrmAddDistribuidor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.ClientSize = New System.Drawing.Size(530, 430)
+        Me.CancelButton = Me.Btn_Cancelar
+        Me.ClientSize = New System.Drawing.Size(530, 475)
+        Me.Controls.Add(Me.Txt_ID)
+        Me.Controls.Add(Me.Lbl_id)
+        Me.Controls.Add(Me.Btn_Cancelar)
         Me.Controls.Add(Me.Btn_Guardar)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.Txt_Correo)
+        Me.Controls.Add(Me.Txt_Celular)
+        Me.Controls.Add(Me.Txt_Telefono)
+        Me.Controls.Add(Me.RichTxt_Direccion)
         Me.Controls.Add(Me.Txt_Encargado)
         Me.Controls.Add(Me.Lbl_Direccion)
         Me.Controls.Add(Me.Lbl_Telefono)
@@ -277,6 +323,7 @@ Partial Class FrmAddDistribuidor
         Me.Margin = New System.Windows.Forms.Padding(5)
         Me.Name = "FrmAddDistribuidor"
         Me.Text = "FrmAddDistribuidor"
+        Me.TransparencyKey = System.Drawing.Color.White
         Me.BarraTop.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -296,9 +343,12 @@ Partial Class FrmAddDistribuidor
     Friend WithEvents Lbl_Telefono As Label
     Friend WithEvents Lbl_Direccion As Label
     Friend WithEvents Txt_Encargado As TextBox
-    Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents RichTxt_Direccion As RichTextBox
+    Friend WithEvents Txt_Telefono As TextBox
+    Friend WithEvents Txt_Celular As TextBox
+    Friend WithEvents Txt_Correo As TextBox
     Friend WithEvents Btn_Guardar As Button
+    Friend WithEvents Btn_Cancelar As Button
+    Friend WithEvents Lbl_id As Label
+    Friend WithEvents Txt_ID As TextBox
 End Class
