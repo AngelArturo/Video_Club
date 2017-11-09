@@ -241,6 +241,7 @@ Partial Class FrmEmpleado
         '
         Me.genero.AutoCompleteCustomSource.AddRange(New String() {"F", "M"})
         Me.genero.FormattingEnabled = True
+        Me.genero.Items.AddRange(New Object() {"F", "M"})
         Me.genero.Location = New System.Drawing.Point(96, 270)
         Me.genero.Name = "genero"
         Me.genero.Size = New System.Drawing.Size(104, 25)
@@ -310,6 +311,7 @@ Partial Class FrmEmpleado
         '
         'claveEm
         '
+        Me.claveEm.Enabled = False
         Me.claveEm.Location = New System.Drawing.Point(396, 41)
         Me.claveEm.Name = "claveEm"
         Me.claveEm.Size = New System.Drawing.Size(90, 23)
