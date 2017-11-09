@@ -26,8 +26,15 @@ Partial Class CUEmpleado
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Btn_Guardar = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -40,12 +47,8 @@ Partial Class CUEmpleado
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Txt_ApPaterno = New System.Windows.Forms.TextBox()
+        Me.Txt_ApMaterno = New System.Windows.Forms.TextBox()
         Me.TabEmpleados.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,6 +59,7 @@ Partial Class CUEmpleado
         '
         'TabEmpleados
         '
+        Me.TabEmpleados.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
         Me.TabEmpleados.Controls.Add(Me.TabPage1)
         Me.TabEmpleados.Controls.Add(Me.TabPage2)
         Me.TabEmpleados.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -69,10 +73,11 @@ Partial Class CUEmpleado
         '
         Me.TabPage1.Controls.Add(Me.DataGridView1)
         Me.TabPage1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabPage1.Location = New System.Drawing.Point(4, 30)
+        Me.TabPage1.ForeColor = System.Drawing.Color.Black
+        Me.TabPage1.Location = New System.Drawing.Point(4, 33)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(992, 616)
+        Me.TabPage1.Size = New System.Drawing.Size(992, 613)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Empleados"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -87,17 +92,49 @@ Partial Class CUEmpleado
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Btn_Guardar)
         Me.TabPage2.Controls.Add(Me.GroupBox3)
         Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Controls.Add(Me.GroupBox1)
         Me.TabPage2.ForeColor = System.Drawing.Color.Black
-        Me.TabPage2.Location = New System.Drawing.Point(4, 30)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 33)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(992, 616)
+        Me.TabPage2.Size = New System.Drawing.Size(992, 613)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Nuevo Empleado"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Btn_Guardar
+        '
+        Me.Btn_Guardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Guardar.FlatAppearance.BorderSize = 0
+        Me.Btn_Guardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Guardar.Font = New System.Drawing.Font("Fineliner Script", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Guardar.ForeColor = System.Drawing.Color.Black
+        Me.Btn_Guardar.Image = Global.Video_Club.My.Resources.Resources.BtnGuardar
+        Me.Btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Btn_Guardar.Location = New System.Drawing.Point(800, 520)
+        Me.Btn_Guardar.Name = "Btn_Guardar"
+        Me.Btn_Guardar.Size = New System.Drawing.Size(125, 50)
+        Me.Btn_Guardar.TabIndex = 65
+        Me.Btn_Guardar.Text = "Guardar"
+        Me.Btn_Guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_Guardar.UseVisualStyleBackColor = False
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.Location = New System.Drawing.Point(600, 200)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(330, 280)
+        Me.GroupBox3.TabIndex = 2
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Fotografía"
         '
         'GroupBox2
         '
@@ -112,8 +149,40 @@ Partial Class CUEmpleado
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos de la cuenta"
         '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(25, 100)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(130, 21)
+        Me.Label17.TabIndex = 3
+        Me.Label17.Text = "Tipo de usuario:"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(48, 70)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(107, 21)
+        Me.Label16.TabIndex = 2
+        Me.Label16.Text = "Contraseña:"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(59, 40)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(96, 21)
+        Me.Label15.TabIndex = 1
+        Me.Label15.Text = "No.Usuario:"
+        '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Txt_ApMaterno)
+        Me.GroupBox1.Controls.Add(Me.Txt_ApPaterno)
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label12)
@@ -129,12 +198,32 @@ Partial Class CUEmpleado
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(40, 40)
+        Me.GroupBox1.Location = New System.Drawing.Point(40, 37)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(500, 500)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Personales"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(25, 450)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(67, 21)
+        Me.Label14.TabIndex = 13
+        Me.Label14.Text = "Correo:"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(25, 390)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(95, 21)
+        Me.Label13.TabIndex = 12
+        Me.Label13.Text = "No.Celular:"
         '
         'Label12
         '
@@ -256,65 +345,20 @@ Partial Class CUEmpleado
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Clave:"
         '
-        'Label13
+        'Txt_ApPaterno
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(25, 390)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(95, 21)
-        Me.Label13.TabIndex = 12
-        Me.Label13.Text = "No.Celular:"
+        Me.Txt_ApPaterno.Location = New System.Drawing.Point(180, 70)
+        Me.Txt_ApPaterno.Name = "Txt_ApPaterno"
+        Me.Txt_ApPaterno.Size = New System.Drawing.Size(250, 23)
+        Me.Txt_ApPaterno.TabIndex = 14
+        Me.Txt_ApPaterno.Text = "Texto"
         '
-        'Label14
+        'Txt_ApMaterno
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(25, 450)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(67, 21)
-        Me.Label14.TabIndex = 13
-        Me.Label14.Text = "Correo:"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(59, 40)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(96, 21)
-        Me.Label15.TabIndex = 1
-        Me.Label15.Text = "No.Usuario:"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(48, 70)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(107, 21)
-        Me.Label16.TabIndex = 2
-        Me.Label16.Text = "Contraseña:"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(25, 100)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(130, 21)
-        Me.Label17.TabIndex = 3
-        Me.Label17.Text = "Tipo de usuario:"
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(600, 200)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(330, 340)
-        Me.GroupBox3.TabIndex = 2
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Fotografía"
+        Me.Txt_ApMaterno.Location = New System.Drawing.Point(180, 100)
+        Me.Txt_ApMaterno.Name = "Txt_ApMaterno"
+        Me.Txt_ApMaterno.Size = New System.Drawing.Size(250, 23)
+        Me.Txt_ApMaterno.TabIndex = 15
         '
         'CUEmpleado
         '
@@ -359,4 +403,7 @@ Partial Class CUEmpleado
     Friend WithEvents Label15 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
+    Friend WithEvents Btn_Guardar As Button
+    Friend WithEvents Txt_ApMaterno As TextBox
+    Friend WithEvents Txt_ApPaterno As TextBox
 End Class

@@ -200,6 +200,7 @@ Public Class Socio
             cnx.cerrar()
 
 
+
         End If
     End Sub
     Public Function consultaId() As Boolean
@@ -217,7 +218,7 @@ Public Class Socio
             End If
             consultaId = True
         End If
-        cnx.cerrar()
+
     End Function
     Public Sub actualizaSocio()
         Dim strSql As String
@@ -228,35 +229,43 @@ Public Class Socio
 
         consultaId()
 
-        If (FrmSocio.numIn.Text.Length <> 0) Then
-            numInt = Integer.Parse(FrmSocio.numIn.Text)
-        End If
+
+        numInt = Integer.Parse(FrmSocio.numIn.Text)
+        MsgBox("llegue aqui")
 
         If (FrmSocio.numEx.Text.Length <> 0) Then
             numExt = Integer.Parse(FrmSocio.numEx.Text)
         End If
+        MsgBox("llegue aqui 1")
+
 
         If (FrmSocio.telefono.Text.Length <> 0) Then
             tel = Integer.Parse(FrmSocio.telefono.Text)
         End If
+        MsgBox("llegue aqui 2")
+
 
         If (FrmSocio.celular.Text.Length <> 0) Then
             cel = Integer.Parse(FrmSocio.celular.Text)
         End If
+        MsgBox("llegue aqui 3")
+
 
 
         If FrmSocio.nombre.Text <> "" And FrmSocio.paterno.Text <> "" And FrmSocio.materno.Text <> "" And FrmSocio.sexo.Text <> "" And
-            FrmSocio.calle.Text <> "" And numExt > 0 And FrmSocio.colonia.Text <> "" And tel > 0 And cel > 0 And Not FrmSocio.radioDeselecion.Checked Then
+            FrmSocio.calle.Text <> "" And numInt > 0 And numExt > 0 And FrmSocio.colonia.Text <> "" And tel > 0 And cel > 0 And Not FrmSocio.radioDeselecion.Checked Then
 
-            strSql = "UPDATE socio set nombre ='" & FrmSocio.nombre.Text & "',apPaterno= '" & FrmSocio.paterno.Text & "',apMaterno= '" & FrmSocio.materno.Text & "',genero = '" & FrmSocio.sexo.Text & "',calle = " & FrmSocio.calle.Text & ",colonia = '" & FrmSocio.colonia.Text & "',numeroIn = '" & numeroIn & "',numeroExterior = '" & numeroEx & "',telefono= " & telefono & ",celular = " & celular & ",credencialVigente = '" & FrmSocio.Radio.Checked & "' " &
+            MsgBox("llegue aqui 4")
+            strSql = "UPDATE socio set nombre ='" & FrmSocio.nombre.Text & "',apPaterno= '" & FrmSocio.paterno.Text & "',apMaterno= '" & FrmSocio.materno.Text & "',genero = '" & FrmSocio.sexo.Text & "',calle = '" & FrmSocio.calle.Text & "',colonia = '" & FrmSocio.colonia.Text & "',numeroInterior = '" & numeroIn & "',numeroExterior = '" & numeroEx & "',telefono= " & telefono & ",celular = " & celular & ",credencialVigenta = '" & FrmSocio.Radio.Checked & "' " &
                      "WHERE nombre =  '" & FrmSocio.nombre.Text & "'" &
                      "AND apPaterno = '" & FrmSocio.paterno.Text & "' " &
                      "AND apMaterno = '" & FrmSocio.materno.Text & "'"
+            MsgBox(strSql)
 
 
             cnx.objetoCommand(strSql)
             MessageBox.Show("Registro Modificado!")
-            cnx.cerrar()
+
         Else
             MsgBox("Faltan datos del Socio!!", MsgBoxStyle.Critical, "ATENCIÓN!!")
         End If
@@ -269,7 +278,8 @@ Public Class Socio
 
         strSQL = "SELECT * FROM socio where nombre = '" & FrmSocio.nombre.Text & "' AND apPaterno ='" & FrmSocio.paterno.Text & "' AND apMaterno = '" & FrmSocio.materno.Text & "'"
 
-        consultaUnSocio = False
+
+            consultaUnSocio = False
 
         xDT = cnx.objetoDataAdapter(strSQL)
 
@@ -279,6 +289,7 @@ Public Class Socio
             Else
                 nombreSocio = CStr(xDT.Rows(0)("nombre"))
             End If
+
             If IsDBNull(xDT.Rows(0)("apPaterno")) Then
                 aPaterno = ""
             Else
@@ -289,15 +300,21 @@ Public Class Socio
                 aMaterno = ""
             Else
                 aMaterno = CStr(xDT.Rows(0)("apMaterno"))
+
             End If
-            consultaUnSocio = True
+
+            MsgBox("llegue")
+
+
         End If
-        cnx.cerrar()
+
     End Function
     Public Function consultaTodosSocios() As Object
         Dim strSQL As String
+
         strSQL = "SELECT * from socio order by id asc"
         consultaTodosSocios = cnx.objetoDataAdapter(strSQL)
+
     End Function
 
 

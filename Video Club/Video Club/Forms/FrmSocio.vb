@@ -1,5 +1,7 @@
 ﻿Public Class FrmSocio
-    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
+    Dim cambio As Boolean
+
+    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) 
 
 
         If nombre.Text = "" Then
@@ -25,27 +27,30 @@
         End If
 
         Dim socio As New Socio
-        If socio.consultaUnSocio() = False Then
+        If socio.consultaUnSocio() = False And cambio = False Then
 
             socio.insertaSocio()
+
+
         Else
 
-            socio.getSetNombre = nombre.Text()
-            socio.getSetPaterno = paterno.Text()
-            socio.getSetMaterno = materno.Text()
-            socio.getSetGenero = sexo.Text()
-            socio.getSetCalle = calle.Text()
-            socio.getSetNumeroIn = numIn.Text()
-            socio.getSetNumeroEx = numEx.Text()
-            socio.getSetColonia = colonia.Text()
-            socio.getSetTelefono = telefono.Text()
-            socio.getSetCelular = celular.Text()
-            socio.getSetCredencialVigente = Radio.Checked()
+            socio.getSetNombre = nombre.Text
+            socio.getSetPaterno = paterno.Text
+            socio.getSetMaterno = materno.Text
+            socio.getSetGenero = sexo.Text
+            socio.getSetCalle = calle.Text
+            socio.getSetNumeroIn = numIn.Text
+            socio.getSetNumeroEx = numEx.Text
+            socio.getSetColonia = colonia.Text
+            socio.getSetTelefono = telefono.Text
+            socio.getSetCelular = celular.Text
+            socio.getSetCredencialVigente = Radio.Checked
             'Si la carrera se encuentra registrada, se modifica la información
             socio.actualizaSocio() 'ACTUALIZA LA CARRERA
             MsgBox("Registro modificado ...")
         End If
         socio.PoblarDataGridSocios(DGV_socios)
+        cambio = False
 
 
 
@@ -71,34 +76,31 @@
     Private Sub FrmSocios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim socio As New Socio
         socio.PoblarDataGridSocios(DGV_socios)
-        'cnx.Close()
+        'cnx.cerrar()
     End Sub
 
-    Private Sub TxtClaveCarrera_LostFocus(sender As Object, e As System.EventArgs) Handles nombre.LostFocus
-        If nombre.Text <> "" Then
-            'Busca  un país en particular
-            Dim socio As New Socio
-            'Llamamos al método que elimina el registro
-            socio.consultaTodosSocios()
-        End If
-    End Sub
-    Private Sub DGVsocios_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGV_socios.CellContentClick
+    Private Sub DGVsocios_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) 
         Dim renglon As Integer
+        cambio = True
+
         'Al darle clic al renglón mostramos los datos en las cajas de texto
         renglon = DGV_socios.CurrentCellAddress.Y
-        nombre.Text = DGV_socios.Rows(renglon).Cells(0).Value
-        paterno.Text = DGV_socios.Rows(renglon).Cells(1).Value
-        materno.Text = DGV_socios.Rows(renglon).Cells(2).Value
-        sexo.Text = DGV_socios.Rows(renglon).Cells(3).Value
-        calle.Text = DGV_socios.Rows(renglon).Cells(4).Value
-        numIn.Text = DGV_socios.Rows(renglon).Cells(5).Value
-        numEx.Text = DGV_socios.Rows(renglon).Cells(6).Value
-        colonia.Text = DGV_socios.Rows(renglon).Cells(7).Value
-        telefono.Text = DGV_socios.Rows(renglon).Cells(8).Value
-        celular.Text = DGV_socios.Rows(renglon).Cells(9).Value
-        Radio.Checked = DGV_socios.Rows(renglon).Cells(10).Value
+        claveSocio.Text = DGV_socios.Rows(renglon).Cells(0).Value
+        nombre.Text = DGV_socios.Rows(renglon).Cells(1).Value
+        paterno.Text = DGV_socios.Rows(renglon).Cells(2).Value
+        materno.Text = DGV_socios.Rows(renglon).Cells(3).Value
+        sexo.Text = DGV_socios.Rows(renglon).Cells(4).Value
+        calle.Text = DGV_socios.Rows(renglon).Cells(5).Value
+        colonia.Text = DGV_socios.Rows(renglon).Cells(6).Value
+        numIn.Text = DGV_socios.Rows(renglon).Cells(7).Value
+        numEx.Text = DGV_socios.Rows(renglon).Cells(8).Value
+        telefono.Text = DGV_socios.Rows(renglon).Cells(9).Value
+        celular.Text = DGV_socios.Rows(renglon).Cells(10).Value
+        Radio.Checked = DGV_socios.Rows(renglon).Cells(11).Value
 
 
     End Sub
+
+
 
 End Class
