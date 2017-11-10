@@ -28,7 +28,7 @@ Partial Class FrmAddPelicula
         Me.BarraTop = New System.Windows.Forms.Panel()
         Me.X = New System.Windows.Forms.Button()
         Me.Minimizar = New System.Windows.Forms.Button()
-        Me.Txt_ID = New System.Windows.Forms.TextBox()
+        Me.nombrePelicula = New System.Windows.Forms.TextBox()
         Me.Lbl_id = New System.Windows.Forms.Label()
         Me.Btn_Cancelar = New System.Windows.Forms.Button()
         Me.Btn_Guardar = New System.Windows.Forms.Button()
@@ -36,15 +36,17 @@ Partial Class FrmAddPelicula
         Me.Lbl_Celular = New System.Windows.Forms.Label()
         Me.Lbl_Correo = New System.Windows.Forms.Label()
         Me.Lbl_Encargado = New System.Windows.Forms.Label()
-        Me.Txt_NombreDistribuidor = New System.Windows.Forms.TextBox()
+        Me.cantidad = New System.Windows.Forms.TextBox()
         Me.Lbl_NombreDistribuior = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.idP = New System.Windows.Forms.TextBox()
+        Me.gnero = New System.Windows.Forms.ComboBox()
+        Me.clasificacion = New System.Windows.Forms.ComboBox()
+        Me.fechaAd = New System.Windows.Forms.DateTimePicker()
+        Me.comb_distribuidor = New System.Windows.Forms.ComboBox()
+        Me.DGVpeliculas = New System.Windows.Forms.DataGridView()
         Me.BarraTop.SuspendLayout()
+        CType(Me.DGVpeliculas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Cerrar
@@ -124,13 +126,13 @@ Partial Class FrmAddPelicula
         Me.Minimizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Minimizar.UseVisualStyleBackColor = False
         '
-        'Txt_ID
+        'nombrePelicula
         '
-        Me.Txt_ID.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_ID.Location = New System.Drawing.Point(250, 100)
-        Me.Txt_ID.Name = "Txt_ID"
-        Me.Txt_ID.Size = New System.Drawing.Size(490, 24)
-        Me.Txt_ID.TabIndex = 81
+        Me.nombrePelicula.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nombrePelicula.Location = New System.Drawing.Point(250, 100)
+        Me.nombrePelicula.Name = "nombrePelicula"
+        Me.nombrePelicula.Size = New System.Drawing.Size(490, 24)
+        Me.nombrePelicula.TabIndex = 81
         '
         'Lbl_id
         '
@@ -151,11 +153,11 @@ Partial Class FrmAddPelicula
         Me.Btn_Cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Cancelar.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Cancelar.ForeColor = System.Drawing.Color.Black
         Me.Btn_Cancelar.Image = Global.Video_Club.My.Resources.Resources.btnCancelar
         Me.Btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Btn_Cancelar.Location = New System.Drawing.Point(235, 250)
+        Me.Btn_Cancelar.Location = New System.Drawing.Point(222, 499)
         Me.Btn_Cancelar.Name = "Btn_Cancelar"
         Me.Btn_Cancelar.Size = New System.Drawing.Size(125, 50)
         Me.Btn_Cancelar.TabIndex = 79
@@ -172,11 +174,11 @@ Partial Class FrmAddPelicula
         Me.Btn_Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Guardar.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Guardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Guardar.ForeColor = System.Drawing.Color.Black
         Me.Btn_Guardar.Image = Global.Video_Club.My.Resources.Resources.BtnGuardar
         Me.Btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Btn_Guardar.Location = New System.Drawing.Point(440, 250)
+        Me.Btn_Guardar.Location = New System.Drawing.Point(427, 499)
         Me.Btn_Guardar.Name = "Btn_Guardar"
         Me.Btn_Guardar.Size = New System.Drawing.Size(125, 50)
         Me.Btn_Guardar.TabIndex = 78
@@ -224,13 +226,13 @@ Partial Class FrmAddPelicula
         Me.Lbl_Encargado.TabIndex = 70
         Me.Lbl_Encargado.Text = "Género:"
         '
-        'Txt_NombreDistribuidor
+        'cantidad
         '
-        Me.Txt_NombreDistribuidor.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_NombreDistribuidor.Location = New System.Drawing.Point(443, 140)
-        Me.Txt_NombreDistribuidor.Name = "Txt_NombreDistribuidor"
-        Me.Txt_NombreDistribuidor.Size = New System.Drawing.Size(53, 24)
-        Me.Txt_NombreDistribuidor.TabIndex = 69
+        Me.cantidad.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cantidad.Location = New System.Drawing.Point(443, 140)
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.Size = New System.Drawing.Size(53, 24)
+        Me.cantidad.TabIndex = 69
         '
         'Lbl_NombreDistribuior
         '
@@ -252,61 +254,73 @@ Partial Class FrmAddPelicula
         Me.Label1.TabIndex = 82
         Me.Label1.Text = "Cantidad:"
         '
-        'TextBox1
+        'idP
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(630, 47)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(110, 24)
-        Me.TextBox1.TabIndex = 83
+        Me.idP.Enabled = False
+        Me.idP.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.idP.Location = New System.Drawing.Point(630, 47)
+        Me.idP.Name = "idP"
+        Me.idP.Size = New System.Drawing.Size(110, 24)
+        Me.idP.TabIndex = 83
         '
-        'ComboBox1
+        'gnero
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(130, 140)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(177, 25)
-        Me.ComboBox1.TabIndex = 84
+        Me.gnero.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gnero.FormattingEnabled = True
+        Me.gnero.Items.AddRange(New Object() {"Terror", "Comedia", "Drama"})
+        Me.gnero.Location = New System.Drawing.Point(130, 140)
+        Me.gnero.Name = "gnero"
+        Me.gnero.Size = New System.Drawing.Size(177, 25)
+        Me.gnero.TabIndex = 84
         '
-        'ComboBox2
+        'clasificacion
         '
-        Me.ComboBox2.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(652, 140)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(87, 25)
-        Me.ComboBox2.TabIndex = 85
+        Me.clasificacion.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clasificacion.FormattingEnabled = True
+        Me.clasificacion.Items.AddRange(New Object() {"A", "B", "C"})
+        Me.clasificacion.Location = New System.Drawing.Point(652, 140)
+        Me.clasificacion.Name = "clasificacion"
+        Me.clasificacion.Size = New System.Drawing.Size(87, 25)
+        Me.clasificacion.TabIndex = 85
         '
-        'DateTimePicker1
+        'fechaAd
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(200, 180)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 86
+        Me.fechaAd.Location = New System.Drawing.Point(200, 180)
+        Me.fechaAd.Name = "fechaAd"
+        Me.fechaAd.Size = New System.Drawing.Size(200, 20)
+        Me.fechaAd.TabIndex = 86
         '
-        'ComboBox3
+        'comb_distribuidor
         '
-        Me.ComboBox3.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(536, 180)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(203, 25)
-        Me.ComboBox3.TabIndex = 87
+        Me.comb_distribuidor.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.comb_distribuidor.FormattingEnabled = True
+        Me.comb_distribuidor.Location = New System.Drawing.Point(536, 180)
+        Me.comb_distribuidor.Name = "comb_distribuidor"
+        Me.comb_distribuidor.Size = New System.Drawing.Size(203, 25)
+        Me.comb_distribuidor.TabIndex = 87
+        '
+        'DGVpeliculas
+        '
+        Me.DGVpeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVpeliculas.Location = New System.Drawing.Point(54, 238)
+        Me.DGVpeliculas.Name = "DGVpeliculas"
+        Me.DGVpeliculas.Size = New System.Drawing.Size(699, 214)
+        Me.DGVpeliculas.TabIndex = 88
         '
         'FrmAddPelicula
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
-        Me.ClientSize = New System.Drawing.Size(800, 350)
-        Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.ClientSize = New System.Drawing.Size(800, 591)
+        Me.Controls.Add(Me.DGVpeliculas)
+        Me.Controls.Add(Me.comb_distribuidor)
+        Me.Controls.Add(Me.fechaAd)
+        Me.Controls.Add(Me.clasificacion)
+        Me.Controls.Add(Me.gnero)
+        Me.Controls.Add(Me.idP)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Txt_ID)
+        Me.Controls.Add(Me.nombrePelicula)
         Me.Controls.Add(Me.Lbl_id)
         Me.Controls.Add(Me.Btn_Cancelar)
         Me.Controls.Add(Me.Btn_Guardar)
@@ -314,7 +328,7 @@ Partial Class FrmAddPelicula
         Me.Controls.Add(Me.Lbl_Celular)
         Me.Controls.Add(Me.Lbl_Correo)
         Me.Controls.Add(Me.Lbl_Encargado)
-        Me.Controls.Add(Me.Txt_NombreDistribuidor)
+        Me.Controls.Add(Me.cantidad)
         Me.Controls.Add(Me.Lbl_NombreDistribuior)
         Me.Controls.Add(Me.BarraTop)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -322,6 +336,7 @@ Partial Class FrmAddPelicula
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmAddPelicula"
         Me.BarraTop.ResumeLayout(False)
+        CType(Me.DGVpeliculas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -332,7 +347,7 @@ Partial Class FrmAddPelicula
     Friend WithEvents BarraTop As Panel
     Friend WithEvents X As Button
     Friend WithEvents Minimizar As Button
-    Friend WithEvents Txt_ID As TextBox
+    Friend WithEvents nombrePelicula As TextBox
     Friend WithEvents Lbl_id As Label
     Friend WithEvents Btn_Cancelar As Button
     Friend WithEvents Btn_Guardar As Button
@@ -340,12 +355,13 @@ Partial Class FrmAddPelicula
     Friend WithEvents Lbl_Celular As Label
     Friend WithEvents Lbl_Correo As Label
     Friend WithEvents Lbl_Encargado As Label
-    Friend WithEvents Txt_NombreDistribuidor As TextBox
+    Friend WithEvents cantidad As TextBox
     Friend WithEvents Lbl_NombreDistribuior As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents idP As TextBox
+    Friend WithEvents gnero As ComboBox
+    Friend WithEvents clasificacion As ComboBox
+    Friend WithEvents fechaAd As DateTimePicker
+    Friend WithEvents comb_distribuidor As ComboBox
+    Friend WithEvents DGVpeliculas As DataGridView
 End Class
