@@ -65,12 +65,19 @@ Partial Class FrmPrincipal
         Me.Btn_AddPelicula = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel_Distribuidor = New System.Windows.Forms.Panel()
+        Me.Btn_BsrDistribuidor = New System.Windows.Forms.Button()
         Me.Txt_BsrDistribuidor = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Btn_ModDistribuidor = New System.Windows.Forms.Button()
         Me.DataGridView_Distribuidor = New System.Windows.Forms.DataGridView()
         Me.Btn_AddDistribuidor = New System.Windows.Forms.Button()
-        Me.Btn_BsrDistribuidor = New System.Windows.Forms.Button()
+        Me.Panel_Empleado = New System.Windows.Forms.Panel()
+        Me.Lbl_Empleado = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Btn_ModEmpleado = New System.Windows.Forms.Button()
+        Me.Btn_AddEmpleado = New System.Windows.Forms.Button()
+        Me.DGVempleados = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BarraTop.SuspendLayout()
@@ -82,6 +89,8 @@ Partial Class FrmPrincipal
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_Distribuidor.SuspendLayout()
         CType(Me.DataGridView_Distribuidor, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel_Empleado.SuspendLayout()
+        CType(Me.DGVempleados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'X
@@ -622,8 +631,20 @@ Partial Class FrmPrincipal
         Me.Panel_Distribuidor.Controls.Add(Me.Btn_AddDistribuidor)
         Me.Panel_Distribuidor.Location = New System.Drawing.Point(275, 25)
         Me.Panel_Distribuidor.Name = "Panel_Distribuidor"
-        Me.Panel_Distribuidor.Size = New System.Drawing.Size(1095, 725)
+        Me.Panel_Distribuidor.Size = New System.Drawing.Size(1066, 725)
         Me.Panel_Distribuidor.TabIndex = 18
+        '
+        'Btn_BsrDistribuidor
+        '
+        Me.Btn_BsrDistribuidor.BackColor = System.Drawing.SystemColors.GrayText
+        Me.Btn_BsrDistribuidor.FlatAppearance.BorderSize = 0
+        Me.Btn_BsrDistribuidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_BsrDistribuidor.Image = Global.Video_Club.My.Resources.Resources.BtnBuscar
+        Me.Btn_BsrDistribuidor.Location = New System.Drawing.Point(550, 93)
+        Me.Btn_BsrDistribuidor.Name = "Btn_BsrDistribuidor"
+        Me.Btn_BsrDistribuidor.Size = New System.Drawing.Size(25, 25)
+        Me.Btn_BsrDistribuidor.TabIndex = 26
+        Me.Btn_BsrDistribuidor.UseVisualStyleBackColor = False
         '
         'Txt_BsrDistribuidor
         '
@@ -693,17 +714,99 @@ Partial Class FrmPrincipal
         Me.Btn_AddDistribuidor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.Btn_AddDistribuidor.UseVisualStyleBackColor = False
         '
-        'Btn_BsrDistribuidor
+        'Panel_Empleado
         '
-        Me.Btn_BsrDistribuidor.BackColor = System.Drawing.SystemColors.GrayText
-        Me.Btn_BsrDistribuidor.FlatAppearance.BorderSize = 0
-        Me.Btn_BsrDistribuidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_BsrDistribuidor.Image = Global.Video_Club.My.Resources.Resources.BtnBuscar
-        Me.Btn_BsrDistribuidor.Location = New System.Drawing.Point(550, 93)
-        Me.Btn_BsrDistribuidor.Name = "Btn_BsrDistribuidor"
-        Me.Btn_BsrDistribuidor.Size = New System.Drawing.Size(25, 25)
-        Me.Btn_BsrDistribuidor.TabIndex = 26
-        Me.Btn_BsrDistribuidor.UseVisualStyleBackColor = False
+        Me.Panel_Empleado.Controls.Add(Me.Button1)
+        Me.Panel_Empleado.Controls.Add(Me.TextBox5)
+        Me.Panel_Empleado.Controls.Add(Me.Btn_ModEmpleado)
+        Me.Panel_Empleado.Controls.Add(Me.Btn_AddEmpleado)
+        Me.Panel_Empleado.Controls.Add(Me.DGVempleados)
+        Me.Panel_Empleado.Controls.Add(Me.Lbl_Empleado)
+        Me.Panel_Empleado.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel_Empleado.ForeColor = System.Drawing.Color.Black
+        Me.Panel_Empleado.Location = New System.Drawing.Point(275, 25)
+        Me.Panel_Empleado.Name = "Panel_Empleado"
+        Me.Panel_Empleado.Size = New System.Drawing.Size(1095, 725)
+        Me.Panel_Empleado.TabIndex = 19
+        '
+        'Lbl_Empleado
+        '
+        Me.Lbl_Empleado.AutoSize = True
+        Me.Lbl_Empleado.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Empleado.Location = New System.Drawing.Point(100, 60)
+        Me.Lbl_Empleado.Name = "Lbl_Empleado"
+        Me.Lbl_Empleado.Size = New System.Drawing.Size(189, 21)
+        Me.Lbl_Empleado.TabIndex = 2
+        Me.Lbl_Empleado.Text = "Nombre del Empleado:"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.GrayText
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Image = Global.Video_Club.My.Resources.Resources.BtnBuscar
+        Me.Button1.Location = New System.Drawing.Point(604, 85)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(25, 25)
+        Me.Button1.TabIndex = 28
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(104, 86)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(500, 23)
+        Me.TextBox5.TabIndex = 27
+        '
+        'Btn_ModEmpleado
+        '
+        Me.Btn_ModEmpleado.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_ModEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_ModEmpleado.FlatAppearance.BorderSize = 0
+        Me.Btn_ModEmpleado.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_ModEmpleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_ModEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_ModEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_ModEmpleado.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_ModEmpleado.ForeColor = System.Drawing.Color.Black
+        Me.Btn_ModEmpleado.Image = Global.Video_Club.My.Resources.Resources.BtnModificar
+        Me.Btn_ModEmpleado.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Btn_ModEmpleado.Location = New System.Drawing.Point(894, 61)
+        Me.Btn_ModEmpleado.Name = "Btn_ModEmpleado"
+        Me.Btn_ModEmpleado.Size = New System.Drawing.Size(60, 60)
+        Me.Btn_ModEmpleado.TabIndex = 26
+        Me.Btn_ModEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_ModEmpleado.UseVisualStyleBackColor = False
+        '
+        'Btn_AddEmpleado
+        '
+        Me.Btn_AddEmpleado.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_AddEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_AddEmpleado.FlatAppearance.BorderSize = 0
+        Me.Btn_AddEmpleado.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_AddEmpleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_AddEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_AddEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_AddEmpleado.Font = New System.Drawing.Font("Fineliner Script", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_AddEmpleado.ForeColor = System.Drawing.Color.Black
+        Me.Btn_AddEmpleado.Image = Global.Video_Club.My.Resources.Resources.BtnAgregarPelicula
+        Me.Btn_AddEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Btn_AddEmpleado.Location = New System.Drawing.Point(684, 61)
+        Me.Btn_AddEmpleado.Name = "Btn_AddEmpleado"
+        Me.Btn_AddEmpleado.Size = New System.Drawing.Size(200, 60)
+        Me.Btn_AddEmpleado.TabIndex = 25
+        Me.Btn_AddEmpleado.Text = "Agregar Empleado"
+        Me.Btn_AddEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_AddEmpleado.UseVisualStyleBackColor = False
+        '
+        'DGVempleados
+        '
+        Me.DGVempleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVempleados.Location = New System.Drawing.Point(111, 163)
+        Me.DGVempleados.Name = "DGVempleados"
+        Me.DGVempleados.Size = New System.Drawing.Size(880, 500)
+        Me.DGVempleados.TabIndex = 24
         '
         'FrmPrincipal
         '
@@ -714,9 +817,10 @@ Partial Class FrmPrincipal
         Me.ClientSize = New System.Drawing.Size(1370, 750)
         Me.Controls.Add(Me.BarraTop)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel_Peliculas)
         Me.Controls.Add(Me.Panel_Distribuidor)
         Me.Controls.Add(Me.Panel_Inicio)
-        Me.Controls.Add(Me.Panel_Peliculas)
+        Me.Controls.Add(Me.Panel_Empleado)
         Me.ForeColor = System.Drawing.Color.Transparent
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -736,6 +840,9 @@ Partial Class FrmPrincipal
         Me.Panel_Distribuidor.ResumeLayout(False)
         Me.Panel_Distribuidor.PerformLayout()
         CType(Me.DataGridView_Distribuidor, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel_Empleado.ResumeLayout(False)
+        Me.Panel_Empleado.PerformLayout()
+        CType(Me.DGVempleados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -788,4 +895,11 @@ Partial Class FrmPrincipal
     Friend WithEvents DataGridView_Distribuidor As DataGridView
     Friend WithEvents Btn_AddDistribuidor As Button
     Friend WithEvents Btn_BsrDistribuidor As Button
+    Friend WithEvents Panel_Empleado As Panel
+    Friend WithEvents Lbl_Empleado As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Btn_ModEmpleado As Button
+    Friend WithEvents Btn_AddEmpleado As Button
+    Friend WithEvents DGVempleados As DataGridView
 End Class

@@ -57,6 +57,13 @@
         Panel_Distribuidor.BringToFront()
     End Sub
 
+    Private Sub BtnCortedeCaja_Click(sender As Object, e As EventArgs) Handles BtnCortedeCaja.Click
+        SlidePanel.Height = BtnCortedeCaja.Height
+        SlidePanel.Top = BtnCortedeCaja.Top
+        FrmCortedeCaja.Show()
+        FrmCortedeCaja.BringToFront()
+    End Sub
+
     'Funcionalidades del Menu Usuario
     Private Sub Btn_Renta_Click(sender As Object, e As EventArgs) Handles Btn_Renta.Click
         FrmRenta.Show()
@@ -70,11 +77,11 @@
         FrmAddPelicula.Show()
     End Sub
 
-    Private Sub BtnCortedeCaja_Click(sender As Object, e As EventArgs) Handles BtnCortedeCaja.Click
-        FrmCortedeCaja.Show()
-    End Sub
-
     Private Sub Btn_AddDistribuidor_Click(sender As Object, e As EventArgs) Handles Btn_AddDistribuidor.Click
         FrmAddDistribuidor.Show()
+    End Sub
+
+    Private Sub Panel_Inicio_Paint(sender As Object, e As PaintEventArgs) Handles Panel_Inicio.Paint
+
     End Sub
 End Class

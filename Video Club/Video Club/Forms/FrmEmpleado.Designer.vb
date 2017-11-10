@@ -22,6 +22,7 @@ Partial Class FrmEmpleado
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEmpleado))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.tipoU = New System.Windows.Forms.TextBox()
         Me.contrasena = New System.Windows.Forms.TextBox()
@@ -64,9 +65,15 @@ Partial Class FrmEmpleado
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DGVempleados = New System.Windows.Forms.DataGridView()
         Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.BarraTop = New System.Windows.Forms.Panel()
+        Me.X = New System.Windows.Forms.Button()
+        Me.Minimizar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGVempleados, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BarraTop.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -78,9 +85,9 @@ Partial Class FrmEmpleado
         Me.GroupBox2.Controls.Add(Me.Label16)
         Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(529, 31)
+        Me.GroupBox2.Location = New System.Drawing.Point(570, 50)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(330, 140)
+        Me.GroupBox2.Size = New System.Drawing.Size(320, 140)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos de la cuenta"
@@ -171,7 +178,7 @@ Partial Class FrmEmpleado
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 26)
+        Me.GroupBox1.Location = New System.Drawing.Point(50, 50)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(500, 500)
         Me.GroupBox1.TabIndex = 3
@@ -460,29 +467,119 @@ Partial Class FrmEmpleado
         'DGVempleados
         '
         Me.DGVempleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVempleados.Location = New System.Drawing.Point(518, 190)
+        Me.DGVempleados.Location = New System.Drawing.Point(556, 205)
         Me.DGVempleados.Name = "DGVempleados"
-        Me.DGVempleados.Size = New System.Drawing.Size(396, 341)
+        Me.DGVempleados.Size = New System.Drawing.Size(341, 341)
         Me.DGVempleados.TabIndex = 5
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(634, 552)
+        Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnGuardar.FlatAppearance.BorderSize = 0
+        Me.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardar.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.Image = Global.Video_Club.My.Resources.Resources.BtnGuardar
+        Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnGuardar.Location = New System.Drawing.Point(680, 570)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.btnGuardar.Size = New System.Drawing.Size(125, 50)
         Me.btnGuardar.TabIndex = 6
         Me.btnGuardar.Text = "Guardar"
-        Me.btnGuardar.UseVisualStyleBackColor = True
+        Me.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnGuardar.UseVisualStyleBackColor = False
+        '
+        'BarraTop
+        '
+        Me.BarraTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(8, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.BarraTop.Controls.Add(Me.Button1)
+        Me.BarraTop.Controls.Add(Me.Button2)
+        Me.BarraTop.Controls.Add(Me.X)
+        Me.BarraTop.Controls.Add(Me.Minimizar)
+        Me.BarraTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BarraTop.Location = New System.Drawing.Point(0, 0)
+        Me.BarraTop.Name = "BarraTop"
+        Me.BarraTop.Size = New System.Drawing.Size(950, 25)
+        Me.BarraTop.TabIndex = 16
+        '
+        'X
+        '
+        Me.X.BackColor = System.Drawing.Color.Transparent
+        Me.X.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.X.FlatAppearance.BorderSize = 0
+        Me.X.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.X.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.X.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.X.Image = CType(resources.GetObject("X.Image"), System.Drawing.Image)
+        Me.X.Location = New System.Drawing.Point(1063, 1)
+        Me.X.Name = "X"
+        Me.X.Size = New System.Drawing.Size(25, 25)
+        Me.X.TabIndex = 1
+        Me.X.UseVisualStyleBackColor = False
+        '
+        'Minimizar
+        '
+        Me.Minimizar.BackColor = System.Drawing.Color.Transparent
+        Me.Minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Minimizar.FlatAppearance.BorderSize = 0
+        Me.Minimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Minimizar.Image = Global.Video_Club.My.Resources.Resources.__
+        Me.Minimizar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Minimizar.Location = New System.Drawing.Point(1029, 1)
+        Me.Minimizar.Name = "Minimizar"
+        Me.Minimizar.Size = New System.Drawing.Size(25, 25)
+        Me.Minimizar.TabIndex = 2
+        Me.Minimizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Minimizar.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(906, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(25, 25)
+        Me.Button1.TabIndex = 3
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Image = Global.Video_Club.My.Resources.Resources.__
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button2.Location = New System.Drawing.Point(872, 0)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(25, 25)
+        Me.Button2.TabIndex = 4
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'FrmEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(937, 607)
+        Me.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.ClientSize = New System.Drawing.Size(950, 650)
+        Me.Controls.Add(Me.BarraTop)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.DGVempleados)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.ForeColor = System.Drawing.Color.Black
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmEmpleado"
         Me.Text = "FrmEmpleado"
         Me.GroupBox2.ResumeLayout(False)
@@ -490,6 +587,7 @@ Partial Class FrmEmpleado
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DGVempleados, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.BarraTop.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -535,4 +633,9 @@ Partial Class FrmEmpleado
     Friend WithEvents celular As TextBox
     Friend WithEvents DGVempleados As DataGridView
     Friend WithEvents btnGuardar As Button
+    Friend WithEvents BarraTop As Panel
+    Friend WithEvents X As Button
+    Friend WithEvents Minimizar As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class
