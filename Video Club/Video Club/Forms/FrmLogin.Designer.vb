@@ -79,6 +79,7 @@ Partial Class FrmLogin
         Me.TxtContraseña.Font = New System.Drawing.Font("Utsaah", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtContraseña.Location = New System.Drawing.Point(240, 345)
         Me.TxtContraseña.Name = "TxtContraseña"
+        Me.TxtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtContraseña.Size = New System.Drawing.Size(230, 25)
         Me.TxtContraseña.TabIndex = 3
         '

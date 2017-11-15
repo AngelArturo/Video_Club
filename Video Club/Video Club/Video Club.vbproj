@@ -79,7 +79,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Adeudos.vb" />
     <Compile Include="Clases\conexion.vb" />
+    <Compile Include="Clases\CorteCaja.vb" />
+    <Compile Include="Clases\DevolucionVenta.vb" />
     <Compile Include="Clases\Distribuidor.vb" />
     <Compile Include="Clases\Empleado.vb" />
     <Compile Include="Clases\Globales.vb" />
@@ -99,10 +102,22 @@
     <Compile Include="Forms\FrmAddPelicula.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\FrmAdeudos.Designer.vb">
+      <DependentUpon>FrmAdeudos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAdeudos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FrmCortedeCaja.Designer.vb">
       <DependentUpon>FrmCortedeCaja.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmCortedeCaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDevolucionVenta.Designer.vb">
+      <DependentUpon>FrmDevolucionVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDevolucionVenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmEmpleado.Designer.vb">
@@ -158,8 +173,14 @@
     <EmbeddedResource Include="Forms\FrmAddPelicula.resx">
       <DependentUpon>FrmAddPelicula.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAdeudos.resx">
+      <DependentUpon>FrmAdeudos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCortedeCaja.resx">
       <DependentUpon>FrmCortedeCaja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDevolucionVenta.resx">
+      <DependentUpon>FrmDevolucionVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmEmpleado.resx">
       <DependentUpon>FrmEmpleado.vb</DependentUpon>

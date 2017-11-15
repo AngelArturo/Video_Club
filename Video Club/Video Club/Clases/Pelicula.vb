@@ -137,7 +137,7 @@ Public Class Pelicula
         If nombrePel <> "" And genero <> "" And cant > 0 And
            clasficacion <> "" And fechaAd <> "" And idDist <> 0 Then
 
-            MsgBox("ya llegue aqui tambien")
+
             'Realiza inserción de datos
             strSql = "INSERT INTO peliculas  " &
                             "VALUES(0,'" & nombrePel & "','" & genero & "',

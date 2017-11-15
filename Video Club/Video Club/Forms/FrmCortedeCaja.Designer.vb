@@ -192,7 +192,7 @@ Partial Class FrmCortedeCaja
         Me.Btn_Cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Cancelar.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Cancelar.ForeColor = System.Drawing.Color.Black
         Me.Btn_Cancelar.Image = Global.Video_Club.My.Resources.Resources.btnCancelar
         Me.Btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
@@ -213,7 +213,7 @@ Partial Class FrmCortedeCaja
         Me.Btn_Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Guardar.Font = New System.Drawing.Font("Fineliner Script", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Guardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Guardar.ForeColor = System.Drawing.Color.Black
         Me.Btn_Guardar.Image = Global.Video_Club.My.Resources.Resources.BtnGuardar
         Me.Btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
@@ -221,12 +221,13 @@ Partial Class FrmCortedeCaja
         Me.Btn_Guardar.Name = "Btn_Guardar"
         Me.Btn_Guardar.Size = New System.Drawing.Size(125, 50)
         Me.Btn_Guardar.TabIndex = 66
-        Me.Btn_Guardar.Text = "Cerrar Sesión"
+        Me.Btn_Guardar.Text = "Guardar"
         Me.Btn_Guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.Btn_Guardar.UseVisualStyleBackColor = False
         '
         'Txt_EfectivoEsperado
         '
+        Me.Txt_EfectivoEsperado.Enabled = False
         Me.Txt_EfectivoEsperado.Location = New System.Drawing.Point(310, 125)
         Me.Txt_EfectivoEsperado.Name = "Txt_EfectivoEsperado"
         Me.Txt_EfectivoEsperado.Size = New System.Drawing.Size(150, 27)
@@ -241,6 +242,7 @@ Partial Class FrmCortedeCaja
         '
         'Txt_Diferencia
         '
+        Me.Txt_Diferencia.Enabled = False
         Me.Txt_Diferencia.Location = New System.Drawing.Point(310, 205)
         Me.Txt_Diferencia.Name = "Txt_Diferencia"
         Me.Txt_Diferencia.Size = New System.Drawing.Size(150, 27)
