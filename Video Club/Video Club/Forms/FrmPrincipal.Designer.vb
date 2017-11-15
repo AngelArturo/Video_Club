@@ -65,12 +65,12 @@ Partial Class FrmPrincipal
         Me.Btn_AddPelicula = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel_Distribuidor = New System.Windows.Forms.Panel()
+        Me.Btn_BsrDistribuidor = New System.Windows.Forms.Button()
         Me.Txt_BsrDistribuidor = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Btn_ModDistribuidor = New System.Windows.Forms.Button()
         Me.DataGridView_Distribuidor = New System.Windows.Forms.DataGridView()
         Me.Btn_AddDistribuidor = New System.Windows.Forms.Button()
-        Me.Btn_BsrDistribuidor = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BarraTop.SuspendLayout()
@@ -572,7 +572,7 @@ Partial Class FrmPrincipal
         Me.Btn_ModPelicula.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_ModPelicula.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_ModPelicula.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_ModPelicula.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_ModPelicula.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_ModPelicula.ForeColor = System.Drawing.Color.Black
         Me.Btn_ModPelicula.Image = Global.Video_Club.My.Resources.Resources.BtnModificar
         Me.Btn_ModPelicula.ImageAlign = System.Drawing.ContentAlignment.TopCenter
@@ -592,7 +592,7 @@ Partial Class FrmPrincipal
         Me.Btn_AddPelicula.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_AddPelicula.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_AddPelicula.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_AddPelicula.Font = New System.Drawing.Font("Fineliner Script", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_AddPelicula.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AddPelicula.ForeColor = System.Drawing.Color.Black
         Me.Btn_AddPelicula.Image = Global.Video_Club.My.Resources.Resources.BtnAgregarPelicula
         Me.Btn_AddPelicula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -625,6 +625,18 @@ Partial Class FrmPrincipal
         Me.Panel_Distribuidor.Size = New System.Drawing.Size(1095, 725)
         Me.Panel_Distribuidor.TabIndex = 18
         '
+        'Btn_BsrDistribuidor
+        '
+        Me.Btn_BsrDistribuidor.BackColor = System.Drawing.SystemColors.GrayText
+        Me.Btn_BsrDistribuidor.FlatAppearance.BorderSize = 0
+        Me.Btn_BsrDistribuidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_BsrDistribuidor.Image = Global.Video_Club.My.Resources.Resources.BtnBuscar
+        Me.Btn_BsrDistribuidor.Location = New System.Drawing.Point(550, 93)
+        Me.Btn_BsrDistribuidor.Name = "Btn_BsrDistribuidor"
+        Me.Btn_BsrDistribuidor.Size = New System.Drawing.Size(25, 25)
+        Me.Btn_BsrDistribuidor.TabIndex = 26
+        Me.Btn_BsrDistribuidor.UseVisualStyleBackColor = False
+        '
         'Txt_BsrDistribuidor
         '
         Me.Txt_BsrDistribuidor.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -653,7 +665,7 @@ Partial Class FrmPrincipal
         Me.Btn_ModDistribuidor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_ModDistribuidor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_ModDistribuidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_ModDistribuidor.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_ModDistribuidor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_ModDistribuidor.ForeColor = System.Drawing.Color.Black
         Me.Btn_ModDistribuidor.Image = Global.Video_Club.My.Resources.Resources.BtnModificar
         Me.Btn_ModDistribuidor.ImageAlign = System.Drawing.ContentAlignment.TopCenter
@@ -681,7 +693,7 @@ Partial Class FrmPrincipal
         Me.Btn_AddDistribuidor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_AddDistribuidor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_AddDistribuidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_AddDistribuidor.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_AddDistribuidor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AddDistribuidor.ForeColor = System.Drawing.Color.Black
         Me.Btn_AddDistribuidor.Image = Global.Video_Club.My.Resources.Resources.BtnAgregarDistribuidor
         Me.Btn_AddDistribuidor.ImageAlign = System.Drawing.ContentAlignment.TopCenter
@@ -692,18 +704,6 @@ Partial Class FrmPrincipal
         Me.Btn_AddDistribuidor.Text = "Agregar Distribuidor"
         Me.Btn_AddDistribuidor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.Btn_AddDistribuidor.UseVisualStyleBackColor = False
-        '
-        'Btn_BsrDistribuidor
-        '
-        Me.Btn_BsrDistribuidor.BackColor = System.Drawing.SystemColors.GrayText
-        Me.Btn_BsrDistribuidor.FlatAppearance.BorderSize = 0
-        Me.Btn_BsrDistribuidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_BsrDistribuidor.Image = Global.Video_Club.My.Resources.Resources.BtnBuscar
-        Me.Btn_BsrDistribuidor.Location = New System.Drawing.Point(550, 93)
-        Me.Btn_BsrDistribuidor.Name = "Btn_BsrDistribuidor"
-        Me.Btn_BsrDistribuidor.Size = New System.Drawing.Size(25, 25)
-        Me.Btn_BsrDistribuidor.TabIndex = 26
-        Me.Btn_BsrDistribuidor.UseVisualStyleBackColor = False
         '
         'FrmPrincipal
         '

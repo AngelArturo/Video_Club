@@ -21,7 +21,7 @@ Public Class Empleado
     Private correo As String
     Private nombreUs As String
     Private conU As String
-    Private tipoE As String
+    Private tipoE As Integer
 
     Public cnx As New conexion
 
@@ -48,14 +48,14 @@ Public Class Empleado
         correo = ""
         nombreUs = ""
         conU = ""
-        tipoE = ""
+        tipoE = 0
 
     End Sub
 
     Public Sub New(ByVal idE As Integer, ByVal pat As String, ByVal mat As String, ByVal nombr As String, ByVal curp As String, ByVal rfc As String, ByVal dia As Integer,
                  ByVal mes As String, ByVal ano As Integer, ByVal genero As String, ByVal lugar As String, ByVal calle As String, ByVal numero As Integer,
                    ByVal col As Integer, ByVal tel As Integer, ByVal cel As Integer, ByVal codigoP As Integer, ByVal correo As String, ByVal nombreUsu As String, ByVal conE As String,
-                    ByVal tipoEm As String)
+                    ByVal tipoEm As Integer)
         'Aquí recibimos los datos
         idEmpleado = idE
         aPaterno = pat
@@ -260,12 +260,12 @@ Public Class Empleado
             conU = ""
         End Set
     End Property
-    Public Property getSetTipoE() As String
+    Public Property getSetTipoE() As Integer
         Get
             Return tipoE
         End Get
-        Set(ByVal Value As String)
-            tipoE = ""
+        Set(ByVal Value As Integer)
+            tipoE = Value
         End Set
     End Property
 

@@ -117,29 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Btn_Cerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABUAAAAZCAYAAADe1WXtAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAAFxEAABcRAcom8z8AAAFSSURBVEhLY/j//z8DtTHVDQQ5
-        kC6GygNtKgLihH///gUCaQk8QWMMlEsH4nIgjgFiFZhaFJcCDZoMlEAG53AYaoimDsSdh8vQpVgUd2Ax
-        +BQWdSC9YEeih2kTFsUgITskg1uwqQH6shuXoWxAiTNYNF2GatDDYWkjUJwHl6Egl8sB8ScsmvuAYtux
-        iG9ADx5cScoZh4vQha8BBdiJNRRkWQ4Bg38A5dWwRCLBxN+Gx2B7bAZii3304HDHYehToDgnOYYKAzU9
-        w+PSzeQYeoCIyOokJUxnYDEQ5Or3WMQTiYn9AhwulAKKF+OQM0M2GD1iPHFoakbSdBWLGlB6DYWpQS+l
-        QCUNOjiB5j0LHBZjL1CAhQJ6KfULaIAGlsioxmIwzlIqEqgYlAavAPFZIHbBlWyADgCVBTeB+D4QHwbi
-        BKzex2UAqeJ0qaOoYglVDEEPHgCyZMeoa9V/zQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="X.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABUAAAAZCAYAAADe1WXtAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAAFxEAABcRAcom8z8AAAFSSURBVEhLY/j//z8DtTHVDQQ5
-        kC6GygNtKgLihH///gUCaQk8QWMMlEsH4nIgjgFiFZhaFJcCDZoMlEAG53AYaoimDsSdh8vQpVgUd2Ax
-        +BQWdSC9YEeih2kTFsUgITskg1uwqQH6shuXoWxAiTNYNF2GatDDYWkjUJwHl6Egl8sB8ScsmvuAYtux
-        iG9ADx5cScoZh4vQha8BBdiJNRRkWQ4Bg38A5dWwRCLBxN+Gx2B7bAZii3304HDHYehToDgnOYYKAzU9
-        w+PSzeQYeoCIyOokJUxnYDEQ5Or3WMQTiYn9AhwulAKKF+OQM0M2GD1iPHFoakbSdBWLGlB6DYWpQS+l
-        QCUNOjiB5j0LHBZjL1CAhQJ6KfULaIAGlsioxmIwzlIqEqgYlAavAPFZIHbBlWyADgCVBTeB+D4QHwbi
-        BKzex2UAqeJ0qaOoYglVDEEPHgCyZMeoa9V/zQAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>

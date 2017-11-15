@@ -43,13 +43,13 @@
         Dim xCnx As New conexion
         Dim xDT As DataTable
 
-        strSQL = "SELECT * FROM usuarios WHERE nombre = '" & TxtNombre.Text & "' && password = '" & TxtContraseña.Text & "';"
+        strSQL = "SELECT * FROM empleados WHERE nombreUsuario = '" & TxtNombre.Text & "' && contrasena = '" & TxtContraseña.Text & "';"
         xDT = xCnx.objetoDataAdapter(strSQL)
         If xDT.Rows.Count = 1 Then
             TxtNombre.Text = ""
             TxtContraseña.Text = ""
-            session = xDT.Rows(0)
-            MessageBox.Show("Bienvenido " & session.Item(1))
+
+            MessageBox.Show("Bienvenido ")
             FrmPrincipal.Show()
             Me.Hide()
         Else
