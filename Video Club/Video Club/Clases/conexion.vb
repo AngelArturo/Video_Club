@@ -12,7 +12,7 @@ Public Class conexion
     '" MySql.Data.MySqlClient 
     '" </summary>
     Public Sub New()
-        cnx.ConnectionString = "server=localhost; user=root; password='arturo1996'; database=videoclub;"
+        cnx.ConnectionString = "server=localhost; user=root; password=''; database=videoclub;"
         If cnx.State <> ConnectionState.Open Then
             Try
                 cnx.Open()
@@ -62,6 +62,20 @@ Public Class conexion
             query.Dispose()
         End Try
     End Sub
+
+    Function objetoDataReader(ByVal comando As String) As MySqlDataReader
+        Dim cmd As New MySqlCommand(comando, cnx)
+        Dim resultadoSQL As MySqlDataReader = cmd.ExecuteReader()
+
+        Try
+            Return resultadoSQL
+        Catch ex As Exception
+            Throw New Exception("Error: " & ex.Message)
+        Finally
+            cmd.Dispose()
+        End Try
+    End Function
+
     Public Function cerrar()
         cnx.Close()
     End Function

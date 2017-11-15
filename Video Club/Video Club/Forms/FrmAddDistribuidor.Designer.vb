@@ -44,7 +44,9 @@ Partial Class FrmAddDistribuidor
         Me.Btn_Cancelar = New System.Windows.Forms.Button()
         Me.Lbl_id = New System.Windows.Forms.Label()
         Me.Txt_ID = New System.Windows.Forms.TextBox()
+        Me.DGVdistri = New System.Windows.Forms.DataGridView()
         Me.BarraTop.SuspendLayout()
+        CType(Me.DGVdistri, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BarraTop
@@ -57,7 +59,7 @@ Partial Class FrmAddDistribuidor
         Me.BarraTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.BarraTop.Location = New System.Drawing.Point(0, 0)
         Me.BarraTop.Name = "BarraTop"
-        Me.BarraTop.Size = New System.Drawing.Size(530, 25)
+        Me.BarraTop.Size = New System.Drawing.Size(876, 25)
         Me.BarraTop.TabIndex = 16
         '
         'Cerrar
@@ -69,7 +71,7 @@ Partial Class FrmAddDistribuidor
         Me.Cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Cerrar.Image = CType(resources.GetObject("Cerrar.Image"), System.Drawing.Image)
-        Me.Cerrar.Location = New System.Drawing.Point(502, 0)
+        Me.Cerrar.Location = New System.Drawing.Point(851, 0)
         Me.Cerrar.Name = "Cerrar"
         Me.Cerrar.Size = New System.Drawing.Size(25, 25)
         Me.Cerrar.TabIndex = 3
@@ -85,7 +87,7 @@ Partial Class FrmAddDistribuidor
         Me.Minimizar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Minimizar1.Image = Global.Video_Club.My.Resources.Resources.__
         Me.Minimizar1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Minimizar1.Location = New System.Drawing.Point(472, 1)
+        Me.Minimizar1.Location = New System.Drawing.Point(819, -3)
         Me.Minimizar1.Name = "Minimizar1"
         Me.Minimizar1.Size = New System.Drawing.Size(26, 25)
         Me.Minimizar1.TabIndex = 4
@@ -242,11 +244,11 @@ Partial Class FrmAddDistribuidor
         Me.Btn_Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Guardar.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Guardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Guardar.ForeColor = System.Drawing.Color.Black
         Me.Btn_Guardar.Image = Global.Video_Club.My.Resources.Resources.BtnGuardar
         Me.Btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Btn_Guardar.Location = New System.Drawing.Point(305, 375)
+        Me.Btn_Guardar.Location = New System.Drawing.Point(720, 419)
         Me.Btn_Guardar.Name = "Btn_Guardar"
         Me.Btn_Guardar.Size = New System.Drawing.Size(125, 50)
         Me.Btn_Guardar.TabIndex = 64
@@ -264,11 +266,11 @@ Partial Class FrmAddDistribuidor
         Me.Btn_Cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Cancelar.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Cancelar.ForeColor = System.Drawing.Color.Black
         Me.Btn_Cancelar.Image = Global.Video_Club.My.Resources.Resources.btnCancelar
         Me.Btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Btn_Cancelar.Location = New System.Drawing.Point(100, 375)
+        Me.Btn_Cancelar.Location = New System.Drawing.Point(557, 419)
         Me.Btn_Cancelar.Name = "Btn_Cancelar"
         Me.Btn_Cancelar.Size = New System.Drawing.Size(125, 50)
         Me.Btn_Cancelar.TabIndex = 65
@@ -288,11 +290,20 @@ Partial Class FrmAddDistribuidor
         '
         'Txt_ID
         '
+        Me.Txt_ID.Enabled = False
         Me.Txt_ID.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_ID.Location = New System.Drawing.Point(250, 70)
         Me.Txt_ID.Name = "Txt_ID"
         Me.Txt_ID.Size = New System.Drawing.Size(200, 24)
         Me.Txt_ID.TabIndex = 67
+        '
+        'DGVdistri
+        '
+        Me.DGVdistri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVdistri.Location = New System.Drawing.Point(493, 70)
+        Me.DGVdistri.Name = "DGVdistri"
+        Me.DGVdistri.Size = New System.Drawing.Size(352, 283)
+        Me.DGVdistri.TabIndex = 69
         '
         'FrmAddDistribuidor
         '
@@ -300,7 +311,8 @@ Partial Class FrmAddDistribuidor
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
         Me.CancelButton = Me.Btn_Cancelar
-        Me.ClientSize = New System.Drawing.Size(530, 475)
+        Me.ClientSize = New System.Drawing.Size(876, 499)
+        Me.Controls.Add(Me.DGVdistri)
         Me.Controls.Add(Me.Txt_ID)
         Me.Controls.Add(Me.Lbl_id)
         Me.Controls.Add(Me.Btn_Cancelar)
@@ -326,6 +338,7 @@ Partial Class FrmAddDistribuidor
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmAddDistribuidor"
         Me.BarraTop.ResumeLayout(False)
+        CType(Me.DGVdistri, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -352,4 +365,5 @@ Partial Class FrmAddDistribuidor
     Friend WithEvents Btn_Cancelar As Button
     Friend WithEvents Lbl_id As Label
     Friend WithEvents Txt_ID As TextBox
+    Friend WithEvents DGVdistri As DataGridView
 End Class
