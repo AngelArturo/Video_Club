@@ -223,6 +223,7 @@ Partial Class FrmAddDistribuidor
         '
         Me.Txt_Celular.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_Celular.Location = New System.Drawing.Point(250, 280)
+        Me.Txt_Celular.MaxLength = 12
         Me.Txt_Celular.Name = "Txt_Celular"
         Me.Txt_Celular.Size = New System.Drawing.Size(200, 24)
         Me.Txt_Celular.TabIndex = 62

@@ -321,9 +321,6 @@ Public Class Empleado
             cnx.objetoCommand(strSql)
             MessageBox.Show("Registro insertado!")
             cnx.cerrar()
-
-
-
         End If
     End Sub
 
@@ -344,6 +341,7 @@ Public Class Empleado
         End If
 
     End Function
+
     Public Sub actualizaEmpleado()
         Dim strSql As String
         Dim diaN As Integer
@@ -439,6 +437,7 @@ Public Class Empleado
         End If
 
     End Function
+
     Public Function consultaTodosEmpleados() As Object
         Dim strSQL As String
 

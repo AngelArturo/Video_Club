@@ -2,8 +2,11 @@
     'Funciones del Form Principal'
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+        Lbl_Fecha.Text = Date.Now.ToLongDateString
         SlidePanel.Height = BtnInicio.Height
         Panel_Inicio.BringToFront()
+        DTP_Catalogo.Value = DateTime.Now.AddDays(5)
+        DTP_Estreno.Value = DateTime.Now.AddDays(3)
     End Sub
 
     'Funcionalidaes del boton cerrar X'
@@ -11,28 +14,12 @@
         Me.Close()
     End Sub
 
-    Private Sub X_MouseHover(sender As Object, e As EventArgs) Handles X.MouseHover
-        X.Image = (My.Resources.ResX)
-    End Sub
-
-    Private Sub X_MouseLeave(sender As Object, e As EventArgs) Handles X.MouseLeave
-        X.Image = (My.Resources.x)
-    End Sub
-
     'Funcionalidades del boton minimizar'
     Private Sub Minimizar_Click(sender As Object, e As EventArgs) Handles Minimizar.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub Minimizar_MouseHover(sender As Object, e As EventArgs) Handles Minimizar.MouseHover
-        Minimizar.Image = (My.Resources.Res_)
-    End Sub
-
-    Private Sub Minimizar_MouseLeave(sender As Object, e As EventArgs) Handles Minimizar.MouseLeave
-        Minimizar.Image = (My.Resources.__)
-    End Sub
-
-    'Funcionalidades del Menu de Administrador
+    'Mostrar Menus del Usuario tipoADMINISTRADOR
     Private Sub BtnInicio_Click(sender As Object, e As EventArgs) Handles BtnInicio.Click
         SlidePanel.Height = BtnInicio.Height
         SlidePanel.Top = BtnInicio.Top
@@ -42,7 +29,10 @@
     Private Sub BtnEmpleado_Click(sender As Object, e As EventArgs) Handles BtnEmpleado.Click
         SlidePanel.Height = BtnEmpleado.Height
         SlidePanel.Top = BtnEmpleado.Top
-        'CuEmpleado1.BringToFront()
+        Panel_Empleado.BringToFront()
+        Dim empleado As New Empleado
+        empleado.PoblarDataGridEmpleado(DGVempleados)
+        'cnx.cerrar()
     End Sub
 
     Private Sub BtnPeliculas_Click(sender As Object, e As EventArgs) Handles BtnPeliculas.Click
@@ -64,9 +54,17 @@
         FrmCortedeCaja.BringToFront()
     End Sub
 
-    'Funcionalidades del Menu Usuario
+    'Mostrar Forms del Usuario tipoEmpleado
     Private Sub Btn_Renta_Click(sender As Object, e As EventArgs) Handles Btn_Renta.Click
-        FrmRenta.Show()
+        If Txt_idSocio.Text = "" Then
+            MessageBox.Show("Ingresa el Socio a&c")
+        Else
+            Panel_Renta.Show()
+        End If
+        Dim ren As New Renta
+        ren.PoblarDataGridRenta(DGVrenta)
+        cnx.Close()
+        'Timer1.Start()
     End Sub
 
     Private Sub Btn_Socio_Click(sender As Object, e As EventArgs) Handles Btn_Socio.Click
@@ -81,7 +79,52 @@
         FrmAddDistribuidor.Show()
     End Sub
 
-    Private Sub Panel_Inicio_Paint(sender As Object, e As PaintEventArgs) Handles Panel_Inicio.Paint
+    Private Sub Btn_AddEmpleado_Click(sender As Object, e As EventArgs) Handles Btn_AddEmpleado.Click
+        FrmEmpleado.Show()
+    End Sub
 
+    'VERIFICAR SOCIO
+    Private Sub Btn_BusquedaSocio_Click(sender As Object, e As EventArgs) Handles Btn_BusquedaSocio.Click
+
+    End Sub
+
+
+
+
+    'RENTA
+    Private Sub Btn_CerrarRenta_Click(sender As Object, e As EventArgs) Handles Btn_CerrarRenta.Click
+        Panel_Renta.Visible = False
+    End Sub
+
+    Private Function consultarPeliculaNombre() As DataTable
+        Dim pel As New Pelicula
+        Return pel.buscarPelicula(Txt_Renta.Text)
+    End Function
+
+    Private Sub BtnRenta_Click(sender As Object, e As EventArgs) Handles BtnRenta.Click
+
+        If RB_Catalago.Checked = False And RB_Estreno.Checked = False Then
+            MessageBox.Show("Ingresa si la pelicula es Estreno o de Catálogo")
+        End If
+        If Txt_Renta.Text = "" Then
+            MessageBox.Show("¿Qué película quieres rentar?")
+        End If
+
+        Dim renta As New Renta()
+        renta.getSetImpR = RB_Catalago.Checked
+        renta.getSetImpR = RB_Estreno.Checked
+        renta.getSetFeE = Convert.ToDateTime(DTP_Catalogo.Text).ToShortDateString
+        renta.getSetFeE = Convert.ToDateTime(DTP_Estreno.Text).ToShortDateString
+
+        renta.addRenta()
+
+        renta.PoblarDataGridRenta(DGVrenta)
+
+        Panel_Renta.Visible = False
+
+    End Sub
+
+    Private Sub Btn_Busca_Click(sender As Object, e As EventArgs) Handles Btn_Busca.Click
+        DGVrenta.DataSource = consultarPeliculaNombre()
     End Sub
 End Class

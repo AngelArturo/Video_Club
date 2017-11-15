@@ -59,7 +59,6 @@
 
 
 
-
         'Limpiamos el contenido de las cajas de texto 
         idP.Text = ""
         nombrePelicula.Text = ""

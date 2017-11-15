@@ -203,6 +203,7 @@ Public Class Socio
 
         End If
     End Sub
+
     Public Function consultaId() As Boolean
         Dim strSQL As String
         Dim xDT As DataTable
@@ -220,6 +221,7 @@ Public Class Socio
         End If
 
     End Function
+
     Public Sub actualizaSocio()
         Dim strSql As String
         Dim numExt As Integer
@@ -271,15 +273,14 @@ Public Class Socio
         End If
 
     End Sub
+
     Public Function consultaUnSocio() As Boolean
         Dim strSQL As String
         Dim xDT As DataTable
 
-
         strSQL = "SELECT * FROM socio where nombre = '" & FrmSocio.nombre.Text & "' AND apPaterno ='" & FrmSocio.paterno.Text & "' AND apMaterno = '" & FrmSocio.materno.Text & "'"
 
-
-            consultaUnSocio = False
+        consultaUnSocio = False
 
         xDT = cnx.objetoDataAdapter(strSQL)
 
@@ -304,11 +305,10 @@ Public Class Socio
             End If
 
             MsgBox("llegue")
-
-
         End If
 
     End Function
+
     Public Function consultaTodosSocios() As Object
         Dim strSQL As String
 
@@ -316,8 +316,6 @@ Public Class Socio
         consultaTodosSocios = cnx.objetoDataAdapter(strSQL)
 
     End Function
-
-
 
     Public Sub PoblarDataGridSocios(ByVal DGV_socios As DataGridView)
         DGV_socios.DataSource = consultaTodosSocios()

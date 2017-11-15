@@ -31,6 +31,7 @@ Partial Class FrmEmpleado
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Lbl = New System.Windows.Forms.Label()
         Me.correo = New System.Windows.Forms.TextBox()
         Me.codigoP = New System.Windows.Forms.TextBox()
         Me.celular = New System.Windows.Forms.TextBox()
@@ -51,9 +52,9 @@ Partial Class FrmEmpleado
         Me.claveEm = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Lbl_LugarNacimiento = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Lbl_FechaNacimiento = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -61,15 +62,17 @@ Partial Class FrmEmpleado
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Lbl_Genero = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DGVempleados = New System.Windows.Forms.DataGridView()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.BarraTop = New System.Windows.Forms.Panel()
-        Me.X = New System.Windows.Forms.Button()
-        Me.Minimizar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.X = New System.Windows.Forms.Button()
+        Me.Minimizar = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Btn_Cancelar = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGVempleados, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,7 +88,7 @@ Partial Class FrmEmpleado
         Me.GroupBox2.Controls.Add(Me.Label16)
         Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(570, 50)
+        Me.GroupBox2.Location = New System.Drawing.Point(530, 50)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(320, 140)
         Me.GroupBox2.TabIndex = 4
@@ -96,21 +99,21 @@ Partial Class FrmEmpleado
         '
         Me.tipoU.Location = New System.Drawing.Point(152, 103)
         Me.tipoU.Name = "tipoU"
-        Me.tipoU.Size = New System.Drawing.Size(149, 23)
+        Me.tipoU.Size = New System.Drawing.Size(150, 23)
         Me.tipoU.TabIndex = 6
         '
         'contrasena
         '
         Me.contrasena.Location = New System.Drawing.Point(152, 74)
         Me.contrasena.Name = "contrasena"
-        Me.contrasena.Size = New System.Drawing.Size(149, 23)
+        Me.contrasena.Size = New System.Drawing.Size(150, 23)
         Me.contrasena.TabIndex = 5
         '
         'nombreUsuario
         '
         Me.nombreUsuario.Location = New System.Drawing.Point(152, 40)
         Me.nombreUsuario.Name = "nombreUsuario"
-        Me.nombreUsuario.Size = New System.Drawing.Size(149, 23)
+        Me.nombreUsuario.Size = New System.Drawing.Size(150, 23)
         Me.nombreUsuario.TabIndex = 4
         '
         'Label17
@@ -165,9 +168,9 @@ Partial Class FrmEmpleado
         Me.GroupBox1.Controls.Add(Me.claveEm)
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.Label13)
-        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.Lbl_LugarNacimiento)
         Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.Lbl_FechaNacimiento)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
@@ -175,71 +178,83 @@ Partial Class FrmEmpleado
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Lbl_Genero)
         Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.Lbl)
+        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(50, 50)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(500, 500)
+        Me.GroupBox1.Size = New System.Drawing.Size(465, 470)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Personales"
         '
+        'Lbl
+        '
+        Me.Lbl.AutoSize = True
+        Me.Lbl.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl.Location = New System.Drawing.Point(257, 240)
+        Me.Lbl.Name = "Lbl"
+        Me.Lbl.Size = New System.Drawing.Size(17, 21)
+        Me.Lbl.TabIndex = 32
+        Me.Lbl.Text = "/"
+        '
         'correo
         '
-        Me.correo.Location = New System.Drawing.Point(151, 451)
+        Me.correo.Location = New System.Drawing.Point(185, 420)
         Me.correo.Name = "correo"
-        Me.correo.Size = New System.Drawing.Size(197, 23)
+        Me.correo.Size = New System.Drawing.Size(240, 23)
         Me.correo.TabIndex = 31
         '
         'codigoP
         '
-        Me.codigoP.Location = New System.Drawing.Point(153, 420)
+        Me.codigoP.Location = New System.Drawing.Point(185, 390)
         Me.codigoP.Name = "codigoP"
-        Me.codigoP.Size = New System.Drawing.Size(197, 23)
+        Me.codigoP.Size = New System.Drawing.Size(240, 23)
         Me.codigoP.TabIndex = 30
         '
         'celular
         '
-        Me.celular.Location = New System.Drawing.Point(151, 393)
+        Me.celular.Location = New System.Drawing.Point(185, 360)
         Me.celular.Name = "celular"
-        Me.celular.Size = New System.Drawing.Size(197, 23)
+        Me.celular.Size = New System.Drawing.Size(240, 23)
         Me.celular.TabIndex = 29
         '
         'telefono
         '
-        Me.telefono.Location = New System.Drawing.Point(151, 364)
+        Me.telefono.Location = New System.Drawing.Point(185, 330)
         Me.telefono.Name = "telefono"
-        Me.telefono.Size = New System.Drawing.Size(197, 23)
+        Me.telefono.Size = New System.Drawing.Size(240, 23)
         Me.telefono.TabIndex = 28
         '
         'colonia
         '
-        Me.colonia.Location = New System.Drawing.Point(366, 301)
+        Me.colonia.Location = New System.Drawing.Point(295, 300)
         Me.colonia.Name = "colonia"
-        Me.colonia.Size = New System.Drawing.Size(120, 23)
+        Me.colonia.Size = New System.Drawing.Size(130, 23)
         Me.colonia.TabIndex = 27
         Me.colonia.Text = "colonia"
         '
         'numero
         '
-        Me.numero.Location = New System.Drawing.Point(260, 301)
+        Me.numero.Location = New System.Drawing.Point(240, 300)
         Me.numero.Name = "numero"
-        Me.numero.Size = New System.Drawing.Size(100, 23)
+        Me.numero.Size = New System.Drawing.Size(50, 23)
         Me.numero.TabIndex = 26
-        Me.numero.Text = "numero"
+        Me.numero.Text = "####"
         '
         'calle
         '
-        Me.calle.Location = New System.Drawing.Point(108, 301)
+        Me.calle.Location = New System.Drawing.Point(110, 300)
         Me.calle.Name = "calle"
-        Me.calle.Size = New System.Drawing.Size(146, 23)
+        Me.calle.Size = New System.Drawing.Size(125, 23)
         Me.calle.TabIndex = 25
-        Me.calle.Text = "calle"
+        Me.calle.Text = "Calle"
         '
         'lugarN
         '
-        Me.lugarN.Location = New System.Drawing.Point(381, 270)
+        Me.lugarN.Location = New System.Drawing.Point(325, 270)
         Me.lugarN.Name = "lugarN"
         Me.lugarN.Size = New System.Drawing.Size(100, 23)
         Me.lugarN.TabIndex = 24
@@ -249,25 +264,25 @@ Partial Class FrmEmpleado
         Me.genero.AutoCompleteCustomSource.AddRange(New String() {"F", "M"})
         Me.genero.FormattingEnabled = True
         Me.genero.Items.AddRange(New Object() {"F", "M"})
-        Me.genero.Location = New System.Drawing.Point(96, 270)
+        Me.genero.Location = New System.Drawing.Point(100, 270)
         Me.genero.Name = "genero"
-        Me.genero.Size = New System.Drawing.Size(104, 25)
+        Me.genero.Size = New System.Drawing.Size(35, 25)
         Me.genero.TabIndex = 23
-        Me.genero.Text = "Seleccione"
+        Me.genero.Text = "M"
         '
         'ano
         '
-        Me.ano.Location = New System.Drawing.Point(381, 240)
+        Me.ano.Location = New System.Drawing.Point(380, 240)
         Me.ano.Name = "ano"
-        Me.ano.Size = New System.Drawing.Size(60, 23)
+        Me.ano.Size = New System.Drawing.Size(45, 23)
         Me.ano.TabIndex = 22
-        Me.ano.Text = "aaa"
+        Me.ano.Text = "aaaa"
         '
         'mes
         '
         Me.mes.FormattingEnabled = True
         Me.mes.Items.AddRange(New Object() {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"})
-        Me.mes.Location = New System.Drawing.Point(274, 239)
+        Me.mes.Location = New System.Drawing.Point(270, 239)
         Me.mes.Name = "mes"
         Me.mes.Size = New System.Drawing.Size(100, 25)
         Me.mes.TabIndex = 21
@@ -275,51 +290,51 @@ Partial Class FrmEmpleado
         '
         'dia
         '
-        Me.dia.Location = New System.Drawing.Point(210, 240)
+        Me.dia.Location = New System.Drawing.Point(215, 240)
         Me.dia.Name = "dia"
-        Me.dia.Size = New System.Drawing.Size(57, 23)
+        Me.dia.Size = New System.Drawing.Size(44, 23)
         Me.dia.TabIndex = 20
         Me.dia.Text = "dd"
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(175, 193)
+        Me.TextBox4.Location = New System.Drawing.Point(185, 190)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(173, 23)
+        Me.TextBox4.Size = New System.Drawing.Size(240, 23)
         Me.TextBox4.TabIndex = 19
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(175, 164)
+        Me.TextBox3.Location = New System.Drawing.Point(185, 160)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(173, 23)
+        Me.TextBox3.Size = New System.Drawing.Size(240, 23)
         Me.TextBox3.TabIndex = 18
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(175, 137)
+        Me.TextBox2.Location = New System.Drawing.Point(185, 130)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(173, 23)
+        Me.TextBox2.Size = New System.Drawing.Size(240, 23)
         Me.TextBox2.TabIndex = 17
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(175, 105)
+        Me.TextBox1.Location = New System.Drawing.Point(185, 100)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(173, 23)
+        Me.TextBox1.Size = New System.Drawing.Size(240, 23)
         Me.TextBox1.TabIndex = 16
         '
         'paterno
         '
-        Me.paterno.Location = New System.Drawing.Point(175, 73)
+        Me.paterno.Location = New System.Drawing.Point(185, 70)
         Me.paterno.Name = "paterno"
-        Me.paterno.Size = New System.Drawing.Size(173, 23)
+        Me.paterno.Size = New System.Drawing.Size(240, 23)
         Me.paterno.TabIndex = 15
         '
         'claveEm
         '
         Me.claveEm.Enabled = False
-        Me.claveEm.Location = New System.Drawing.Point(396, 41)
+        Me.claveEm.Location = New System.Drawing.Point(333, 30)
         Me.claveEm.Name = "claveEm"
         Me.claveEm.Size = New System.Drawing.Size(90, 23)
         Me.claveEm.TabIndex = 14
@@ -328,7 +343,7 @@ Partial Class FrmEmpleado
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(25, 450)
+        Me.Label14.Location = New System.Drawing.Point(116, 420)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(67, 21)
         Me.Label14.TabIndex = 13
@@ -338,47 +353,47 @@ Partial Class FrmEmpleado
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(25, 390)
+        Me.Label13.Location = New System.Drawing.Point(88, 360)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(95, 21)
         Me.Label13.TabIndex = 12
         Me.Label13.Text = "No.Celular:"
         '
-        'Label12
+        'Lbl_LugarNacimiento
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(199, 261)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(176, 21)
-        Me.Label12.TabIndex = 11
-        Me.Label12.Text = "Lugar de nacimiento:"
+        Me.Lbl_LugarNacimiento.AutoSize = True
+        Me.Lbl_LugarNacimiento.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_LugarNacimiento.Location = New System.Drawing.Point(150, 270)
+        Me.Lbl_LugarNacimiento.Name = "Lbl_LugarNacimiento"
+        Me.Lbl_LugarNacimiento.Size = New System.Drawing.Size(176, 21)
+        Me.Lbl_LugarNacimiento.TabIndex = 11
+        Me.Lbl_LugarNacimiento.Text = "Lugar de nacimiento:"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(25, 420)
+        Me.Label11.Location = New System.Drawing.Point(61, 390)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(122, 21)
         Me.Label11.TabIndex = 10
         Me.Label11.Text = "Código Postal:"
         '
-        'Label10
+        'Lbl_FechaNacimiento
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(25, 240)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(183, 21)
-        Me.Label10.TabIndex = 9
-        Me.Label10.Text = "Fecha de Nacimiento:"
+        Me.Lbl_FechaNacimiento.AutoSize = True
+        Me.Lbl_FechaNacimiento.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_FechaNacimiento.Location = New System.Drawing.Point(30, 240)
+        Me.Lbl_FechaNacimiento.Name = "Lbl_FechaNacimiento"
+        Me.Lbl_FechaNacimiento.Size = New System.Drawing.Size(183, 21)
+        Me.Lbl_FechaNacimiento.TabIndex = 9
+        Me.Lbl_FechaNacimiento.Text = "Fecha de Nacimiento:"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(25, 360)
+        Me.Label9.Location = New System.Drawing.Point(77, 330)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(106, 21)
         Me.Label9.TabIndex = 8
@@ -388,7 +403,7 @@ Partial Class FrmEmpleado
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(25, 300)
+        Me.Label8.Location = New System.Drawing.Point(30, 300)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(83, 21)
         Me.Label8.TabIndex = 7
@@ -398,7 +413,7 @@ Partial Class FrmEmpleado
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(34, 70)
+        Me.Label7.Location = New System.Drawing.Point(36, 70)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(144, 21)
         Me.Label7.TabIndex = 6
@@ -408,7 +423,7 @@ Partial Class FrmEmpleado
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(28, 100)
+        Me.Label6.Location = New System.Drawing.Point(30, 100)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(150, 21)
         Me.Label6.TabIndex = 5
@@ -418,7 +433,7 @@ Partial Class FrmEmpleado
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(83, 130)
+        Me.Label5.Location = New System.Drawing.Point(85, 130)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(95, 21)
         Me.Label5.TabIndex = 4
@@ -428,7 +443,7 @@ Partial Class FrmEmpleado
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(121, 160)
+        Me.Label4.Location = New System.Drawing.Point(123, 160)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(57, 21)
         Me.Label4.TabIndex = 3
@@ -438,27 +453,27 @@ Partial Class FrmEmpleado
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(133, 190)
+        Me.Label3.Location = New System.Drawing.Point(135, 190)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(45, 21)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "RFC:"
         '
-        'Label2
+        'Lbl_Genero
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(25, 270)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 21)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Género:"
+        Me.Lbl_Genero.AutoSize = True
+        Me.Lbl_Genero.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Genero.Location = New System.Drawing.Point(30, 270)
+        Me.Lbl_Genero.Name = "Lbl_Genero"
+        Me.Lbl_Genero.Size = New System.Drawing.Size(73, 21)
+        Me.Lbl_Genero.TabIndex = 1
+        Me.Lbl_Genero.Text = "Género:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(339, 40)
+        Me.Label1.Location = New System.Drawing.Point(273, 30)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(61, 21)
         Me.Label1.TabIndex = 0
@@ -467,9 +482,9 @@ Partial Class FrmEmpleado
         'DGVempleados
         '
         Me.DGVempleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVempleados.Location = New System.Drawing.Point(556, 205)
+        Me.DGVempleados.Location = New System.Drawing.Point(531, 205)
         Me.DGVempleados.Name = "DGVempleados"
-        Me.DGVempleados.Size = New System.Drawing.Size(341, 341)
+        Me.DGVempleados.Size = New System.Drawing.Size(327, 315)
         Me.DGVempleados.TabIndex = 5
         '
         'btnGuardar
@@ -482,7 +497,7 @@ Partial Class FrmEmpleado
         Me.btnGuardar.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.Image = Global.Video_Club.My.Resources.Resources.BtnGuardar
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnGuardar.Location = New System.Drawing.Point(680, 570)
+        Me.btnGuardar.Location = New System.Drawing.Point(600, 550)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(125, 50)
         Me.btnGuardar.TabIndex = 6
@@ -500,8 +515,40 @@ Partial Class FrmEmpleado
         Me.BarraTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.BarraTop.Location = New System.Drawing.Point(0, 0)
         Me.BarraTop.Name = "BarraTop"
-        Me.BarraTop.Size = New System.Drawing.Size(950, 25)
+        Me.BarraTop.Size = New System.Drawing.Size(900, 25)
         Me.BarraTop.TabIndex = 16
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(872, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(25, 25)
+        Me.Button1.TabIndex = 3
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Image = Global.Video_Club.My.Resources.Resources.__
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button2.Location = New System.Drawing.Point(838, 0)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(25, 25)
+        Me.Button2.TabIndex = 4
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'X
         '
@@ -535,44 +582,44 @@ Partial Class FrmEmpleado
         Me.Minimizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Minimizar.UseVisualStyleBackColor = False
         '
-        'Button1
+        'Label2
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(906, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(25, 25)
-        Me.Button1.TabIndex = 3
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(367, 240)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(17, 21)
+        Me.Label2.TabIndex = 33
+        Me.Label2.Text = "/"
         '
-        'Button2
+        'Btn_Cancelar
         '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Image = Global.Video_Club.My.Resources.Resources.__
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button2.Location = New System.Drawing.Point(872, 0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(25, 25)
-        Me.Button2.TabIndex = 4
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.Btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Cancelar.FlatAppearance.BorderSize = 0
+        Me.Btn_Cancelar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Cancelar.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Cancelar.ForeColor = System.Drawing.Color.Black
+        Me.Btn_Cancelar.Image = Global.Video_Club.My.Resources.Resources.btnCancelar
+        Me.Btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Btn_Cancelar.Location = New System.Drawing.Point(300, 550)
+        Me.Btn_Cancelar.Name = "Btn_Cancelar"
+        Me.Btn_Cancelar.Size = New System.Drawing.Size(125, 50)
+        Me.Btn_Cancelar.TabIndex = 80
+        Me.Btn_Cancelar.Text = "Cancelar"
+        Me.Btn_Cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_Cancelar.UseVisualStyleBackColor = False
         '
         'FrmEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.ClientSize = New System.Drawing.Size(950, 650)
+        Me.ClientSize = New System.Drawing.Size(900, 650)
+        Me.Controls.Add(Me.Btn_Cancelar)
         Me.Controls.Add(Me.BarraTop)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.DGVempleados)
@@ -598,9 +645,9 @@ Partial Class FrmEmpleado
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents Label12 As Label
+    Friend WithEvents Lbl_LugarNacimiento As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents Label10 As Label
+    Friend WithEvents Lbl_FechaNacimiento As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
@@ -608,7 +655,7 @@ Partial Class FrmEmpleado
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents Lbl_Genero As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents dia As TextBox
     Friend WithEvents TextBox4 As TextBox
@@ -638,4 +685,7 @@ Partial Class FrmEmpleado
     Friend WithEvents Minimizar As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Lbl As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Btn_Cancelar As Button
 End Class

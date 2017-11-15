@@ -1,55 +1,55 @@
 ﻿Public Class FrmEmpleado
     Dim cambio As Boolean
+
+    'VERIFICAR QUE LOS CAMPOS ESTEN LLENOS
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
 
-
         If paterno.Text = "" Then
-            MessageBox.Show(" captura el apellido paterno del empleado")
+            MessageBox.Show("Captura el apellido paterno del empleado")
         ElseIf TextBox1.Text = "" Then
-            MessageBox.Show("captura el apellido materno del empleado")
+            MessageBox.Show("Captura el apellido materno del empleado")
         ElseIf TextBox2.Text = "" Then
-            MessageBox.Show("captura el nombre del empleado")
+            MessageBox.Show("Captura el nombre del empleado")
         ElseIf TextBox3.Text = "" Then
-            MessageBox.Show("captura el curp")
+            MessageBox.Show("Captura el CURP")
         ElseIf TextBox4.Text = "" Then
-            MessageBox.Show("captura el rfc")
+            MessageBox.Show("Captura el RFC")
         ElseIf dia.Text = "" Then
-            MessageBox.Show("captura el dia de nacimiento del empleado")
+            MessageBox.Show("Captura el dia de nacimiento del empleado")
         ElseIf mes.Text = "" Then
-            MessageBox.Show("selecciona el mes de nacimiento del empleado")
+            MessageBox.Show("Selecciona el mes de nacimiento del empleado")
         ElseIf ano.Text = "" Then
-            MessageBox.Show("capturar el año de nacimiento del empleado ")
+            MessageBox.Show("Capturar el año de nacimiento del empleado ")
         ElseIf genero.Text = "" Then
-            MessageBox.Show("selecciona el sexo del empleado ")
+            MessageBox.Show("Selecciona el sexo del empleado ")
         ElseIf lugarN.Text = "" Then
-            MessageBox.Show("captura el lugar de nacimiento del empleado")
+            MessageBox.Show("Captura el lugar de nacimiento del empleado")
         ElseIf calle.Text = "" Then
-            MessageBox.Show("captura la calle del domicilo")
+            MessageBox.Show("Captura la calle del domicilo")
         ElseIf numero.Text = "" Then
-            MessageBox.Show("capturar el numero del domicilio ")
+            MessageBox.Show("Capturar el numero del domicilio ")
         ElseIf colonia.Text = "" Then
-            MessageBox.Show("captura la colonia del domicilio ")
+            MessageBox.Show("Captura la colonia del domicilio ")
         ElseIf telefono.Text = "" Then
-            MessageBox.Show("captura el telefono del empleado")
+            MessageBox.Show("Captura el telefono del empleado")
         ElseIf celular.Text = "" Then
-            MessageBox.Show("captura el numero de celular del empleado")
+            MessageBox.Show("Captura el numero de celular del empleado")
         ElseIf codigoP.Text = "" Then
-            MessageBox.Show("capturar el codigo postal del empleado ")
+            MessageBox.Show("Capturar el codigo postal del empleado ")
         ElseIf correo.Text = "" Then
-            MessageBox.Show("captura el correo del empleado ")
+            MessageBox.Show("Captura el correo del empleado ")
         ElseIf nombreUsuario.Text = "" Then
-            MessageBox.Show("captura el nombre del usuario")
+            MessageBox.Show("Captura el nombre del usuario")
         ElseIf contrasena.Text = "" Then
-            MessageBox.Show("captura la contraseña del usuario")
+            MessageBox.Show("Captura la contraseña del usuario")
         ElseIf tipoU.Text = "" Then
-            MessageBox.Show("capturar el tipo de usuario ")
+            MessageBox.Show("Capturar el tipo de usuario ")
         End If
 
         Dim empleado As New Empleado
         If empleado.consultaUnEmpleado() = False And cambio = False Then
 
             empleado.insertaEmpleado()
-
 
         Else
 
@@ -74,11 +74,11 @@
             empleado.getSetContrasena = contrasena.Text
             empleado.getSetTipoE = tipoU.Text
 
-
             'Si la carrera se encuentra registrada, se modifica la información
             empleado.actualizaEmpleado() 'ACTUALIZA LA CARRERA
             MsgBox("Registro modificado ...")
         End If
+
         empleado.PoblarDataGridEmpleado(DGVempleados)
         cambio = False
 
@@ -108,7 +108,8 @@
         'Ponemos el cursor en la caja de textos TxtClaveCarrera
         paterno.Focus()
     End Sub
-    Private Sub FrmSocios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    Private Sub FrmEmpleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim empleado As New Empleado
         empleado.PoblarDataGridEmpleado(DGVempleados)
         'cnx.cerrar()
@@ -142,9 +143,6 @@
         nombreUsuario.Text = DGVempleados.Rows(renglon).Cells(18).Value
         contrasena.Text = DGVempleados.Rows(renglon).Cells(19).Value
         tipoU.Text = DGVempleados.Rows(renglon).Cells(20).Value
-
-
-
     End Sub
 
     'Valida que solo se introduzcan números

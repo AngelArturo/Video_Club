@@ -123,7 +123,6 @@ Public Class Pelicula
         End If
     End Function
 
-
     Public Sub insertaPel()
         Dim strSql As String
 
@@ -134,9 +133,6 @@ Public Class Pelicula
         If (FrmAddPelicula.cantidad.Text.Length <> 0) Then
             cant = Integer.Parse(FrmAddPelicula.cantidad.Text)
         End If
-
-
-
 
         If nombrePel <> "" And genero <> "" And cant > 0 And
            clasficacion <> "" And fechaAd <> "" And idDist <> 0 Then
@@ -152,6 +148,7 @@ Public Class Pelicula
             cnx.cerrar()
         End If
     End Sub
+
     Public Function consultaId() As Boolean
         Dim strSQL As String
         Dim xDT As DataTable
@@ -169,6 +166,7 @@ Public Class Pelicula
         End If
 
     End Function
+
     Public Sub actualizaPelicula()
 
         Dim strSql As String
@@ -206,9 +204,7 @@ Public Class Pelicula
         Dim strSQL As String
         Dim xDT As DataTable
 
-
         strSQL = "SELECT * FROM peliculas where nombre = '" & nombrePel & "'"
-
 
         consultaUnaPelicula = False
 
@@ -222,6 +218,7 @@ Public Class Pelicula
             End If
         End If
     End Function
+
     Public Function consultaTodasPel() As Object
         Dim strSQL As String
 
@@ -229,6 +226,18 @@ Public Class Pelicula
         consultaTodasPel = cnx.objetoDataAdapter(strSQL)
 
 
+    End Function
+
+    Public Function buscarPelicula(nombre As String) As DataTable
+        Dim strSQL As String
+
+        Dim datos As DataTable
+
+        strSQL = "SELECT * FROM peliculas WHERE nombre LIKE'%" & FrmPrincipal.Txt_Renta.Text & "%'"
+
+        datos = cnx.objetoDataAdapter(strSQL)
+        cnx.cerrar()
+        Return datos
     End Function
 
     Public Sub poblarComboDis(ByVal objeto As ComboBox)
@@ -243,8 +252,8 @@ Public Class Pelicula
             objeto.Items.Add(Lista.GetValue(0))
         End While
         Lista.Close()
-
     End Sub
+
     Public Sub PoblarDataGridPel(ByVal DGVpeliculas As DataGridView)
         DGVpeliculas.DataSource = consultaTodasPel()
         DGVpeliculas.Refresh()

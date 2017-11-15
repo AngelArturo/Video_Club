@@ -153,7 +153,7 @@ Partial Class FrmAddPelicula
         Me.Btn_Cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Cancelar.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Cancelar.ForeColor = System.Drawing.Color.Black
         Me.Btn_Cancelar.Image = Global.Video_Club.My.Resources.Resources.btnCancelar
         Me.Btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
@@ -174,7 +174,7 @@ Partial Class FrmAddPelicula
         Me.Btn_Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Guardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Guardar.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Guardar.ForeColor = System.Drawing.Color.Black
         Me.Btn_Guardar.Image = Global.Video_Club.My.Resources.Resources.BtnGuardar
         Me.Btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter

@@ -85,4 +85,9 @@
         Txt_Correo.Text = DGVdistri.Rows(renglon).Cells(6).Value
 
     End Sub
+
+    Private Sub RichTxt_Direccion_Click(sender As Object, e As EventArgs) Handles RichTxt_Direccion.Click
+        Text = ""
+    End Sub
+
 End Class

@@ -85,6 +85,7 @@
     <Compile Include="Clases\Globales.vb" />
     <Compile Include="Clases\login.vb" />
     <Compile Include="Clases\Pelicula.vb" />
+    <Compile Include="Clases\Renta.vb" />
     <Compile Include="Clases\Socio.vb" />
     <Compile Include="Forms\FrmAddDistribuidor.Designer.vb">
       <DependentUpon>FrmAddDistribuidor.vb</DependentUpon>
