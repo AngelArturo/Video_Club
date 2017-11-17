@@ -32,6 +32,7 @@ Partial Class FrmPrincipal
         Me.Minimizar = New System.Windows.Forms.Button()
         Me.BtnInicio = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Lbl_Usuario = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.SlidePanel = New System.Windows.Forms.Panel()
         Me.BtnCortedeCaja = New System.Windows.Forms.Button()
@@ -179,6 +180,7 @@ Partial Class FrmPrincipal
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Lbl_Usuario)
         Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.SlidePanel)
         Me.Panel1.Controls.Add(Me.BtnCortedeCaja)
@@ -191,6 +193,18 @@ Partial Class FrmPrincipal
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(275, 750)
         Me.Panel1.TabIndex = 14
+        '
+        'Lbl_Usuario
+        '
+        Me.Lbl_Usuario.AutoSize = True
+        Me.Lbl_Usuario.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_Usuario.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Usuario.ForeColor = System.Drawing.Color.White
+        Me.Lbl_Usuario.Location = New System.Drawing.Point(83, 629)
+        Me.Lbl_Usuario.Name = "Lbl_Usuario"
+        Me.Lbl_Usuario.Size = New System.Drawing.Size(71, 22)
+        Me.Lbl_Usuario.TabIndex = 18
+        Me.Lbl_Usuario.Text = "Label9"
         '
         'PictureBox2
         '
@@ -750,7 +764,7 @@ Partial Class FrmPrincipal
         '
         Me.Txt_NombreSocio.Font = New System.Drawing.Font("Century Gothic", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_NombreSocio.ForeColor = System.Drawing.Color.Black
-        Me.Txt_NombreSocio.Location = New System.Drawing.Point(280, 50)
+        Me.Txt_NombreSocio.Location = New System.Drawing.Point(280, 49)
         Me.Txt_NombreSocio.Name = "Txt_NombreSocio"
         Me.Txt_NombreSocio.ReadOnly = True
         Me.Txt_NombreSocio.Size = New System.Drawing.Size(200, 21)
@@ -802,7 +816,7 @@ Partial Class FrmPrincipal
         '
         Me.Txt_idSocio.Font = New System.Drawing.Font("Century Gothic", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_idSocio.ForeColor = System.Drawing.Color.Black
-        Me.Txt_idSocio.Location = New System.Drawing.Point(280, 20)
+        Me.Txt_idSocio.Location = New System.Drawing.Point(279, 20)
         Me.Txt_idSocio.Name = "Txt_idSocio"
         Me.Txt_idSocio.Size = New System.Drawing.Size(175, 21)
         Me.Txt_idSocio.TabIndex = 2
@@ -1217,6 +1231,7 @@ Partial Class FrmPrincipal
         Me.Name = "FrmPrincipal"
         Me.Text = "FrmPrincipal"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BarraTop.ResumeLayout(False)
         Me.BarraTop.PerformLayout()
@@ -1325,4 +1340,5 @@ Partial Class FrmPrincipal
     Friend WithEvents RB_Catalago As RadioButton
     Friend WithEvents Btn_BusquedaSocio As Button
     Friend WithEvents Btn_Busca As Button
+    Friend WithEvents Lbl_Usuario As Label
 End Class

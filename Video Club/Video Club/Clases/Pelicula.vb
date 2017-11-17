@@ -19,6 +19,7 @@ Public Class Pelicula
         clasficacion = 0
         fechaAd = ""
         idDist = 0
+
     End Sub
 
     Public Sub New(ByVal idP As Integer, ByVal nombr As String, ByVal genero As String, ByVal cant As Integer, ByVal clasif As String, ByVal fecha As String, ByVal idD As Integer)
@@ -164,7 +165,7 @@ Public Class Pelicula
             End If
             consultaId = True
         End If
-
+        cnx.cerrar()
     End Function
 
     Public Sub actualizaPelicula()
@@ -198,6 +199,15 @@ Public Class Pelicula
             MsgBox("Faltan datos del empleado!!", MsgBoxStyle.Critical, "ATENCIÓN!!")
         End If
 
+    End Sub
+
+    Public Sub actualizapelicula2(idPelicula As Integer, cantidad As Integer)
+        Dim strSQL As String
+        strSQL = "UPDATE peliculas set cantidad = " & cantidad & " " &
+                    "WHERE id = " & idPelicula & " "
+
+        cnx.objetoCommand(strSQL)
+        cnx.cerrar()
     End Sub
 
     Public Function consultaUnaPelicula() As Boolean

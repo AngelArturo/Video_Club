@@ -1,8 +1,11 @@
-﻿Public Class FrmPrincipal
+﻿Imports MySql.Data.MySqlClient
+
+Public Class FrmPrincipal
     'Funciones del Form Principal'
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
         Lbl_Fecha.Text = Date.Now.ToLongDateString
+        Lbl_Usuario.Text = empleadonombre
         SlidePanel.Height = BtnInicio.Height
         Panel_Inicio.BringToFront()
         DTP_Catalogo.Value = DateTime.Now.AddDays(5)
@@ -85,10 +88,34 @@
 
     'VERIFICAR SOCIO
     Private Sub Btn_BusquedaSocio_Click(sender As Object, e As EventArgs) Handles Btn_BusquedaSocio.Click
+        Dim adaptador As New MySqlDataAdapter
+        Dim datos As DataSet
+        Dim strSQL As String
+        Dim lista As Byte
+
+        If Txt_idSocio.Text <> "" Then
+            strSQL = "SELECT * FROM socio WHERE id='" & Txt_idSocio.Text & "'"
+            adaptador = New MySqlDataAdapter(strSQL, cnx)
+            datos = New DataSet
+            adaptador.Fill(datos, "socio")
+            lista = datos.Tables("socio").Rows.Count
+        End If
+
+        If lista <> 0 Then
+            Txt_NombreSocio.Text = datos.Tables("socio").Rows(0).Item("nombre")
+            Txt_ApPaternoSocio.Text = datos.Tables("socio").Rows(0).Item("apPaterno")
+            Txt_ApMaternoSocio.Text = datos.Tables("socio").Rows(0).Item("apMaterno")
+        Else
+            Txt_idSocio.Text = ""
+            Txt_NombreSocio.Text = ""
+            Txt_ApPaternoSocio.Text = ""
+            Txt_ApMaternoSocio.Text = ""
+            MsgBox("El idSocio no es válido. ¡Ingresalo Correctamente!")
+        End If
+        cnx.Close()
+
 
     End Sub
-
-
 
 
     'RENTA
@@ -103,22 +130,27 @@
 
     Private Sub BtnRenta_Click(sender As Object, e As EventArgs) Handles BtnRenta.Click
 
-        If RB_Catalago.Checked = False And RB_Estreno.Checked = False Then
-            MessageBox.Show("Ingresa si la pelicula es Estreno o de Catálogo")
-        End If
-        If Txt_Renta.Text = "" Then
-            MessageBox.Show("¿Qué película quieres rentar?")
-        End If
+        For Each filaSeleccionada In DGVrenta.SelectedRows
+            If RB_Catalago.Checked = False And RB_Estreno.Checked = False Then
+                MessageBox.Show("Ingresa si la pelicula es Estreno o de Catálogo")
+                Return
+            End If
+            Dim celdas As DataGridViewCellCollection = filaSeleccionada.cells
+            Dim idPelicula As Integer = celdas(0).Value.ToString
+            Dim cantidad As Integer = celdas(6).Value.ToString
+            Dim rent As New Renta
 
-        Dim renta As New Renta()
-        renta.getSetImpR = RB_Catalago.Checked
-        renta.getSetImpR = RB_Estreno.Checked
-        renta.getSetFeE = Convert.ToDateTime(DTP_Catalogo.Text).ToShortDateString
-        renta.getSetFeE = Convert.ToDateTime(DTP_Estreno.Text).ToShortDateString
 
-        renta.addRenta()
+            rent.getSetImpR = RB_Catalago.Checked
+            rent.getSetImpR = RB_Estreno.Checked
+            rent.getSetFeE = Convert.ToDateTime(DTP_Catalogo.Text).ToShortDateString
+            rent.getSetFeE = Convert.ToDateTime(DTP_Estreno.Text).ToShortDateString
+            rent.addRenta(idPelicula)
 
-        renta.PoblarDataGridRenta(DGVrenta)
+            cantidad = cantidad - 1
+             Dim pel As New Pelicula
+            pel.actualizapelicula2(idPelicula, cantidad)
+        Next
 
         Panel_Renta.Visible = False
 

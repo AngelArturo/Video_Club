@@ -103,43 +103,34 @@ Public Class Renta
     Public Function consultaIdU() As Boolean
         Dim strSQL As String
         Dim xDT As DataTable
+        Dim row As DataRow
+        Dim idE As Integer
 
         strSQL = "SELECT id FROM  empleados " &
-                 "WHERE nombre='" & FrmLogin.TxtNombre.Text & "'"
+                 "WHERE nombreUsuario='" & empleadonombre & "'"
 
         consultaIdU = False
         xDT = cnx.objetoDataAdapter(strSQL)
+
+        MsgBox(xDT.Rows(0)(0).ToString())
+        idE = xDT.Rows(0)(0).ToString()
+        idUsu = idE
+
         If xDT.Rows.Count = 1 Then
             If IsDBNull(xDT.Rows(0)("id")) Then
                 idPel = ""
             End If
             consultaIdU = True
         End If
+
     End Function
 
-    Public Function consultaIdS() As Boolean
-        Dim strSQL As String
-        Dim xDT As DataTable
-
-        strSQL = "SELECT id FROM  socio " &
-                 "WHERE id='" & FrmPrincipal.Txt_idSocio.Text & "'"
-
-        consultaIdS = False
-        xDT = cnx.objetoDataAdapter(strSQL)
-        If xDT.Rows.Count = 1 Then
-            If IsDBNull(xDT.Rows(0)("id")) Then
-                idPel = ""
-            End If
-            consultaIdS = True
-        End If
-    End Function
-
-    Public Sub addRenta()
+    Public Sub addRenta(idPelicula As Integer)
         Dim strSql As String
 
-        consultaIdPel()
-        consultaIdS()
         consultaIdU()
+        idSoc = FrmPrincipal.Txt_idSocio.Text
+
         fechaRen = FrmPrincipal.Lbl_Fecha.Text
 
         If (FrmPrincipal.RB_Estreno.Checked = True) Then
@@ -152,16 +143,16 @@ Public Class Renta
         End If
 
         If impRenta <> 0 And fechaRen <> "" And fechaEnt <> "" And
-            idUsu <> "" And idPel <> "" And idSoc <> "" Then
+            idUsu <> 0 And idPelicula <> 0 And idSoc <> 0 Then
 
             'Realiza inserción de datos
             strSql = "INSERT INTO renta  " &
                                 "VALUES(0,'" & impRenta & "','" & fechaRen & "',
-                              '" & fechaEnt & "','" & idUsu & "','" & idPel & "','" & idSoc & "' );"
+                              '" & fechaEnt & "','" & idUsu & "','" & idPelicula & "','" & idSoc & "' );"
             cnx.objetoCommand(strSql)
             MessageBox.Show("Agregado al carrito!")
-            cnx.cerrar()
         End If
+        cnx.cerrar()
     End Sub
 
     Public Function consultaTodasPel() As Object
@@ -169,6 +160,7 @@ Public Class Renta
 
         strSQL = "SELECT * from peliculas order by id asc"
         consultaTodasPel = cnx.objetoDataAdapter(strSQL)
+
     End Function
 
     'Poblar el DatagrindView Renta conlas peliculas

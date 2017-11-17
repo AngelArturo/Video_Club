@@ -39,24 +39,24 @@
     End Sub
 
     Private Sub BtnIngresark(sender As Object, e As EventArgs) Handles BtnIngresar.Click
+
         Dim strSQL As String
+        Dim strSQL2 As String
         Dim xCnx As New conexion
         Dim xDT As DataTable
 
         strSQL = "SELECT * FROM empleados WHERE nombreUsuario = '" & TxtNombre.Text & "' && contrasena = '" & TxtContraseña.Text & "';"
         xDT = xCnx.objetoDataAdapter(strSQL)
         If xDT.Rows.Count = 1 Then
+            empleadonombre = TxtNombre.Text
             TxtNombre.Text = ""
             TxtContraseña.Text = ""
-
             MessageBox.Show("Bienvenido ")
             FrmPrincipal.Show()
             Me.Hide()
         Else
             MessageBox.Show("!Usuario o contraseña incorrecto!")
         End If
-        cnx.Close()
+        xCnx.cerrar()
     End Sub
-
-
 End Class
