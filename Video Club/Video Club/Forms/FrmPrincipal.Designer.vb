@@ -23,6 +23,11 @@ Partial Class FrmPrincipal
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -43,6 +48,41 @@ Partial Class FrmPrincipal
         Me.Lbl_Fecha = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel_Inicio = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Txt_Pago = New System.Windows.Forms.TextBox()
+        Me.Lbl_Cambio2 = New System.Windows.Forms.Label()
+        Me.Lbl_Cambio = New System.Windows.Forms.Label()
+        Me.Lbl_Total2 = New System.Windows.Forms.Label()
+        Me.Lbl_Pago = New System.Windows.Forms.Label()
+        Me.Lbl_Total = New System.Windows.Forms.Label()
+        Me.LV_Importe = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Motivo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Producto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Importe = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.DGV_RentasSocio = New System.Windows.Forms.DataGridView()
+        Me.Btn_Devolver = New System.Windows.Forms.Button()
+        Me.Btn_BusquedaSocio = New System.Windows.Forms.Button()
+        Me.RB_NoVigente = New System.Windows.Forms.RadioButton()
+        Me.RB_Vigente = New System.Windows.Forms.RadioButton()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Txt_ApMaternoSocio = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Txt_NombreSocio = New System.Windows.Forms.TextBox()
+        Me.Txt_ApPaternoSocio = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Txt_idSocio = New System.Windows.Forms.TextBox()
+        Me.LblNombre = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Btn_Pagar = New System.Windows.Forms.Button()
+        Me.Btn_Devoluciones = New System.Windows.Forms.Button()
+        Me.Btn_Quitar = New System.Windows.Forms.Button()
+        Me.Btn_Venta = New System.Windows.Forms.Button()
+        Me.Btn_Renta = New System.Windows.Forms.Button()
+        Me.Btn_Socio = New System.Windows.Forms.Button()
         Me.Panel_Renta = New System.Windows.Forms.Panel()
         Me.Btn_Busca = New System.Windows.Forms.Button()
         Me.Btn_Cancelar = New System.Windows.Forms.Button()
@@ -64,29 +104,6 @@ Partial Class FrmPrincipal
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.DGVrenta = New System.Windows.Forms.DataGridView()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Btn_BusquedaSocio = New System.Windows.Forms.Button()
-        Me.DGV_Socio = New System.Windows.Forms.DataGridView()
-        Me.RB_NoVigente = New System.Windows.Forms.RadioButton()
-        Me.RB_Vigente = New System.Windows.Forms.RadioButton()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Txt_ApMaternoSocio = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Txt_NombreSocio = New System.Windows.Forms.TextBox()
-        Me.Txt_ApPaternoSocio = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Txt_idSocio = New System.Windows.Forms.TextBox()
-        Me.LblNombre = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Btn_Pagar = New System.Windows.Forms.Button()
-        Me.Btn_Devoluciones = New System.Windows.Forms.Button()
-        Me.DGV_Importe = New System.Windows.Forms.DataGridView()
-        Me.Btn_Venta = New System.Windows.Forms.Button()
-        Me.Btn_Renta = New System.Windows.Forms.Button()
-        Me.Btn_Socio = New System.Windows.Forms.Button()
         Me.Panel_Peliculas = New System.Windows.Forms.Panel()
         Me.Btn_Buscar = New System.Windows.Forms.Button()
         Me.Txt_BuscarDistribuidor = New System.Windows.Forms.TextBox()
@@ -112,14 +129,13 @@ Partial Class FrmPrincipal
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BarraTop.SuspendLayout()
         Me.Panel_Inicio.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        CType(Me.DGV_RentasSocio, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_Renta.SuspendLayout()
         Me.GB_Fechaentrega.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.DGVrenta, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
-        CType(Me.DGV_Socio, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGV_Importe, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_Peliculas.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_Distribuidor.SuspendLayout()
@@ -327,10 +343,18 @@ Partial Class FrmPrincipal
         'Panel_Inicio
         '
         Me.Panel_Inicio.Controls.Add(Me.Panel_Renta)
+        Me.Panel_Inicio.Controls.Add(Me.Button4)
+        Me.Panel_Inicio.Controls.Add(Me.Txt_Pago)
+        Me.Panel_Inicio.Controls.Add(Me.Lbl_Cambio2)
+        Me.Panel_Inicio.Controls.Add(Me.Lbl_Cambio)
+        Me.Panel_Inicio.Controls.Add(Me.Lbl_Total2)
+        Me.Panel_Inicio.Controls.Add(Me.Lbl_Pago)
+        Me.Panel_Inicio.Controls.Add(Me.Lbl_Total)
+        Me.Panel_Inicio.Controls.Add(Me.LV_Importe)
         Me.Panel_Inicio.Controls.Add(Me.Panel2)
         Me.Panel_Inicio.Controls.Add(Me.Btn_Pagar)
         Me.Panel_Inicio.Controls.Add(Me.Btn_Devoluciones)
-        Me.Panel_Inicio.Controls.Add(Me.DGV_Importe)
+        Me.Panel_Inicio.Controls.Add(Me.Btn_Quitar)
         Me.Panel_Inicio.Controls.Add(Me.Btn_Venta)
         Me.Panel_Inicio.Controls.Add(Me.Btn_Renta)
         Me.Panel_Inicio.Controls.Add(Me.Btn_Socio)
@@ -338,6 +362,493 @@ Partial Class FrmPrincipal
         Me.Panel_Inicio.Name = "Panel_Inicio"
         Me.Panel_Inicio.Size = New System.Drawing.Size(1067, 725)
         Me.Panel_Inicio.TabIndex = 16
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button4.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Fineliner Script", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.Black
+        Me.Button4.Image = Global.Video_Club.My.Resources.Resources.Btn_limpiar
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button4.Location = New System.Drawing.Point(740, 375)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(50, 50)
+        Me.Button4.TabIndex = 70
+        Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Txt_Pago
+        '
+        Me.Txt_Pago.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_Pago.ForeColor = System.Drawing.Color.Black
+        Me.Txt_Pago.Location = New System.Drawing.Point(935, 393)
+        Me.Txt_Pago.Name = "Txt_Pago"
+        Me.Txt_Pago.Size = New System.Drawing.Size(90, 27)
+        Me.Txt_Pago.TabIndex = 69
+        Me.Txt_Pago.Visible = False
+        '
+        'Lbl_Cambio2
+        '
+        Me.Lbl_Cambio2.AutoSize = True
+        Me.Lbl_Cambio2.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_Cambio2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Cambio2.ForeColor = System.Drawing.Color.Black
+        Me.Lbl_Cambio2.Location = New System.Drawing.Point(948, 420)
+        Me.Lbl_Cambio2.Name = "Lbl_Cambio2"
+        Me.Lbl_Cambio2.Size = New System.Drawing.Size(77, 21)
+        Me.Lbl_Cambio2.TabIndex = 33
+        Me.Lbl_Cambio2.Text = "Cambio:"
+        Me.Lbl_Cambio2.Visible = False
+        '
+        'Lbl_Cambio
+        '
+        Me.Lbl_Cambio.AutoSize = True
+        Me.Lbl_Cambio.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_Cambio.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Cambio.ForeColor = System.Drawing.Color.Black
+        Me.Lbl_Cambio.Location = New System.Drawing.Point(832, 420)
+        Me.Lbl_Cambio.Name = "Lbl_Cambio"
+        Me.Lbl_Cambio.Size = New System.Drawing.Size(98, 19)
+        Me.Lbl_Cambio.TabIndex = 32
+        Me.Lbl_Cambio.Text = "Cambio:   $"
+        '
+        'Lbl_Total2
+        '
+        Me.Lbl_Total2.AutoSize = True
+        Me.Lbl_Total2.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_Total2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Total2.ForeColor = System.Drawing.Color.Black
+        Me.Lbl_Total2.Location = New System.Drawing.Point(961, 370)
+        Me.Lbl_Total2.Name = "Lbl_Total2"
+        Me.Lbl_Total2.Size = New System.Drawing.Size(64, 21)
+        Me.Lbl_Total2.TabIndex = 30
+        Me.Lbl_Total2.Text = "TOTAL:"
+        Me.Lbl_Total2.Visible = False
+        '
+        'Lbl_Pago
+        '
+        Me.Lbl_Pago.AutoSize = True
+        Me.Lbl_Pago.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_Pago.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Pago.ForeColor = System.Drawing.Color.Black
+        Me.Lbl_Pago.Location = New System.Drawing.Point(855, 395)
+        Me.Lbl_Pago.Name = "Lbl_Pago"
+        Me.Lbl_Pago.Size = New System.Drawing.Size(75, 19)
+        Me.Lbl_Pago.TabIndex = 29
+        Me.Lbl_Pago.Text = "Pago:   $"
+        '
+        'Lbl_Total
+        '
+        Me.Lbl_Total.AutoSize = True
+        Me.Lbl_Total.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_Total.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Total.ForeColor = System.Drawing.Color.Black
+        Me.Lbl_Total.Location = New System.Drawing.Point(850, 370)
+        Me.Lbl_Total.Name = "Lbl_Total"
+        Me.Lbl_Total.Size = New System.Drawing.Size(80, 19)
+        Me.Lbl_Total.TabIndex = 28
+        Me.Lbl_Total.Text = "TOTAL:   $"
+        '
+        'LV_Importe
+        '
+        Me.LV_Importe.BackColor = System.Drawing.Color.White
+        Me.LV_Importe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LV_Importe.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.Motivo, Me.Producto, Me.Importe})
+        Me.LV_Importe.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LV_Importe.ForeColor = System.Drawing.Color.Black
+        Me.LV_Importe.FullRowSelect = True
+        Me.LV_Importe.GridLines = True
+        Me.LV_Importe.Location = New System.Drawing.Point(585, 40)
+        Me.LV_Importe.Name = "LV_Importe"
+        Me.LV_Importe.Size = New System.Drawing.Size(450, 320)
+        Me.LV_Importe.TabIndex = 27
+        Me.LV_Importe.UseCompatibleStateImageBehavior = False
+        Me.LV_Importe.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.DisplayIndex = 3
+        Me.ColumnHeader1.Text = ""
+        Me.ColumnHeader1.Width = 0
+        '
+        'Motivo
+        '
+        Me.Motivo.DisplayIndex = 0
+        Me.Motivo.Text = "Motivo"
+        Me.Motivo.Width = 100
+        '
+        'Producto
+        '
+        Me.Producto.DisplayIndex = 1
+        Me.Producto.Text = "Producto"
+        Me.Producto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Producto.Width = 250
+        '
+        'Importe
+        '
+        Me.Importe.DisplayIndex = 2
+        Me.Importe.Text = "Importe"
+        Me.Importe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Importe.Width = 100
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.DGV_RentasSocio)
+        Me.Panel2.Controls.Add(Me.Btn_Devolver)
+        Me.Panel2.Controls.Add(Me.Btn_BusquedaSocio)
+        Me.Panel2.Controls.Add(Me.RB_NoVigente)
+        Me.Panel2.Controls.Add(Me.RB_Vigente)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.Txt_ApMaternoSocio)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Txt_NombreSocio)
+        Me.Panel2.Controls.Add(Me.Txt_ApPaternoSocio)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.Txt_idSocio)
+        Me.Panel2.Controls.Add(Me.LblNombre)
+        Me.Panel2.Controls.Add(Me.PictureBox1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 545)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1067, 180)
+        Me.Panel2.TabIndex = 25
+        '
+        'DGV_RentasSocio
+        '
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        Me.DGV_RentasSocio.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
+        Me.DGV_RentasSocio.BackgroundColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_RentasSocio.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.DGV_RentasSocio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Transparent
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_RentasSocio.DefaultCellStyle = DataGridViewCellStyle8
+        Me.DGV_RentasSocio.GridColor = System.Drawing.Color.Black
+        Me.DGV_RentasSocio.Location = New System.Drawing.Point(530, 18)
+        Me.DGV_RentasSocio.MultiSelect = False
+        Me.DGV_RentasSocio.Name = "DGV_RentasSocio"
+        Me.DGV_RentasSocio.ReadOnly = True
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_RentasSocio.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        Me.DGV_RentasSocio.RowHeadersVisible = False
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black
+        Me.DGV_RentasSocio.RowsDefaultCellStyle = DataGridViewCellStyle10
+        Me.DGV_RentasSocio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGV_RentasSocio.Size = New System.Drawing.Size(300, 110)
+        Me.DGV_RentasSocio.TabIndex = 69
+        '
+        'Btn_Devolver
+        '
+        Me.Btn_Devolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Devolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Devolver.FlatAppearance.BorderSize = 0
+        Me.Btn_Devolver.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Devolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Devolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Devolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Devolver.Font = New System.Drawing.Font("Fineliner Script", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Devolver.ForeColor = System.Drawing.Color.Black
+        Me.Btn_Devolver.Image = Global.Video_Club.My.Resources.Resources.BtnDevolver
+        Me.Btn_Devolver.Location = New System.Drawing.Point(707, 136)
+        Me.Btn_Devolver.Name = "Btn_Devolver"
+        Me.Btn_Devolver.Size = New System.Drawing.Size(100, 30)
+        Me.Btn_Devolver.TabIndex = 68
+        Me.Btn_Devolver.Text = "Devolver"
+        Me.Btn_Devolver.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_Devolver.UseVisualStyleBackColor = False
+        Me.Btn_Devolver.Visible = False
+        '
+        'Btn_BusquedaSocio
+        '
+        Me.Btn_BusquedaSocio.BackColor = System.Drawing.SystemColors.GrayText
+        Me.Btn_BusquedaSocio.FlatAppearance.BorderSize = 0
+        Me.Btn_BusquedaSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_BusquedaSocio.Image = Global.Video_Club.My.Resources.Resources.BtnBuscar
+        Me.Btn_BusquedaSocio.Location = New System.Drawing.Point(455, 18)
+        Me.Btn_BusquedaSocio.Name = "Btn_BusquedaSocio"
+        Me.Btn_BusquedaSocio.Size = New System.Drawing.Size(25, 25)
+        Me.Btn_BusquedaSocio.TabIndex = 29
+        Me.Btn_BusquedaSocio.UseVisualStyleBackColor = False
+        '
+        'RB_NoVigente
+        '
+        Me.RB_NoVigente.AutoSize = True
+        Me.RB_NoVigente.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RB_NoVigente.ForeColor = System.Drawing.Color.Black
+        Me.RB_NoVigente.Location = New System.Drawing.Point(321, 140)
+        Me.RB_NoVigente.Name = "RB_NoVigente"
+        Me.RB_NoVigente.Size = New System.Drawing.Size(47, 21)
+        Me.RB_NoVigente.TabIndex = 14
+        Me.RB_NoVigente.TabStop = True
+        Me.RB_NoVigente.Text = "NO"
+        Me.RB_NoVigente.UseVisualStyleBackColor = True
+        '
+        'RB_Vigente
+        '
+        Me.RB_Vigente.AutoSize = True
+        Me.RB_Vigente.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RB_Vigente.ForeColor = System.Drawing.Color.Black
+        Me.RB_Vigente.Location = New System.Drawing.Point(280, 140)
+        Me.RB_Vigente.Name = "RB_Vigente"
+        Me.RB_Vigente.Size = New System.Drawing.Size(35, 21)
+        Me.RB_Vigente.TabIndex = 13
+        Me.RB_Vigente.TabStop = True
+        Me.RB_Vigente.Text = "SI"
+        Me.RB_Vigente.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(233, 20)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(34, 22)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "ID:"
+        '
+        'Txt_ApMaternoSocio
+        '
+        Me.Txt_ApMaternoSocio.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_ApMaternoSocio.ForeColor = System.Drawing.Color.Black
+        Me.Txt_ApMaternoSocio.Location = New System.Drawing.Point(280, 110)
+        Me.Txt_ApMaternoSocio.Name = "Txt_ApMaternoSocio"
+        Me.Txt_ApMaternoSocio.ReadOnly = True
+        Me.Txt_ApMaternoSocio.Size = New System.Drawing.Size(200, 24)
+        Me.Txt_ApMaternoSocio.TabIndex = 9
+        Me.Txt_ApMaternoSocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(178, 140)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(89, 22)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Vigente:"
+        '
+        'Txt_NombreSocio
+        '
+        Me.Txt_NombreSocio.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_NombreSocio.ForeColor = System.Drawing.Color.Black
+        Me.Txt_NombreSocio.Location = New System.Drawing.Point(280, 49)
+        Me.Txt_NombreSocio.Name = "Txt_NombreSocio"
+        Me.Txt_NombreSocio.ReadOnly = True
+        Me.Txt_NombreSocio.Size = New System.Drawing.Size(200, 24)
+        Me.Txt_NombreSocio.TabIndex = 7
+        Me.Txt_NombreSocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Txt_ApPaternoSocio
+        '
+        Me.Txt_ApPaternoSocio.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_ApPaternoSocio.Location = New System.Drawing.Point(280, 80)
+        Me.Txt_ApPaternoSocio.Name = "Txt_ApPaternoSocio"
+        Me.Txt_ApPaternoSocio.ReadOnly = True
+        Me.Txt_ApPaternoSocio.Size = New System.Drawing.Size(200, 23)
+        Me.Txt_ApPaternoSocio.TabIndex = 6
+        Me.Txt_ApPaternoSocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(94, 110)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(173, 22)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Apellido Materno:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(100, 80)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(167, 22)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Apellido Paterno:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(322, 59)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(0, 22)
+        Me.Label1.TabIndex = 3
+        '
+        'Txt_idSocio
+        '
+        Me.Txt_idSocio.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_idSocio.ForeColor = System.Drawing.Color.Black
+        Me.Txt_idSocio.Location = New System.Drawing.Point(279, 20)
+        Me.Txt_idSocio.Name = "Txt_idSocio"
+        Me.Txt_idSocio.Size = New System.Drawing.Size(175, 24)
+        Me.Txt_idSocio.TabIndex = 2
+        '
+        'LblNombre
+        '
+        Me.LblNombre.AutoSize = True
+        Me.LblNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNombre.ForeColor = System.Drawing.Color.Black
+        Me.LblNombre.Location = New System.Drawing.Point(157, 50)
+        Me.LblNombre.Name = "LblNombre"
+        Me.LblNombre.Size = New System.Drawing.Size(110, 22)
+        Me.LblNombre.TabIndex = 1
+        Me.LblNombre.Text = "Nombre(s):"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Image = Global.Video_Club.My.Resources.Resources.ImagenSocio
+        Me.PictureBox1.Location = New System.Drawing.Point(875, 10)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(160, 160)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'Btn_Pagar
+        '
+        Me.Btn_Pagar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Pagar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Pagar.FlatAppearance.BorderSize = 0
+        Me.Btn_Pagar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Pagar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Pagar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Pagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Pagar.Image = Global.Video_Club.My.Resources.Resources.BtnPagar
+        Me.Btn_Pagar.Location = New System.Drawing.Point(326, 237)
+        Me.Btn_Pagar.Name = "Btn_Pagar"
+        Me.Btn_Pagar.Size = New System.Drawing.Size(125, 125)
+        Me.Btn_Pagar.TabIndex = 24
+        Me.Btn_Pagar.UseVisualStyleBackColor = False
+        '
+        'Btn_Devoluciones
+        '
+        Me.Btn_Devoluciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Devoluciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Devoluciones.FlatAppearance.BorderSize = 0
+        Me.Btn_Devoluciones.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Devoluciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Devoluciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Devoluciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Devoluciones.Image = Global.Video_Club.My.Resources.Resources.BtnDevoluciones
+        Me.Btn_Devoluciones.Location = New System.Drawing.Point(171, 237)
+        Me.Btn_Devoluciones.Name = "Btn_Devoluciones"
+        Me.Btn_Devoluciones.Size = New System.Drawing.Size(125, 125)
+        Me.Btn_Devoluciones.TabIndex = 23
+        Me.Btn_Devoluciones.UseVisualStyleBackColor = False
+        '
+        'Btn_Quitar
+        '
+        Me.Btn_Quitar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Quitar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Quitar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Btn_Quitar.FlatAppearance.BorderSize = 0
+        Me.Btn_Quitar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Quitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Quitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Quitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Quitar.Font = New System.Drawing.Font("Fineliner Script", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Quitar.ForeColor = System.Drawing.Color.Black
+        Me.Btn_Quitar.Image = Global.Video_Club.My.Resources.Resources.btnCancelar
+        Me.Btn_Quitar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Btn_Quitar.Location = New System.Drawing.Point(600, 375)
+        Me.Btn_Quitar.Name = "Btn_Quitar"
+        Me.Btn_Quitar.Size = New System.Drawing.Size(125, 50)
+        Me.Btn_Quitar.TabIndex = 68
+        Me.Btn_Quitar.Text = "Quitar"
+        Me.Btn_Quitar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_Quitar.UseVisualStyleBackColor = False
+        '
+        'Btn_Venta
+        '
+        Me.Btn_Venta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Venta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Venta.FlatAppearance.BorderSize = 0
+        Me.Btn_Venta.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Venta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Venta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Venta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Venta.Image = Global.Video_Club.My.Resources.Resources.BtnVenta
+        Me.Btn_Venta.Location = New System.Drawing.Point(400, 87)
+        Me.Btn_Venta.Name = "Btn_Venta"
+        Me.Btn_Venta.Size = New System.Drawing.Size(125, 125)
+        Me.Btn_Venta.TabIndex = 21
+        Me.Btn_Venta.UseVisualStyleBackColor = False
+        '
+        'Btn_Renta
+        '
+        Me.Btn_Renta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Renta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Renta.FlatAppearance.BorderSize = 0
+        Me.Btn_Renta.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Renta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Renta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Renta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Renta.Image = Global.Video_Club.My.Resources.Resources.BtnRenta
+        Me.Btn_Renta.Location = New System.Drawing.Point(250, 87)
+        Me.Btn_Renta.Name = "Btn_Renta"
+        Me.Btn_Renta.Size = New System.Drawing.Size(125, 125)
+        Me.Btn_Renta.TabIndex = 20
+        Me.Btn_Renta.UseVisualStyleBackColor = False
+        '
+        'Btn_Socio
+        '
+        Me.Btn_Socio.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Socio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Socio.FlatAppearance.BorderSize = 0
+        Me.Btn_Socio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Socio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Socio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Socio.Image = Global.Video_Club.My.Resources.Resources.BtnSocio
+        Me.Btn_Socio.Location = New System.Drawing.Point(100, 87)
+        Me.Btn_Socio.Name = "Btn_Socio"
+        Me.Btn_Socio.Size = New System.Drawing.Size(125, 125)
+        Me.Btn_Socio.TabIndex = 19
+        Me.Btn_Socio.Text = " "
+        Me.Btn_Socio.UseVisualStyleBackColor = False
         '
         'Panel_Renta
         '
@@ -646,292 +1157,6 @@ Partial Class FrmPrincipal
         Me.DGVrenta.Size = New System.Drawing.Size(530, 270)
         Me.DGVrenta.TabIndex = 23
         '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.Btn_BusquedaSocio)
-        Me.Panel2.Controls.Add(Me.DGV_Socio)
-        Me.Panel2.Controls.Add(Me.RB_NoVigente)
-        Me.Panel2.Controls.Add(Me.RB_Vigente)
-        Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.Txt_ApMaternoSocio)
-        Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.Txt_NombreSocio)
-        Me.Panel2.Controls.Add(Me.Txt_ApPaternoSocio)
-        Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.Txt_idSocio)
-        Me.Panel2.Controls.Add(Me.LblNombre)
-        Me.Panel2.Controls.Add(Me.PictureBox1)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 545)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1067, 180)
-        Me.Panel2.TabIndex = 25
-        '
-        'Btn_BusquedaSocio
-        '
-        Me.Btn_BusquedaSocio.BackColor = System.Drawing.SystemColors.GrayText
-        Me.Btn_BusquedaSocio.FlatAppearance.BorderSize = 0
-        Me.Btn_BusquedaSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_BusquedaSocio.Image = Global.Video_Club.My.Resources.Resources.BtnBuscar
-        Me.Btn_BusquedaSocio.Location = New System.Drawing.Point(455, 18)
-        Me.Btn_BusquedaSocio.Name = "Btn_BusquedaSocio"
-        Me.Btn_BusquedaSocio.Size = New System.Drawing.Size(25, 25)
-        Me.Btn_BusquedaSocio.TabIndex = 29
-        Me.Btn_BusquedaSocio.UseVisualStyleBackColor = False
-        '
-        'DGV_Socio
-        '
-        Me.DGV_Socio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV_Socio.Location = New System.Drawing.Point(530, 50)
-        Me.DGV_Socio.Name = "DGV_Socio"
-        Me.DGV_Socio.Size = New System.Drawing.Size(300, 100)
-        Me.DGV_Socio.TabIndex = 15
-        '
-        'RB_NoVigente
-        '
-        Me.RB_NoVigente.AutoSize = True
-        Me.RB_NoVigente.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RB_NoVigente.ForeColor = System.Drawing.Color.Black
-        Me.RB_NoVigente.Location = New System.Drawing.Point(321, 140)
-        Me.RB_NoVigente.Name = "RB_NoVigente"
-        Me.RB_NoVigente.Size = New System.Drawing.Size(47, 21)
-        Me.RB_NoVigente.TabIndex = 14
-        Me.RB_NoVigente.TabStop = True
-        Me.RB_NoVigente.Text = "NO"
-        Me.RB_NoVigente.UseVisualStyleBackColor = True
-        '
-        'RB_Vigente
-        '
-        Me.RB_Vigente.AutoSize = True
-        Me.RB_Vigente.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RB_Vigente.ForeColor = System.Drawing.Color.Black
-        Me.RB_Vigente.Location = New System.Drawing.Point(280, 140)
-        Me.RB_Vigente.Name = "RB_Vigente"
-        Me.RB_Vigente.Size = New System.Drawing.Size(35, 21)
-        Me.RB_Vigente.TabIndex = 13
-        Me.RB_Vigente.TabStop = True
-        Me.RB_Vigente.Text = "SI"
-        Me.RB_Vigente.UseVisualStyleBackColor = True
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(233, 20)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(34, 22)
-        Me.Label6.TabIndex = 12
-        Me.Label6.Text = "ID:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(530, 20)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(113, 22)
-        Me.Label5.TabIndex = 10
-        Me.Label5.Text = "Adeudo(s):"
-        '
-        'Txt_ApMaternoSocio
-        '
-        Me.Txt_ApMaternoSocio.Font = New System.Drawing.Font("Century Gothic", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_ApMaternoSocio.ForeColor = System.Drawing.Color.Black
-        Me.Txt_ApMaternoSocio.Location = New System.Drawing.Point(280, 110)
-        Me.Txt_ApMaternoSocio.Name = "Txt_ApMaternoSocio"
-        Me.Txt_ApMaternoSocio.ReadOnly = True
-        Me.Txt_ApMaternoSocio.Size = New System.Drawing.Size(200, 21)
-        Me.Txt_ApMaternoSocio.TabIndex = 9
-        Me.Txt_ApMaternoSocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(178, 140)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(89, 22)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Vigente:"
-        '
-        'Txt_NombreSocio
-        '
-        Me.Txt_NombreSocio.Font = New System.Drawing.Font("Century Gothic", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_NombreSocio.ForeColor = System.Drawing.Color.Black
-        Me.Txt_NombreSocio.Location = New System.Drawing.Point(280, 49)
-        Me.Txt_NombreSocio.Name = "Txt_NombreSocio"
-        Me.Txt_NombreSocio.ReadOnly = True
-        Me.Txt_NombreSocio.Size = New System.Drawing.Size(200, 21)
-        Me.Txt_NombreSocio.TabIndex = 7
-        Me.Txt_NombreSocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Txt_ApPaternoSocio
-        '
-        Me.Txt_ApPaternoSocio.Font = New System.Drawing.Font("Century", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_ApPaternoSocio.Location = New System.Drawing.Point(280, 80)
-        Me.Txt_ApPaternoSocio.Name = "Txt_ApPaternoSocio"
-        Me.Txt_ApPaternoSocio.ReadOnly = True
-        Me.Txt_ApPaternoSocio.Size = New System.Drawing.Size(200, 20)
-        Me.Txt_ApPaternoSocio.TabIndex = 6
-        Me.Txt_ApPaternoSocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(94, 110)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(173, 22)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Apellido Materno:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(100, 80)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(167, 22)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Apellido Paterno:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(322, 59)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 22)
-        Me.Label1.TabIndex = 3
-        '
-        'Txt_idSocio
-        '
-        Me.Txt_idSocio.Font = New System.Drawing.Font("Century Gothic", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_idSocio.ForeColor = System.Drawing.Color.Black
-        Me.Txt_idSocio.Location = New System.Drawing.Point(279, 20)
-        Me.Txt_idSocio.Name = "Txt_idSocio"
-        Me.Txt_idSocio.Size = New System.Drawing.Size(175, 21)
-        Me.Txt_idSocio.TabIndex = 2
-        Me.Txt_idSocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'LblNombre
-        '
-        Me.LblNombre.AutoSize = True
-        Me.LblNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNombre.ForeColor = System.Drawing.Color.Black
-        Me.LblNombre.Location = New System.Drawing.Point(157, 50)
-        Me.LblNombre.Name = "LblNombre"
-        Me.LblNombre.Size = New System.Drawing.Size(110, 22)
-        Me.LblNombre.TabIndex = 1
-        Me.LblNombre.Text = "Nombre(s):"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Image = Global.Video_Club.My.Resources.Resources.ImagenSocio
-        Me.PictureBox1.Location = New System.Drawing.Point(875, 10)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(160, 160)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'Btn_Pagar
-        '
-        Me.Btn_Pagar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Btn_Pagar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Pagar.FlatAppearance.BorderSize = 0
-        Me.Btn_Pagar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Pagar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Pagar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Pagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Pagar.Image = Global.Video_Club.My.Resources.Resources.BtnPagar
-        Me.Btn_Pagar.Location = New System.Drawing.Point(326, 237)
-        Me.Btn_Pagar.Name = "Btn_Pagar"
-        Me.Btn_Pagar.Size = New System.Drawing.Size(125, 125)
-        Me.Btn_Pagar.TabIndex = 24
-        Me.Btn_Pagar.UseVisualStyleBackColor = False
-        '
-        'Btn_Devoluciones
-        '
-        Me.Btn_Devoluciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Btn_Devoluciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Devoluciones.FlatAppearance.BorderSize = 0
-        Me.Btn_Devoluciones.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Devoluciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Devoluciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Devoluciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Devoluciones.Image = Global.Video_Club.My.Resources.Resources.BtnDevoluciones
-        Me.Btn_Devoluciones.Location = New System.Drawing.Point(171, 237)
-        Me.Btn_Devoluciones.Name = "Btn_Devoluciones"
-        Me.Btn_Devoluciones.Size = New System.Drawing.Size(125, 125)
-        Me.Btn_Devoluciones.TabIndex = 23
-        Me.Btn_Devoluciones.UseVisualStyleBackColor = False
-        '
-        'DGV_Importe
-        '
-        Me.DGV_Importe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV_Importe.Location = New System.Drawing.Point(586, 37)
-        Me.DGV_Importe.Name = "DGV_Importe"
-        Me.DGV_Importe.Size = New System.Drawing.Size(450, 400)
-        Me.DGV_Importe.TabIndex = 22
-        '
-        'Btn_Venta
-        '
-        Me.Btn_Venta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Btn_Venta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Venta.FlatAppearance.BorderSize = 0
-        Me.Btn_Venta.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Venta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Venta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Venta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Venta.Image = Global.Video_Club.My.Resources.Resources.BtnVenta
-        Me.Btn_Venta.Location = New System.Drawing.Point(400, 87)
-        Me.Btn_Venta.Name = "Btn_Venta"
-        Me.Btn_Venta.Size = New System.Drawing.Size(125, 125)
-        Me.Btn_Venta.TabIndex = 21
-        Me.Btn_Venta.UseVisualStyleBackColor = False
-        '
-        'Btn_Renta
-        '
-        Me.Btn_Renta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Btn_Renta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Renta.FlatAppearance.BorderSize = 0
-        Me.Btn_Renta.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Renta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Renta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Renta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Renta.Image = Global.Video_Club.My.Resources.Resources.BtnRenta
-        Me.Btn_Renta.Location = New System.Drawing.Point(250, 87)
-        Me.Btn_Renta.Name = "Btn_Renta"
-        Me.Btn_Renta.Size = New System.Drawing.Size(125, 125)
-        Me.Btn_Renta.TabIndex = 20
-        Me.Btn_Renta.UseVisualStyleBackColor = False
-        '
-        'Btn_Socio
-        '
-        Me.Btn_Socio.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Btn_Socio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Socio.FlatAppearance.BorderSize = 0
-        Me.Btn_Socio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Socio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Btn_Socio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Socio.Image = Global.Video_Club.My.Resources.Resources.BtnSocio
-        Me.Btn_Socio.Location = New System.Drawing.Point(100, 87)
-        Me.Btn_Socio.Name = "Btn_Socio"
-        Me.Btn_Socio.Size = New System.Drawing.Size(125, 125)
-        Me.Btn_Socio.TabIndex = 19
-        Me.Btn_Socio.Text = " "
-        Me.Btn_Socio.UseVisualStyleBackColor = False
-        '
         'Panel_Peliculas
         '
         Me.Panel_Peliculas.Controls.Add(Me.Btn_Buscar)
@@ -1236,6 +1461,11 @@ Partial Class FrmPrincipal
         Me.BarraTop.ResumeLayout(False)
         Me.BarraTop.PerformLayout()
         Me.Panel_Inicio.ResumeLayout(False)
+        Me.Panel_Inicio.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.DGV_RentasSocio, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_Renta.ResumeLayout(False)
         Me.Panel_Renta.PerformLayout()
         Me.GB_Fechaentrega.ResumeLayout(False)
@@ -1243,11 +1473,6 @@ Partial Class FrmPrincipal
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.DGVrenta, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        CType(Me.DGV_Socio, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGV_Importe, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_Peliculas.ResumeLayout(False)
         Me.Panel_Peliculas.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1275,7 +1500,6 @@ Partial Class FrmPrincipal
     Friend WithEvents Panel_Inicio As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Txt_ApMaternoSocio As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Txt_NombreSocio As TextBox
@@ -1288,7 +1512,6 @@ Partial Class FrmPrincipal
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Btn_Pagar As Button
     Friend WithEvents Btn_Devoluciones As Button
-    Friend WithEvents DGV_Importe As DataGridView
     Friend WithEvents Btn_Venta As Button
     Friend WithEvents Btn_Renta As Button
     Friend WithEvents Btn_Socio As Button
@@ -1316,7 +1539,6 @@ Partial Class FrmPrincipal
     Friend WithEvents Btn_AddEmpleado As Button
     Friend WithEvents DGVempleados As DataGridView
     Friend WithEvents Panel_Renta As Panel
-    Friend WithEvents DGV_Socio As DataGridView
     Friend WithEvents Label8 As Label
     Friend WithEvents Lbl_Fecha As Label
     Friend WithEvents Panel3 As Panel
@@ -1341,4 +1563,19 @@ Partial Class FrmPrincipal
     Friend WithEvents Btn_BusquedaSocio As Button
     Friend WithEvents Btn_Busca As Button
     Friend WithEvents Lbl_Usuario As Label
+    Friend WithEvents Btn_Devolver As Button
+    Friend WithEvents DGV_RentasSocio As DataGridView
+    Friend WithEvents Lbl_Total2 As Label
+    Friend WithEvents Lbl_Pago As Label
+    Friend WithEvents Lbl_Total As Label
+    Friend WithEvents LV_Importe As ListView
+    Friend WithEvents Motivo As ColumnHeader
+    Friend WithEvents Producto As ColumnHeader
+    Friend WithEvents Importe As ColumnHeader
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents Lbl_Cambio2 As Label
+    Friend WithEvents Lbl_Cambio As Label
+    Friend WithEvents Btn_Quitar As Button
+    Friend WithEvents Txt_Pago As TextBox
+    Friend WithEvents Button4 As Button
 End Class

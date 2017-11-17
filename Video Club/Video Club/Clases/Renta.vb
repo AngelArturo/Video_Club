@@ -179,4 +179,32 @@ Public Class Renta
 
     End Sub
 
+    Public Function consultaRentas() As Object
+        Dim strSQL As String
+
+        strSQL = "SELECT id,id_pelicula,fechaEntrega FROM renta WHERE id_socio=" & FrmPrincipal.Txt_idSocio.Text & ""
+        consultaRentas = cnx.objetoDataAdapter(strSQL)
+    End Function
+
+    Public Sub PoblarDataGridSocioRenta(ByVal DGV_RentasSocio As DataGridView)
+        DGV_RentasSocio.DataSource = consultaRentas()
+        DGV_RentasSocio.Refresh()
+        'Establecer ancho de cada columna del DataGridView
+        DGV_RentasSocio.Columns.Item(0).Width = 50 'id
+        DGV_RentasSocio.Columns.Item(1).Width = 0
+        DGV_RentasSocio.Columns.Item(2).Width = 245
+        cnx.cerrar()
+    End Sub
+
+    Public Sub Devolver(idRenta As Integer, idPelicula As Integer)
+        Dim strSQL As String
+        Dim strSQL2 As String
+
+        strSQL = "DELETE FROM renta wHERE id=" & idRenta & ""
+        strSQL2 = "UPDATE peliculas set cantidad=cantidad+1 where id=" & idPelicula & ""
+        cnx.objetoCommand(strSQL2)
+        cnx.objetoCommand(strSQL)
+        cnx.cerrar()
+        MsgBox("¡Pon la pelicula en los estantes!")
+    End Sub
 End Class

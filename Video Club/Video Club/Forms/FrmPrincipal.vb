@@ -86,7 +86,7 @@ Public Class FrmPrincipal
         FrmEmpleado.Show()
     End Sub
 
-    'VERIFICAR SOCIO
+    'VERIFICAR SOCIO Y MOSTRAR LAS RENTAS
     Private Sub Btn_BusquedaSocio_Click(sender As Object, e As EventArgs) Handles Btn_BusquedaSocio.Click
         Dim adaptador As New MySqlDataAdapter
         Dim datos As DataSet
@@ -112,9 +112,10 @@ Public Class FrmPrincipal
             Txt_ApMaternoSocio.Text = ""
             MsgBox("El idSocio no es válido. ¡Ingresalo Correctamente!")
         End If
+        Dim ren As New Renta
+        ren.PoblarDataGridSocioRenta(DGV_RentasSocio)
+        Btn_Devolver.Visible = True
         cnx.Close()
-
-
     End Sub
 
 
@@ -129,7 +130,6 @@ Public Class FrmPrincipal
     End Function
 
     Private Sub BtnRenta_Click(sender As Object, e As EventArgs) Handles BtnRenta.Click
-
         For Each filaSeleccionada In DGVrenta.SelectedRows
             If RB_Catalago.Checked = False And RB_Estreno.Checked = False Then
                 MessageBox.Show("Ingresa si la pelicula es Estreno o de Catálogo")
@@ -148,15 +148,83 @@ Public Class FrmPrincipal
             rent.addRenta(idPelicula)
 
             cantidad = cantidad - 1
-             Dim pel As New Pelicula
+            Dim pel As New Pelicula
             pel.actualizapelicula2(idPelicula, cantidad)
+
+
+            Dim lista As ListViewItem = New ListViewItem()
+            Dim impR As Double
+
+            If (RB_Estreno.Checked = True) Then
+                impR = 50
+            End If
+            If (RB_Catalago.Checked = True) Then
+                impR = 25
+            End If
+            lista.SubItems.Add("Renta")
+            lista.SubItems.Add(celdas(1).Value.ToString)
+            lista.SubItems.Add(impR)
+            LV_Importe.Items.Add(lista)
         Next
 
+        Me.calculaTotal()
         Panel_Renta.Visible = False
-
     End Sub
 
     Private Sub Btn_Busca_Click(sender As Object, e As EventArgs) Handles Btn_Busca.Click
         DGVrenta.DataSource = consultarPeliculaNombre()
+    End Sub
+
+    'DEVOLVER PELICULA RENTADA
+    Private Sub Btn_Devolver_Click(sender As Object, e As EventArgs) Handles Btn_Devolver.Click
+        Dim response As MsgBoxResult
+        response = MsgBox("¿La pelicula ya fue devuelta?", MsgBoxStyle.YesNo, "Devolver")
+
+        If response = MsgBoxResult.Yes Then
+            Dim re As New Renta
+            For Each filaSeleccionada In DGV_RentasSocio.SelectedRows
+                Dim celdas As DataGridViewCellCollection = filaSeleccionada.cells
+                Dim idRenta As Integer = celdas(0).Value.ToString
+                Dim idPelicula As Integer = celdas(1).Value.ToString
+
+                re.Devolver(idRenta, idPelicula)
+            Next
+
+            For Each filaSeleccionada In DGVrenta.SelectedRows
+                Dim celdas As DataGridViewCellCollection = filaSeleccionada.cells
+                Dim idPelicula As Integer = celdas(0).Value.ToString
+                Dim cantidad As Integer = celdas(6).Value.ToString
+                cantidad = cantidad + 1
+            Next
+            DGV_RentasSocio.Refresh()
+        End If
+    End Sub
+
+    'CANCELAR RENTA
+
+    'PAGAR
+    Private Sub calculaTotal()
+        Dim total As Double
+        For i = 0 To LV_Importe.Items.Count - 1
+            total += CDbl(LV_Importe.Items(i).SubItems(3).Text)
+        Next i
+        Lbl_Total2.Text = "$" & total
+        Lbl_Total2.Visible = True
+    End Sub
+
+    Private Sub Btn_Pagar_Click(sender As Object, e As EventArgs) Handles Btn_Pagar.Click
+        Txt_Pago.Visible = True
+    End Sub
+
+    Private Sub Txt_Pago_LostFocus(sender As Object, e As EventArgs) Handles Txt_Pago.LostFocus
+        Dim resta As Integer
+
+        If Not IsNumeric(Txt_Pago.Text) Then
+            MsgBox("!Cantidad Invalida!")
+        Else
+            resta = CInt(Txt_Pago.Text) - CInt(Lbl_Total2.Text)
+            Lbl_Cambio2.Text = StrConv(resta, VbStrConv.ProperCase)
+            Lbl_Cambio2.Visible = True
+        End If
     End Sub
 End Class
