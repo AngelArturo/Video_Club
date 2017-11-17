@@ -26,10 +26,11 @@ Partial Class FrmDevolucionVenta
         Me.Pelicula = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DGVdevo = New System.Windows.Forms.DataGridView()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.estado = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.idD = New System.Windows.Forms.TextBox()
+        Me.Btn_Cancelar = New System.Windows.Forms.Button()
+        Me.Btn_Guardar = New System.Windows.Forms.Button()
         CType(Me.DGVdevo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -67,15 +68,6 @@ Partial Class FrmDevolucionVenta
         Me.DGVdevo.Size = New System.Drawing.Size(487, 130)
         Me.DGVdevo.TabIndex = 4
         '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.Location = New System.Drawing.Point(363, 319)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(82, 24)
-        Me.BtnGuardar.TabIndex = 5
-        Me.BtnGuardar.Text = "Guarar"
-        Me.BtnGuardar.UseVisualStyleBackColor = True
-        '
         'estado
         '
         Me.estado.FormattingEnabled = True
@@ -102,15 +94,59 @@ Partial Class FrmDevolucionVenta
         Me.idD.Size = New System.Drawing.Size(100, 20)
         Me.idD.TabIndex = 8
         '
+        'Btn_Cancelar
+        '
+        Me.Btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Btn_Cancelar.FlatAppearance.BorderSize = 0
+        Me.Btn_Cancelar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Cancelar.ForeColor = System.Drawing.Color.Black
+        Me.Btn_Cancelar.Image = Global.Video_Club.My.Resources.Resources.btnCancelar
+        Me.Btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Btn_Cancelar.Location = New System.Drawing.Point(81, 295)
+        Me.Btn_Cancelar.Name = "Btn_Cancelar"
+        Me.Btn_Cancelar.Size = New System.Drawing.Size(125, 50)
+        Me.Btn_Cancelar.TabIndex = 69
+        Me.Btn_Cancelar.Text = "Cancelar"
+        Me.Btn_Cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_Cancelar.UseVisualStyleBackColor = False
+        '
+        'Btn_Guardar
+        '
+        Me.Btn_Guardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Guardar.FlatAppearance.BorderSize = 0
+        Me.Btn_Guardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Guardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Guardar.ForeColor = System.Drawing.Color.Black
+        Me.Btn_Guardar.Image = Global.Video_Club.My.Resources.Resources.BtnGuardar
+        Me.Btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Btn_Guardar.Location = New System.Drawing.Point(286, 295)
+        Me.Btn_Guardar.Name = "Btn_Guardar"
+        Me.Btn_Guardar.Size = New System.Drawing.Size(125, 50)
+        Me.Btn_Guardar.TabIndex = 68
+        Me.Btn_Guardar.Text = "Guardar"
+        Me.Btn_Guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_Guardar.UseVisualStyleBackColor = False
+        '
         'FrmDevolucionVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(511, 350)
+        Me.ClientSize = New System.Drawing.Size(511, 357)
+        Me.Controls.Add(Me.Btn_Cancelar)
+        Me.Controls.Add(Me.Btn_Guardar)
         Me.Controls.Add(Me.idD)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.estado)
-        Me.Controls.Add(Me.BtnGuardar)
         Me.Controls.Add(Me.DGVdevo)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Pelicula)
@@ -127,8 +163,9 @@ Partial Class FrmDevolucionVenta
     Friend WithEvents Pelicula As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DGVdevo As DataGridView
-    Friend WithEvents BtnGuardar As Button
     Friend WithEvents estado As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents idD As TextBox
+    Friend WithEvents Btn_Cancelar As Button
+    Friend WithEvents Btn_Guardar As Button
 End Class

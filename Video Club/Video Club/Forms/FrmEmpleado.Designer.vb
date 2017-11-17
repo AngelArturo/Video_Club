@@ -31,7 +31,6 @@ Partial Class FrmEmpleado
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Lbl = New System.Windows.Forms.Label()
         Me.correo = New System.Windows.Forms.TextBox()
         Me.codigoP = New System.Windows.Forms.TextBox()
         Me.celular = New System.Windows.Forms.TextBox()
@@ -64,6 +63,8 @@ Partial Class FrmEmpleado
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Lbl_Genero = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Lbl = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.DGVempleados = New System.Windows.Forms.DataGridView()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.BarraTop = New System.Windows.Forms.Panel()
@@ -71,7 +72,6 @@ Partial Class FrmEmpleado
         Me.Button2 = New System.Windows.Forms.Button()
         Me.X = New System.Windows.Forms.Button()
         Me.Minimizar = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Btn_Cancelar = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -189,16 +189,6 @@ Partial Class FrmEmpleado
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Personales"
-        '
-        'Lbl
-        '
-        Me.Lbl.AutoSize = True
-        Me.Lbl.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl.Location = New System.Drawing.Point(257, 240)
-        Me.Lbl.Name = "Lbl"
-        Me.Lbl.Size = New System.Drawing.Size(17, 21)
-        Me.Lbl.TabIndex = 32
-        Me.Lbl.Text = "/"
         '
         'correo
         '
@@ -479,6 +469,26 @@ Partial Class FrmEmpleado
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Clave:"
         '
+        'Lbl
+        '
+        Me.Lbl.AutoSize = True
+        Me.Lbl.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl.Location = New System.Drawing.Point(257, 240)
+        Me.Lbl.Name = "Lbl"
+        Me.Lbl.Size = New System.Drawing.Size(17, 21)
+        Me.Lbl.TabIndex = 32
+        Me.Lbl.Text = "/"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(367, 240)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(17, 21)
+        Me.Label2.TabIndex = 33
+        Me.Label2.Text = "/"
+        '
         'DGVempleados
         '
         Me.DGVempleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -494,7 +504,7 @@ Partial Class FrmEmpleado
         Me.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuardar.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.Image = Global.Video_Club.My.Resources.Resources.BtnGuardar
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnGuardar.Location = New System.Drawing.Point(600, 550)
@@ -582,16 +592,6 @@ Partial Class FrmEmpleado
         Me.Minimizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Minimizar.UseVisualStyleBackColor = False
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(367, 240)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(17, 21)
-        Me.Label2.TabIndex = 33
-        Me.Label2.Text = "/"
-        '
         'Btn_Cancelar
         '
         Me.Btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -601,7 +601,7 @@ Partial Class FrmEmpleado
         Me.Btn_Cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Cancelar.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Cancelar.ForeColor = System.Drawing.Color.Black
         Me.Btn_Cancelar.Image = Global.Video_Club.My.Resources.Resources.btnCancelar
         Me.Btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
