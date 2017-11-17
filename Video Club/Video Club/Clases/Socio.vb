@@ -222,6 +222,13 @@ Public Class Socio
 
     End Function
 
+    'Public Function consultaVigencia() As Integer
+    'Dim strSQL As String
+
+    '   strSQL = "SELECT vigencia from peliculas order by id asc"
+    '  consultaVigencia = cnx.objetoDataAdapter(strSQL)
+    'End Function
+
     Public Sub actualizaSocio()
         Dim strSql As String
         Dim numExt As Integer

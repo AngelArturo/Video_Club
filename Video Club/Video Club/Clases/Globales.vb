@@ -7,4 +7,5 @@ Imports MySql.Data.MySqlClient
 Module Globales
     Public cnx As New MySqlConnection
     Public tipodeusuario As Integer
+    Public empleadonombre As String
 End Module
