@@ -88,23 +88,25 @@ Public Class FrmPrincipal
 
     'VERIFICAR SOCIO
     Private Sub Btn_BusquedaSocio_Click(sender As Object, e As EventArgs) Handles Btn_BusquedaSocio.Click
-        Dim adaptador As New MySqlDataAdapter
+
         Dim datos As DataSet
         Dim strSQL As String
         Dim lista As Byte
+        Dim cnx As New conexion
+        Dim xDT As DataTable
 
-        If Txt_idSocio.Text <> "" Then
-            strSQL = "SELECT * FROM socio WHERE id='" & Txt_idSocio.Text & "'"
-            adaptador = New MySqlDataAdapter(strSQL, cnx)
-            datos = New DataSet
-            adaptador.Fill(datos, "socio")
-            lista = datos.Tables("socio").Rows.Count
+        strSQL = "SELECT * FROM socio WHERE id='" & Txt_idSocio.Text & "'"
+        xDT = cnx.objetoDataAdapter(strSQL)
+        If xDT.Rows.Count = 1 Then
+
+            lista = xDT.Rows.Count
+
         End If
 
         If lista <> 0 Then
-            Txt_NombreSocio.Text = datos.Tables("socio").Rows(0).Item("nombre")
-            Txt_ApPaternoSocio.Text = datos.Tables("socio").Rows(0).Item("apPaterno")
-            Txt_ApMaternoSocio.Text = datos.Tables("socio").Rows(0).Item("apMaterno")
+            Txt_NombreSocio.Text = xDT.Rows(0)("nombre")
+            Txt_ApPaternoSocio.Text = xDT.Rows(0)("apPaterno")
+            Txt_ApMaternoSocio.Text = xDT.Rows(0)("apMaterno")
         Else
             Txt_idSocio.Text = ""
             Txt_NombreSocio.Text = ""
@@ -112,7 +114,7 @@ Public Class FrmPrincipal
             Txt_ApMaternoSocio.Text = ""
             MsgBox("El idSocio no es válido. ¡Ingresalo Correctamente!")
         End If
-        cnx.Close()
+        cnx.cerrar()
 
 
     End Sub
@@ -158,5 +160,11 @@ Public Class FrmPrincipal
 
     Private Sub Btn_Busca_Click(sender As Object, e As EventArgs) Handles Btn_Busca.Click
         DGVrenta.DataSource = consultarPeliculaNombre()
+    End Sub
+
+    Private Sub Btn_Devoluciones_Click(sender As Object, e As EventArgs) Handles Btn_Devoluciones.Click
+
+        FrmDevolucionVenta.Show()
+        Me.Close()
     End Sub
 End Class
