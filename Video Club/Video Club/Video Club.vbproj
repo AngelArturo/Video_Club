@@ -90,6 +90,7 @@
     <Compile Include="Clases\Pelicula.vb" />
     <Compile Include="Clases\Renta.vb" />
     <Compile Include="Clases\Socio.vb" />
+    <Compile Include="Clases\Venta.vb" />
     <Compile Include="Forms\FrmAddDistribuidor.Designer.vb">
       <DependentUpon>FrmAddDistribuidor.vb</DependentUpon>
     </Compile>
@@ -335,6 +336,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BtnMal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnDevolver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn_limpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnComprar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

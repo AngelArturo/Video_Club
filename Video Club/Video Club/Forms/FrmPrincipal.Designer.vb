@@ -23,11 +23,16 @@ Partial Class FrmPrincipal
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.X = New System.Windows.Forms.Button()
         Me.Minimizar = New System.Windows.Forms.Button()
         Me.BtnInicio = New System.Windows.Forms.Button()
@@ -43,6 +48,21 @@ Partial Class FrmPrincipal
         Me.Lbl_Fecha = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel_Inicio = New System.Windows.Forms.Panel()
+        Me.Panel_Venta = New System.Windows.Forms.Panel()
+        Me.Txt_MontoVenta = New System.Windows.Forms.TextBox()
+        Me.Lbl_MontoV = New System.Windows.Forms.Label()
+        Me.DGV_venta = New System.Windows.Forms.DataGridView()
+        Me.Btn_bscrVenta = New System.Windows.Forms.Button()
+        Me.Txt_BscrPelVenta = New System.Windows.Forms.TextBox()
+        Me.Lbl_PeliculaVenta = New System.Windows.Forms.Label()
+        Me.Btn_CancelarVenta = New System.Windows.Forms.Button()
+        Me.Btn_Comprar = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Btn_CerrarVenta = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.Panel_Renta = New System.Windows.Forms.Panel()
         Me.Btn_Busca = New System.Windows.Forms.Button()
         Me.Btn_Cancelar = New System.Windows.Forms.Button()
@@ -64,13 +84,25 @@ Partial Class FrmPrincipal
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.DGVrenta = New System.Windows.Forms.DataGridView()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Txt_Pago = New System.Windows.Forms.TextBox()
+        Me.Lbl_Cambio2 = New System.Windows.Forms.Label()
+        Me.Lbl_Cambio = New System.Windows.Forms.Label()
+        Me.Lbl_Total2 = New System.Windows.Forms.Label()
+        Me.Lbl_Pago = New System.Windows.Forms.Label()
+        Me.Lbl_Total = New System.Windows.Forms.Label()
+        Me.LV_Importe = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Motivo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Producto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Importe = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.DGV_RentasSocio = New System.Windows.Forms.DataGridView()
+        Me.Btn_Devolver = New System.Windows.Forms.Button()
         Me.Btn_BusquedaSocio = New System.Windows.Forms.Button()
-        Me.DGV_Socio = New System.Windows.Forms.DataGridView()
         Me.RB_NoVigente = New System.Windows.Forms.RadioButton()
         Me.RB_Vigente = New System.Windows.Forms.RadioButton()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Txt_ApMaternoSocio = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Txt_NombreSocio = New System.Windows.Forms.TextBox()
@@ -83,7 +115,7 @@ Partial Class FrmPrincipal
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Btn_Pagar = New System.Windows.Forms.Button()
         Me.Btn_Devoluciones = New System.Windows.Forms.Button()
-        Me.DGV_Importe = New System.Windows.Forms.DataGridView()
+        Me.Btn_Quitar = New System.Windows.Forms.Button()
         Me.Btn_Venta = New System.Windows.Forms.Button()
         Me.Btn_Renta = New System.Windows.Forms.Button()
         Me.Btn_Socio = New System.Windows.Forms.Button()
@@ -112,14 +144,16 @@ Partial Class FrmPrincipal
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BarraTop.SuspendLayout()
         Me.Panel_Inicio.SuspendLayout()
+        Me.Panel_Venta.SuspendLayout()
+        CType(Me.DGV_venta, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
         Me.Panel_Renta.SuspendLayout()
         Me.GB_Fechaentrega.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.DGVrenta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.DGV_Socio, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGV_RentasSocio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGV_Importe, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_Peliculas.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_Distribuidor.SuspendLayout()
@@ -326,11 +360,20 @@ Partial Class FrmPrincipal
         '
         'Panel_Inicio
         '
+        Me.Panel_Inicio.Controls.Add(Me.Panel_Venta)
         Me.Panel_Inicio.Controls.Add(Me.Panel_Renta)
+        Me.Panel_Inicio.Controls.Add(Me.Button4)
+        Me.Panel_Inicio.Controls.Add(Me.Txt_Pago)
+        Me.Panel_Inicio.Controls.Add(Me.Lbl_Cambio2)
+        Me.Panel_Inicio.Controls.Add(Me.Lbl_Cambio)
+        Me.Panel_Inicio.Controls.Add(Me.Lbl_Total2)
+        Me.Panel_Inicio.Controls.Add(Me.Lbl_Pago)
+        Me.Panel_Inicio.Controls.Add(Me.Lbl_Total)
+        Me.Panel_Inicio.Controls.Add(Me.LV_Importe)
         Me.Panel_Inicio.Controls.Add(Me.Panel2)
         Me.Panel_Inicio.Controls.Add(Me.Btn_Pagar)
         Me.Panel_Inicio.Controls.Add(Me.Btn_Devoluciones)
-        Me.Panel_Inicio.Controls.Add(Me.DGV_Importe)
+        Me.Panel_Inicio.Controls.Add(Me.Btn_Quitar)
         Me.Panel_Inicio.Controls.Add(Me.Btn_Venta)
         Me.Panel_Inicio.Controls.Add(Me.Btn_Renta)
         Me.Panel_Inicio.Controls.Add(Me.Btn_Socio)
@@ -338,6 +381,205 @@ Partial Class FrmPrincipal
         Me.Panel_Inicio.Name = "Panel_Inicio"
         Me.Panel_Inicio.Size = New System.Drawing.Size(1067, 725)
         Me.Panel_Inicio.TabIndex = 16
+        '
+        'Panel_Venta
+        '
+        Me.Panel_Venta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel_Venta.Controls.Add(Me.Txt_MontoVenta)
+        Me.Panel_Venta.Controls.Add(Me.Lbl_MontoV)
+        Me.Panel_Venta.Controls.Add(Me.DGV_venta)
+        Me.Panel_Venta.Controls.Add(Me.Btn_bscrVenta)
+        Me.Panel_Venta.Controls.Add(Me.Txt_BscrPelVenta)
+        Me.Panel_Venta.Controls.Add(Me.Lbl_PeliculaVenta)
+        Me.Panel_Venta.Controls.Add(Me.Btn_CancelarVenta)
+        Me.Panel_Venta.Controls.Add(Me.Btn_Comprar)
+        Me.Panel_Venta.Controls.Add(Me.Panel4)
+        Me.Panel_Venta.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel_Venta.ForeColor = System.Drawing.Color.Black
+        Me.Panel_Venta.Location = New System.Drawing.Point(200, 70)
+        Me.Panel_Venta.Name = "Panel_Venta"
+        Me.Panel_Venta.Size = New System.Drawing.Size(500, 400)
+        Me.Panel_Venta.TabIndex = 71
+        Me.Panel_Venta.Visible = False
+        '
+        'Txt_MontoVenta
+        '
+        Me.Txt_MontoVenta.Location = New System.Drawing.Point(365, 245)
+        Me.Txt_MontoVenta.Name = "Txt_MontoVenta"
+        Me.Txt_MontoVenta.Size = New System.Drawing.Size(75, 27)
+        Me.Txt_MontoVenta.TabIndex = 74
+        '
+        'Lbl_MontoV
+        '
+        Me.Lbl_MontoV.AutoSize = True
+        Me.Lbl_MontoV.Location = New System.Drawing.Point(240, 250)
+        Me.Lbl_MontoV.Name = "Lbl_MontoV"
+        Me.Lbl_MontoV.Size = New System.Drawing.Size(124, 21)
+        Me.Lbl_MontoV.TabIndex = 73
+        Me.Lbl_MontoV.Text = "Precio unitario:"
+        '
+        'DGV_venta
+        '
+        Me.DGV_venta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGV_venta.Location = New System.Drawing.Point(30, 75)
+        Me.DGV_venta.Name = "DGV_venta"
+        Me.DGV_venta.Size = New System.Drawing.Size(410, 150)
+        Me.DGV_venta.TabIndex = 72
+        '
+        'Btn_bscrVenta
+        '
+        Me.Btn_bscrVenta.BackColor = System.Drawing.SystemColors.GrayText
+        Me.Btn_bscrVenta.FlatAppearance.BorderSize = 0
+        Me.Btn_bscrVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_bscrVenta.Image = Global.Video_Club.My.Resources.Resources.BtnBuscar
+        Me.Btn_bscrVenta.Location = New System.Drawing.Point(404, 40)
+        Me.Btn_bscrVenta.Name = "Btn_bscrVenta"
+        Me.Btn_bscrVenta.Size = New System.Drawing.Size(25, 25)
+        Me.Btn_bscrVenta.TabIndex = 71
+        Me.Btn_bscrVenta.UseVisualStyleBackColor = False
+        '
+        'Txt_BscrPelVenta
+        '
+        Me.Txt_BscrPelVenta.Location = New System.Drawing.Point(105, 40)
+        Me.Txt_BscrPelVenta.Name = "Txt_BscrPelVenta"
+        Me.Txt_BscrPelVenta.Size = New System.Drawing.Size(300, 27)
+        Me.Txt_BscrPelVenta.TabIndex = 70
+        '
+        'Lbl_PeliculaVenta
+        '
+        Me.Lbl_PeliculaVenta.AutoSize = True
+        Me.Lbl_PeliculaVenta.Location = New System.Drawing.Point(30, 40)
+        Me.Lbl_PeliculaVenta.Name = "Lbl_PeliculaVenta"
+        Me.Lbl_PeliculaVenta.Size = New System.Drawing.Size(73, 21)
+        Me.Lbl_PeliculaVenta.TabIndex = 69
+        Me.Lbl_PeliculaVenta.Text = "Pelicula:"
+        '
+        'Btn_CancelarVenta
+        '
+        Me.Btn_CancelarVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_CancelarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_CancelarVenta.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Btn_CancelarVenta.FlatAppearance.BorderSize = 0
+        Me.Btn_CancelarVenta.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_CancelarVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_CancelarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_CancelarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_CancelarVenta.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_CancelarVenta.ForeColor = System.Drawing.Color.Black
+        Me.Btn_CancelarVenta.Image = Global.Video_Club.My.Resources.Resources.btnCancelar
+        Me.Btn_CancelarVenta.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Btn_CancelarVenta.Location = New System.Drawing.Point(95, 320)
+        Me.Btn_CancelarVenta.Name = "Btn_CancelarVenta"
+        Me.Btn_CancelarVenta.Size = New System.Drawing.Size(125, 50)
+        Me.Btn_CancelarVenta.TabIndex = 68
+        Me.Btn_CancelarVenta.Text = "Cancelar"
+        Me.Btn_CancelarVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_CancelarVenta.UseVisualStyleBackColor = False
+        '
+        'Btn_Comprar
+        '
+        Me.Btn_Comprar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Comprar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Comprar.FlatAppearance.BorderSize = 0
+        Me.Btn_Comprar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Comprar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Comprar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Comprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Comprar.Font = New System.Drawing.Font("Fineliner Script", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Comprar.ForeColor = System.Drawing.Color.Black
+        Me.Btn_Comprar.Image = Global.Video_Club.My.Resources.Resources.BtnComprar
+        Me.Btn_Comprar.Location = New System.Drawing.Point(280, 320)
+        Me.Btn_Comprar.Name = "Btn_Comprar"
+        Me.Btn_Comprar.Size = New System.Drawing.Size(125, 50)
+        Me.Btn_Comprar.TabIndex = 67
+        Me.Btn_Comprar.Text = "Comprar"
+        Me.Btn_Comprar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_Comprar.UseVisualStyleBackColor = False
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(8, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.Btn_CerrarVenta)
+        Me.Panel4.Controls.Add(Me.Button5)
+        Me.Panel4.Controls.Add(Me.Label5)
+        Me.Panel4.Controls.Add(Me.Button6)
+        Me.Panel4.Controls.Add(Me.Button7)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(498, 25)
+        Me.Panel4.TabIndex = 17
+        '
+        'Btn_CerrarVenta
+        '
+        Me.Btn_CerrarVenta.BackColor = System.Drawing.Color.Transparent
+        Me.Btn_CerrarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Btn_CerrarVenta.FlatAppearance.BorderSize = 0
+        Me.Btn_CerrarVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_CerrarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed
+        Me.Btn_CerrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_CerrarVenta.Image = CType(resources.GetObject("Btn_CerrarVenta.Image"), System.Drawing.Image)
+        Me.Btn_CerrarVenta.Location = New System.Drawing.Point(472, 0)
+        Me.Btn_CerrarVenta.Name = "Btn_CerrarVenta"
+        Me.Btn_CerrarVenta.Size = New System.Drawing.Size(25, 25)
+        Me.Btn_CerrarVenta.TabIndex = 5
+        Me.Btn_CerrarVenta.UseVisualStyleBackColor = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.Transparent
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
+        Me.Button5.Location = New System.Drawing.Point(570, 0)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(25, 25)
+        Me.Button5.TabIndex = 4
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label5.Location = New System.Drawing.Point(0, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(0, 21)
+        Me.Label5.TabIndex = 3
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.Transparent
+        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
+        Me.Button6.Location = New System.Drawing.Point(1063, 1)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(25, 25)
+        Me.Button6.TabIndex = 1
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.Transparent
+        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Image = Global.Video_Club.My.Resources.Resources.__
+        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button7.Location = New System.Drawing.Point(1029, 1)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(25, 25)
+        Me.Button7.TabIndex = 2
+        Me.Button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button7.UseVisualStyleBackColor = False
         '
         'Panel_Renta
         '
@@ -597,63 +839,197 @@ Partial Class FrmPrincipal
         '
         'DGVrenta
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
-        Me.DGVrenta.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black
+        Me.DGVrenta.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
         Me.DGVrenta.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGVrenta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGVrenta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.DGVrenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Transparent
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGVrenta.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Transparent
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGVrenta.DefaultCellStyle = DataGridViewCellStyle13
         Me.DGVrenta.GridColor = System.Drawing.Color.Black
         Me.DGVrenta.Location = New System.Drawing.Point(30, 180)
         Me.DGVrenta.MultiSelect = False
         Me.DGVrenta.Name = "DGVrenta"
         Me.DGVrenta.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGVrenta.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGVrenta.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.DGVrenta.RowHeadersVisible = False
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black
-        Me.DGVrenta.RowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black
+        Me.DGVrenta.RowsDefaultCellStyle = DataGridViewCellStyle15
         Me.DGVrenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGVrenta.Size = New System.Drawing.Size(530, 270)
         Me.DGVrenta.TabIndex = 23
         '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button4.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Fineliner Script", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.Black
+        Me.Button4.Image = Global.Video_Club.My.Resources.Resources.Btn_limpiar
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button4.Location = New System.Drawing.Point(740, 375)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(50, 50)
+        Me.Button4.TabIndex = 70
+        Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Txt_Pago
+        '
+        Me.Txt_Pago.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_Pago.ForeColor = System.Drawing.Color.Black
+        Me.Txt_Pago.Location = New System.Drawing.Point(935, 393)
+        Me.Txt_Pago.Name = "Txt_Pago"
+        Me.Txt_Pago.Size = New System.Drawing.Size(90, 27)
+        Me.Txt_Pago.TabIndex = 69
+        '
+        'Lbl_Cambio2
+        '
+        Me.Lbl_Cambio2.AutoSize = True
+        Me.Lbl_Cambio2.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_Cambio2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Cambio2.ForeColor = System.Drawing.Color.Black
+        Me.Lbl_Cambio2.Location = New System.Drawing.Point(948, 420)
+        Me.Lbl_Cambio2.Name = "Lbl_Cambio2"
+        Me.Lbl_Cambio2.Size = New System.Drawing.Size(77, 21)
+        Me.Lbl_Cambio2.TabIndex = 33
+        Me.Lbl_Cambio2.Text = "Cambio:"
+        Me.Lbl_Cambio2.Visible = False
+        '
+        'Lbl_Cambio
+        '
+        Me.Lbl_Cambio.AutoSize = True
+        Me.Lbl_Cambio.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_Cambio.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Cambio.ForeColor = System.Drawing.Color.Black
+        Me.Lbl_Cambio.Location = New System.Drawing.Point(832, 420)
+        Me.Lbl_Cambio.Name = "Lbl_Cambio"
+        Me.Lbl_Cambio.Size = New System.Drawing.Size(98, 19)
+        Me.Lbl_Cambio.TabIndex = 32
+        Me.Lbl_Cambio.Text = "Cambio:   $"
+        '
+        'Lbl_Total2
+        '
+        Me.Lbl_Total2.AutoSize = True
+        Me.Lbl_Total2.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_Total2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Total2.ForeColor = System.Drawing.Color.Black
+        Me.Lbl_Total2.Location = New System.Drawing.Point(961, 370)
+        Me.Lbl_Total2.Name = "Lbl_Total2"
+        Me.Lbl_Total2.Size = New System.Drawing.Size(64, 21)
+        Me.Lbl_Total2.TabIndex = 30
+        Me.Lbl_Total2.Text = "TOTAL:"
+        Me.Lbl_Total2.Visible = False
+        '
+        'Lbl_Pago
+        '
+        Me.Lbl_Pago.AutoSize = True
+        Me.Lbl_Pago.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_Pago.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Pago.ForeColor = System.Drawing.Color.Black
+        Me.Lbl_Pago.Location = New System.Drawing.Point(855, 395)
+        Me.Lbl_Pago.Name = "Lbl_Pago"
+        Me.Lbl_Pago.Size = New System.Drawing.Size(75, 19)
+        Me.Lbl_Pago.TabIndex = 29
+        Me.Lbl_Pago.Text = "Pago:   $"
+        '
+        'Lbl_Total
+        '
+        Me.Lbl_Total.AutoSize = True
+        Me.Lbl_Total.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_Total.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Total.ForeColor = System.Drawing.Color.Black
+        Me.Lbl_Total.Location = New System.Drawing.Point(850, 370)
+        Me.Lbl_Total.Name = "Lbl_Total"
+        Me.Lbl_Total.Size = New System.Drawing.Size(80, 19)
+        Me.Lbl_Total.TabIndex = 28
+        Me.Lbl_Total.Text = "TOTAL:   $"
+        '
+        'LV_Importe
+        '
+        Me.LV_Importe.BackColor = System.Drawing.Color.White
+        Me.LV_Importe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LV_Importe.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.Motivo, Me.Producto, Me.Importe})
+        Me.LV_Importe.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LV_Importe.ForeColor = System.Drawing.Color.Black
+        Me.LV_Importe.FullRowSelect = True
+        Me.LV_Importe.GridLines = True
+        Me.LV_Importe.Location = New System.Drawing.Point(585, 40)
+        Me.LV_Importe.Name = "LV_Importe"
+        Me.LV_Importe.Size = New System.Drawing.Size(450, 320)
+        Me.LV_Importe.TabIndex = 27
+        Me.LV_Importe.UseCompatibleStateImageBehavior = False
+        Me.LV_Importe.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.DisplayIndex = 3
+        Me.ColumnHeader1.Text = ""
+        Me.ColumnHeader1.Width = 0
+        '
+        'Motivo
+        '
+        Me.Motivo.DisplayIndex = 0
+        Me.Motivo.Text = "Motivo"
+        Me.Motivo.Width = 100
+        '
+        'Producto
+        '
+        Me.Producto.DisplayIndex = 1
+        Me.Producto.Text = "Producto"
+        Me.Producto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Producto.Width = 250
+        '
+        'Importe
+        '
+        Me.Importe.DisplayIndex = 2
+        Me.Importe.Text = "Importe"
+        Me.Importe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Importe.Width = 100
+        '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.DGV_RentasSocio)
+        Me.Panel2.Controls.Add(Me.Btn_Devolver)
         Me.Panel2.Controls.Add(Me.Btn_BusquedaSocio)
-        Me.Panel2.Controls.Add(Me.DGV_Socio)
         Me.Panel2.Controls.Add(Me.RB_NoVigente)
         Me.Panel2.Controls.Add(Me.RB_Vigente)
         Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Txt_ApMaternoSocio)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Txt_NombreSocio)
@@ -670,6 +1046,78 @@ Partial Class FrmPrincipal
         Me.Panel2.Size = New System.Drawing.Size(1067, 180)
         Me.Panel2.TabIndex = 25
         '
+        'DGV_RentasSocio
+        '
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black
+        Me.DGV_RentasSocio.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
+        Me.DGV_RentasSocio.BackgroundColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_RentasSocio.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        Me.DGV_RentasSocio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.Transparent
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_RentasSocio.DefaultCellStyle = DataGridViewCellStyle18
+        Me.DGV_RentasSocio.GridColor = System.Drawing.Color.Black
+        Me.DGV_RentasSocio.Location = New System.Drawing.Point(530, 18)
+        Me.DGV_RentasSocio.MultiSelect = False
+        Me.DGV_RentasSocio.Name = "DGV_RentasSocio"
+        Me.DGV_RentasSocio.ReadOnly = True
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_RentasSocio.RowHeadersDefaultCellStyle = DataGridViewCellStyle19
+        Me.DGV_RentasSocio.RowHeadersVisible = False
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle20.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black
+        Me.DGV_RentasSocio.RowsDefaultCellStyle = DataGridViewCellStyle20
+        Me.DGV_RentasSocio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGV_RentasSocio.Size = New System.Drawing.Size(300, 110)
+        Me.DGV_RentasSocio.TabIndex = 69
+        '
+        'Btn_Devolver
+        '
+        Me.Btn_Devolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Devolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Devolver.FlatAppearance.BorderSize = 0
+        Me.Btn_Devolver.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Devolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Devolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Devolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Devolver.Font = New System.Drawing.Font("Fineliner Script", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Devolver.ForeColor = System.Drawing.Color.Black
+        Me.Btn_Devolver.Image = Global.Video_Club.My.Resources.Resources.BtnDevolver
+        Me.Btn_Devolver.Location = New System.Drawing.Point(707, 136)
+        Me.Btn_Devolver.Name = "Btn_Devolver"
+        Me.Btn_Devolver.Size = New System.Drawing.Size(100, 30)
+        Me.Btn_Devolver.TabIndex = 68
+        Me.Btn_Devolver.Text = "Devolver"
+        Me.Btn_Devolver.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_Devolver.UseVisualStyleBackColor = False
+        Me.Btn_Devolver.Visible = False
+        '
         'Btn_BusquedaSocio
         '
         Me.Btn_BusquedaSocio.BackColor = System.Drawing.SystemColors.GrayText
@@ -681,14 +1129,6 @@ Partial Class FrmPrincipal
         Me.Btn_BusquedaSocio.Size = New System.Drawing.Size(25, 25)
         Me.Btn_BusquedaSocio.TabIndex = 29
         Me.Btn_BusquedaSocio.UseVisualStyleBackColor = False
-        '
-        'DGV_Socio
-        '
-        Me.DGV_Socio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV_Socio.Location = New System.Drawing.Point(530, 50)
-        Me.DGV_Socio.Name = "DGV_Socio"
-        Me.DGV_Socio.Size = New System.Drawing.Size(300, 100)
-        Me.DGV_Socio.TabIndex = 15
         '
         'RB_NoVigente
         '
@@ -727,25 +1167,14 @@ Partial Class FrmPrincipal
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "ID:"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(530, 20)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(113, 22)
-        Me.Label5.TabIndex = 10
-        Me.Label5.Text = "Adeudo(s):"
-        '
         'Txt_ApMaternoSocio
         '
-        Me.Txt_ApMaternoSocio.Font = New System.Drawing.Font("Century Gothic", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_ApMaternoSocio.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_ApMaternoSocio.ForeColor = System.Drawing.Color.Black
         Me.Txt_ApMaternoSocio.Location = New System.Drawing.Point(280, 110)
         Me.Txt_ApMaternoSocio.Name = "Txt_ApMaternoSocio"
         Me.Txt_ApMaternoSocio.ReadOnly = True
-        Me.Txt_ApMaternoSocio.Size = New System.Drawing.Size(200, 21)
+        Me.Txt_ApMaternoSocio.Size = New System.Drawing.Size(200, 24)
         Me.Txt_ApMaternoSocio.TabIndex = 9
         Me.Txt_ApMaternoSocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -762,22 +1191,22 @@ Partial Class FrmPrincipal
         '
         'Txt_NombreSocio
         '
-        Me.Txt_NombreSocio.Font = New System.Drawing.Font("Century Gothic", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_NombreSocio.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_NombreSocio.ForeColor = System.Drawing.Color.Black
         Me.Txt_NombreSocio.Location = New System.Drawing.Point(280, 49)
         Me.Txt_NombreSocio.Name = "Txt_NombreSocio"
         Me.Txt_NombreSocio.ReadOnly = True
-        Me.Txt_NombreSocio.Size = New System.Drawing.Size(200, 21)
+        Me.Txt_NombreSocio.Size = New System.Drawing.Size(200, 24)
         Me.Txt_NombreSocio.TabIndex = 7
         Me.Txt_NombreSocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Txt_ApPaternoSocio
         '
-        Me.Txt_ApPaternoSocio.Font = New System.Drawing.Font("Century", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_ApPaternoSocio.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_ApPaternoSocio.Location = New System.Drawing.Point(280, 80)
         Me.Txt_ApPaternoSocio.Name = "Txt_ApPaternoSocio"
         Me.Txt_ApPaternoSocio.ReadOnly = True
-        Me.Txt_ApPaternoSocio.Size = New System.Drawing.Size(200, 20)
+        Me.Txt_ApPaternoSocio.Size = New System.Drawing.Size(200, 23)
         Me.Txt_ApPaternoSocio.TabIndex = 6
         Me.Txt_ApPaternoSocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -814,13 +1243,12 @@ Partial Class FrmPrincipal
         '
         'Txt_idSocio
         '
-        Me.Txt_idSocio.Font = New System.Drawing.Font("Century Gothic", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_idSocio.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_idSocio.ForeColor = System.Drawing.Color.Black
         Me.Txt_idSocio.Location = New System.Drawing.Point(279, 20)
         Me.Txt_idSocio.Name = "Txt_idSocio"
-        Me.Txt_idSocio.Size = New System.Drawing.Size(175, 21)
+        Me.Txt_idSocio.Size = New System.Drawing.Size(175, 24)
         Me.Txt_idSocio.TabIndex = 2
-        Me.Txt_idSocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'LblNombre
         '
@@ -876,13 +1304,27 @@ Partial Class FrmPrincipal
         Me.Btn_Devoluciones.TabIndex = 23
         Me.Btn_Devoluciones.UseVisualStyleBackColor = False
         '
-        'DGV_Importe
+        'Btn_Quitar
         '
-        Me.DGV_Importe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV_Importe.Location = New System.Drawing.Point(586, 37)
-        Me.DGV_Importe.Name = "DGV_Importe"
-        Me.DGV_Importe.Size = New System.Drawing.Size(450, 400)
-        Me.DGV_Importe.TabIndex = 22
+        Me.Btn_Quitar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Quitar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Quitar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Btn_Quitar.FlatAppearance.BorderSize = 0
+        Me.Btn_Quitar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Quitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Quitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Quitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Quitar.Font = New System.Drawing.Font("Fineliner Script", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Quitar.ForeColor = System.Drawing.Color.Black
+        Me.Btn_Quitar.Image = Global.Video_Club.My.Resources.Resources.btnCancelar
+        Me.Btn_Quitar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Btn_Quitar.Location = New System.Drawing.Point(600, 375)
+        Me.Btn_Quitar.Name = "Btn_Quitar"
+        Me.Btn_Quitar.Size = New System.Drawing.Size(125, 50)
+        Me.Btn_Quitar.TabIndex = 68
+        Me.Btn_Quitar.Text = "Quitar"
+        Me.Btn_Quitar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_Quitar.UseVisualStyleBackColor = False
         '
         'Btn_Venta
         '
@@ -1236,6 +1678,12 @@ Partial Class FrmPrincipal
         Me.BarraTop.ResumeLayout(False)
         Me.BarraTop.PerformLayout()
         Me.Panel_Inicio.ResumeLayout(False)
+        Me.Panel_Inicio.PerformLayout()
+        Me.Panel_Venta.ResumeLayout(False)
+        Me.Panel_Venta.PerformLayout()
+        CType(Me.DGV_venta, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.Panel_Renta.ResumeLayout(False)
         Me.Panel_Renta.PerformLayout()
         Me.GB_Fechaentrega.ResumeLayout(False)
@@ -1245,9 +1693,8 @@ Partial Class FrmPrincipal
         CType(Me.DGVrenta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.DGV_Socio, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGV_RentasSocio, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGV_Importe, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_Peliculas.ResumeLayout(False)
         Me.Panel_Peliculas.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1275,7 +1722,6 @@ Partial Class FrmPrincipal
     Friend WithEvents Panel_Inicio As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Txt_ApMaternoSocio As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Txt_NombreSocio As TextBox
@@ -1288,7 +1734,6 @@ Partial Class FrmPrincipal
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Btn_Pagar As Button
     Friend WithEvents Btn_Devoluciones As Button
-    Friend WithEvents DGV_Importe As DataGridView
     Friend WithEvents Btn_Venta As Button
     Friend WithEvents Btn_Renta As Button
     Friend WithEvents Btn_Socio As Button
@@ -1316,7 +1761,6 @@ Partial Class FrmPrincipal
     Friend WithEvents Btn_AddEmpleado As Button
     Friend WithEvents DGVempleados As DataGridView
     Friend WithEvents Panel_Renta As Panel
-    Friend WithEvents DGV_Socio As DataGridView
     Friend WithEvents Label8 As Label
     Friend WithEvents Lbl_Fecha As Label
     Friend WithEvents Panel3 As Panel
@@ -1341,4 +1785,34 @@ Partial Class FrmPrincipal
     Friend WithEvents Btn_BusquedaSocio As Button
     Friend WithEvents Btn_Busca As Button
     Friend WithEvents Lbl_Usuario As Label
+    Friend WithEvents Btn_Devolver As Button
+    Friend WithEvents DGV_RentasSocio As DataGridView
+    Friend WithEvents Lbl_Total2 As Label
+    Friend WithEvents Lbl_Pago As Label
+    Friend WithEvents Lbl_Total As Label
+    Friend WithEvents LV_Importe As ListView
+    Friend WithEvents Motivo As ColumnHeader
+    Friend WithEvents Producto As ColumnHeader
+    Friend WithEvents Importe As ColumnHeader
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents Lbl_Cambio2 As Label
+    Friend WithEvents Lbl_Cambio As Label
+    Friend WithEvents Btn_Quitar As Button
+    Friend WithEvents Txt_Pago As TextBox
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Panel_Venta As Panel
+    Friend WithEvents Btn_CancelarVenta As Button
+    Friend WithEvents Btn_Comprar As Button
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Btn_CerrarVenta As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Lbl_PeliculaVenta As Label
+    Friend WithEvents Btn_bscrVenta As Button
+    Friend WithEvents Txt_BscrPelVenta As TextBox
+    Friend WithEvents Txt_MontoVenta As TextBox
+    Friend WithEvents Lbl_MontoV As Label
+    Friend WithEvents DGV_venta As DataGridView
 End Class
