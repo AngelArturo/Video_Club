@@ -89,7 +89,7 @@ Public Class FrmPrincipal
     'VERIFICAR SOCIO
     Private Sub Btn_BusquedaSocio_Click(sender As Object, e As EventArgs) Handles Btn_BusquedaSocio.Click
 
-        Dim datos As DataSet
+
         Dim strSQL As String
         Dim lista As Byte
         Dim cnx As New conexion
@@ -167,4 +167,10 @@ Public Class FrmPrincipal
         FrmDevolucionVenta.Show()
         Me.Close()
     End Sub
+
+    Private Sub LV_Importe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LV_Importe.SelectedIndexChanged
+
+    End Sub
+
+
 End Class
