@@ -131,6 +131,45 @@
         YII=
 </value>
   </data>
+  <data name="Btn_CerrarVenta.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAZCAYAAADe1WXtAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAAFxIAABcSAWef0lIAAAFoSURBVEhLrdQvSARBFMfxS4pg
+        s4hBi4hJEEFMGhTEaDAIhjNZLogGg8k/iCJYLCabXTBYBYuIWvwDJpNWwSSGXb8zuyP73rzbE/Z+8GF2
+        3r55bLibWpqmbWcWqzKLVenCANZQT5JknrU3r1vGsIINLGEQ/p1oZNAxazEPED25Ueicwr8XzQw9Y9XZ
+        h+jDLXTcWf9eN2/DyiRCz64r6PBBhyy+JzQGHbiDziPc+xG/i7OFbvg5xYFBP76gc4TL7FHkHGKG2BRM
+        4z95QSfEebFRGijLN4YQnY0Kyh6aZQrWmZZDZ2HlHV2wzpQO7cEHmuUC1rnSoVdolQNEZ6NC7gQ67qs/
+        s0eRZYjzYpNbhZU+rGePUcbxN6M4zJmDlR2EnmdXUHG/1wX4ntDo8f91N43ODYp9E7BiXyjGLfWDYYg+
+        bEKn6S21CPcbfMI9ZqB7PD7A3QWveMM16q7uRM3tYBarMotVmcVq0tovsmTHqOhJykoAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="Button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAZCAYAAADe1WXtAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAAFxIAABcSAWef0lIAAAFoSURBVEhLrdQvSARBFMfxS4pg
+        s4hBi4hJEEFMGhTEaDAIhjNZLogGg8k/iCJYLCabXTBYBYuIWvwDJpNWwSSGXb8zuyP73rzbE/Z+8GF2
+        3r55bLibWpqmbWcWqzKLVenCANZQT5JknrU3r1vGsIINLGEQ/p1oZNAxazEPED25Ueicwr8XzQw9Y9XZ
+        h+jDLXTcWf9eN2/DyiRCz64r6PBBhyy+JzQGHbiDziPc+xG/i7OFbvg5xYFBP76gc4TL7FHkHGKG2BRM
+        4z95QSfEebFRGijLN4YQnY0Kyh6aZQrWmZZDZ2HlHV2wzpQO7cEHmuUC1rnSoVdolQNEZ6NC7gQ67qs/
+        s0eRZYjzYpNbhZU+rGePUcbxN6M4zJmDlR2EnmdXUHG/1wX4ntDo8f91N43ODYp9E7BiXyjGLfWDYYg+
+        bEKn6S21CPcbfMI9ZqB7PD7A3QWveMM16q7uRM3tYBarMotVmcVq0tovsmTHqOhJykoAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="Button6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAZCAYAAADe1WXtAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAAFxIAABcSAWef0lIAAAFoSURBVEhLrdQvSARBFMfxS4pg
+        s4hBi4hJEEFMGhTEaDAIhjNZLogGg8k/iCJYLCabXTBYBYuIWvwDJpNWwSSGXb8zuyP73rzbE/Z+8GF2
+        3r55bLibWpqmbWcWqzKLVenCANZQT5JknrU3r1vGsIINLGEQ/p1oZNAxazEPED25Ueicwr8XzQw9Y9XZ
+        h+jDLXTcWf9eN2/DyiRCz64r6PBBhyy+JzQGHbiDziPc+xG/i7OFbvg5xYFBP76gc4TL7FHkHGKG2BRM
+        4z95QSfEebFRGijLN4YQnY0Kyh6aZQrWmZZDZ2HlHV2wzpQO7cEHmuUC1rnSoVdolQNEZ6NC7gQ67qs/
+        s0eRZYjzYpNbhZU+rGePUcbxN6M4zJmDlR2EnmdXUHG/1wX4ntDo8f91N43ODYp9E7BiXyjGLfWDYYg+
+        bEKn6S21CPcbfMI9ZqB7PD7A3QWveMM16q7uRM3tYBarMotVmcVq0tovsmTHqOhJykoAAAAASUVORK5C
+        YII=
+</value>
+  </data>
   <data name="Btn_CerrarRenta.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABUAAAAZCAYAAADe1WXtAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1

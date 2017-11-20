@@ -14,6 +14,7 @@ Public Class FrmPrincipal
 
     'Funcionalidaes del boton cerrar X'
     Private Sub X_Click(sender As Object, e As EventArgs) Handles X.Click
+        'FrmLogin.ActiveForm.Close()
         Me.Close()
     End Sub
 
@@ -59,6 +60,7 @@ Public Class FrmPrincipal
 
     'Mostrar Forms del Usuario tipoEmpleado
     Private Sub Btn_Renta_Click(sender As Object, e As EventArgs) Handles Btn_Renta.Click
+        Panel_Venta.Visible = False
         If Txt_idSocio.Text = "" Then
             MessageBox.Show("Ingresa el Socio a&c")
         Else
@@ -68,6 +70,14 @@ Public Class FrmPrincipal
         ren.PoblarDataGridRenta(DGVrenta)
         cnx.Close()
         'Timer1.Start()
+    End Sub
+
+    Private Sub Btn_Venta_Click(sender As Object, e As EventArgs) Handles Btn_Venta.Click
+        Panel_Venta.Visible = True
+        Panel_Renta.Visible = False
+        Dim ven As New Venta
+        ven.PoblarDataGridVenta(DGV_venta)
+        cnx.Close()
     End Sub
 
     Private Sub Btn_Socio_Click(sender As Object, e As EventArgs) Handles Btn_Socio.Click
@@ -200,7 +210,44 @@ Public Class FrmPrincipal
         End If
     End Sub
 
-    'CANCELAR RENTA
+    'VENTA
+    Private Sub Btn_CerrarVenta_Click(sender As Object, e As EventArgs) Handles Btn_CerrarVenta.Click
+        Panel_Venta.Visible = False
+    End Sub
+
+    Private Function consultarPeliculaNombreVenta() As DataTable
+        Dim pel As New Pelicula
+        Return pel.buscarPelicula(Txt_BscrPelVenta.Text)
+    End Function
+
+    Private Sub Btn_Comprar_Click(sender As Object, e As EventArgs) Handles Btn_Comprar.Click
+        For Each filaSeleccionada In DGV_venta.SelectedRows
+            If Txt_MontoVenta.Text = "" Then
+                MsgBox("¡Falta agregar el monto de la venta!")
+                Return
+            End If
+            Dim celdas As DataGridViewCellCollection = filaSeleccionada.cells
+            Dim idPelicula As Integer = celdas(0).Value.ToString
+            Dim cantidad As Integer = celdas(6).Value.ToString
+            Dim venta As New Venta
+            venta.addVenta(idPelicula)
+
+            cantidad = cantidad - 1
+            Dim pel As New Pelicula
+            pel.actualizapelicula2(idPelicula, cantidad)
+
+            Dim lista As ListViewItem = New ListViewItem()
+            Dim montV As Double = CDbl(Txt_MontoVenta.Text)
+
+            lista.SubItems.Add("Venta")
+            lista.SubItems.Add(celdas(1).Value.ToString)
+            lista.SubItems.Add(montV)
+            LV_Importe.Items.Add(lista)
+        Next
+
+        Me.calculaTotal()
+        Panel_Venta.Visible = False
+    End Sub
 
     'PAGAR
     Private Sub calculaTotal()
@@ -213,10 +260,6 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub Btn_Pagar_Click(sender As Object, e As EventArgs) Handles Btn_Pagar.Click
-        Txt_Pago.Visible = True
-    End Sub
-
-    Private Sub Txt_Pago_LostFocus(sender As Object, e As EventArgs) Handles Txt_Pago.LostFocus
         Dim resta As Integer
 
         If Not IsNumeric(Txt_Pago.Text) Then
@@ -227,4 +270,12 @@ Public Class FrmPrincipal
             Lbl_Cambio2.Visible = True
         End If
     End Sub
+
+    Private Sub Txt_Pago_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_Pago.KeyPress
+        If Not IsNumeric(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+
 End Class

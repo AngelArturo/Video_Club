@@ -112,7 +112,6 @@ Public Class Renta
         consultaIdU = False
         xDT = cnx.objetoDataAdapter(strSQL)
 
-        MsgBox(xDT.Rows(0)(0).ToString())
         idE = xDT.Rows(0)(0).ToString()
         idUsu = idE
 
@@ -150,17 +149,15 @@ Public Class Renta
                                 "VALUES(0,'" & impRenta & "','" & fechaRen & "',
                               '" & fechaEnt & "','" & idUsu & "','" & idPelicula & "','" & idSoc & "' );"
             cnx.objetoCommand(strSql)
-            MessageBox.Show("Agregado al carrito!")
+            MessageBox.Show("Agregado a la cuenta!")
         End If
         cnx.cerrar()
     End Sub
 
     Public Function consultaTodasPel() As Object
         Dim strSQL As String
-
         strSQL = "SELECT * from peliculas order by id asc"
         consultaTodasPel = cnx.objetoDataAdapter(strSQL)
-
     End Function
 
     'Poblar el DatagrindView Renta conlas peliculas
@@ -186,6 +183,7 @@ Public Class Renta
         consultaRentas = cnx.objetoDataAdapter(strSQL)
     End Function
 
+    'Poblar el dataGridView con las rentas que ha hecho cada socio
     Public Sub PoblarDataGridSocioRenta(ByVal DGV_RentasSocio As DataGridView)
         DGV_RentasSocio.DataSource = consultaRentas()
         DGV_RentasSocio.Refresh()
