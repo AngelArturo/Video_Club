@@ -35,4 +35,12 @@
     Private Sub Btn_Guardar_Click(sender As Object, e As EventArgs) Handles Btn_Guardar.Click
         corteCaja.insertaCorteCaja()
     End Sub
+
+    Private Sub Txt_Efectivo__kPress(sender As Object, e As KeyPressEventArgs) Handles Txt_Efectivo.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And e.KeyChar <> vbBack Then
+
+        End If
+        e.Handled = True
+
+    End Sub
 End Class

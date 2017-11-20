@@ -6,7 +6,7 @@
         adeudos.PoblarDataGridAdeudo(DGVadeudos)
     End Sub
 
-    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
+    Private Sub btnGuardar_Click_1(sender As Object, e As EventArgs) Handles btnGuardar.Click
 
         If cantidad.Text = "" Then
             MessageBox.Show("captura la cantidad del adeudo")
@@ -66,4 +66,12 @@
 
 
     End Sub
+
+
+
+    Private Sub Btn_Cancelar_Click(sender As Object, e As EventArgs) Handles Btn_Cancelar.Click
+
+    End Sub
+
+
 End Class

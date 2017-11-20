@@ -98,7 +98,7 @@
         numero.Text = vbNullString
         colonia.Text = ""
         telefono.Text = vbNullString
-        celular.Text = vbNullString
+        celular.Text = ""
         codigoP.Text = vbNullString
         correo.Text = ""
         nombreUsuario.Text = ""
@@ -153,6 +153,28 @@
     End Sub
 
     Private Sub telefono_kPress(sender As Object, e As KeyPressEventArgs) Handles telefono.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And e.KeyChar <> vbBack Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub celular_kPress(sender As Object, e As KeyPressEventArgs) Handles celular.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And e.KeyChar <> vbBack Then
+            e.Handled = True
+        End If
+
+    End Sub
+
+    Private Sub codigoP_kPress(sender As Object, e As KeyPressEventArgs) Handles codigoP.KeyPress
         If Not Char.IsDigit(e.KeyChar) And e.KeyChar <> vbBack Then
             e.Handled = True
         End If
