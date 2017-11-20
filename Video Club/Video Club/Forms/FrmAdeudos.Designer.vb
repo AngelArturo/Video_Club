@@ -31,7 +31,8 @@ Partial Class FrmAdeudos
         Me.cantidad = New System.Windows.Forms.TextBox()
         Me.estatus = New System.Windows.Forms.ComboBox()
         Me.DGVadeudos = New System.Windows.Forms.DataGridView()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.Btn_Cancelar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         CType(Me.DGVadeudos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -47,11 +48,11 @@ Partial Class FrmAdeudos
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(309, 32)
+        Me.Label2.Location = New System.Drawing.Point(325, 33)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 13)
+        Me.Label2.Size = New System.Drawing.Size(45, 13)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Cantidad"
+        Me.Label2.Text = "Importe "
         '
         'Label4
         '
@@ -111,21 +112,52 @@ Partial Class FrmAdeudos
         Me.DGVadeudos.Size = New System.Drawing.Size(527, 157)
         Me.DGVadeudos.TabIndex = 10
         '
-        'BtnGuardar
+        'Btn_Cancelar
         '
-        Me.BtnGuardar.Location = New System.Drawing.Point(334, 344)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnGuardar.TabIndex = 11
-        Me.BtnGuardar.Text = "Guardar"
-        Me.BtnGuardar.UseVisualStyleBackColor = True
+        Me.Btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Btn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Cancelar.FlatAppearance.BorderSize = 0
+        Me.Btn_Cancelar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Cancelar.ForeColor = System.Drawing.Color.Black
+        Me.Btn_Cancelar.Image = Global.Video_Club.My.Resources.Resources.btnCancelar
+        Me.Btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Btn_Cancelar.Location = New System.Drawing.Point(67, 340)
+        Me.Btn_Cancelar.Name = "Btn_Cancelar"
+        Me.Btn_Cancelar.Size = New System.Drawing.Size(125, 50)
+        Me.Btn_Cancelar.TabIndex = 82
+        Me.Btn_Cancelar.Text = "Cancelar"
+        Me.Btn_Cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_Cancelar.UseVisualStyleBackColor = False
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnGuardar.FlatAppearance.BorderSize = 0
+        Me.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.Image = Global.Video_Club.My.Resources.Resources.BtnGuardar
+        Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnGuardar.Location = New System.Drawing.Point(367, 340)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(125, 50)
+        Me.btnGuardar.TabIndex = 81
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnGuardar.UseVisualStyleBackColor = False
         '
         'FrmAdeudos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(577, 391)
-        Me.Controls.Add(Me.BtnGuardar)
+        Me.ClientSize = New System.Drawing.Size(578, 413)
+        Me.Controls.Add(Me.Btn_Cancelar)
+        Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.DGVadeudos)
         Me.Controls.Add(Me.estatus)
         Me.Controls.Add(Me.cantidad)
@@ -152,5 +184,6 @@ Partial Class FrmAdeudos
     Friend WithEvents cantidad As TextBox
     Friend WithEvents estatus As ComboBox
     Friend WithEvents DGVadeudos As DataGridView
-    Friend WithEvents BtnGuardar As Button
+    Friend WithEvents Btn_Cancelar As Button
+    Friend WithEvents btnGuardar As Button
 End Class

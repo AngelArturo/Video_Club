@@ -3,8 +3,7 @@
 
     Dim cambio As Boolean
 
-    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
-
+    Private Sub btnGuardar_Click_1(sender As Object, e As EventArgs) Handles btnGuardar.Click
 
         If nombre.Text = "" Then
             MessageBox.Show(" captura el nombre del socio")
@@ -111,5 +110,20 @@
     Private Sub Minimizar_Click(sender As Object, e As EventArgs) Handles Minimizar.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
+
+    Private Sub telefono_kPress(sender As Object, e As KeyPressEventArgs) Handles telefono.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And e.KeyChar <> vbBack Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub celular_kPress(sender As Object, e As KeyPressEventArgs) Handles celular.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And e.KeyChar <> vbBack Then
+
+        End If
+        e.Handled = True
+
+    End Sub
+
 End Class
 

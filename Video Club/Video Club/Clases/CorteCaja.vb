@@ -95,7 +95,7 @@ Public Class CorteCaja
         Dim qry As String
         Dim xDT As DataTable
 
-        qry = "SELECT sum(monto_venta) as suma FROM `venta_pelicula` WHERE fecha = '" & System.DateTime.Today.ToShortDateString & "'"
+        qry = "SELECT sum(monto_venta) as suma FROM `venta` WHERE fecha = '" & System.DateTime.Today.ToShortDateString & "'"
 
         xDT = cnx.objetoDataAdapter(qry)
         If xDT.Rows.Count = 1 Then

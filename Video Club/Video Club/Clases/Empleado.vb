@@ -16,7 +16,7 @@ Public Class Empleado
     Private numeroE As Integer
     Private coloniaE As String
     Private telefono As Integer
-    Private celular As Integer
+    Private celular As String
     Private codigoP As Integer
     Private correo As String
     Private nombreUs As String
@@ -43,7 +43,7 @@ Public Class Empleado
         numeroE = 0
         coloniaE = ""
         telefono = 0
-        celular = 0
+        celular = ""
         codigoP = 0
         correo = ""
         nombreUs = ""
@@ -54,7 +54,7 @@ Public Class Empleado
 
     Public Sub New(ByVal idE As Integer, ByVal pat As String, ByVal mat As String, ByVal nombr As String, ByVal curp As String, ByVal rfc As String, ByVal dia As Integer,
                  ByVal mes As String, ByVal ano As Integer, ByVal genero As String, ByVal lugar As String, ByVal calle As String, ByVal numero As Integer,
-                   ByVal col As Integer, ByVal tel As Integer, ByVal cel As Integer, ByVal codigoP As Integer, ByVal correo As String, ByVal nombreUsu As String, ByVal conE As String,
+                   ByVal col As Integer, ByVal tel As Integer, ByVal cel As String, ByVal codigoP As Integer, ByVal correo As String, ByVal nombreUsu As String, ByVal conE As String,
                     ByVal tipoEm As Integer)
         'Aquí recibimos los datos
         idEmpleado = idE
@@ -220,11 +220,11 @@ Public Class Empleado
             telefono = Value
         End Set
     End Property
-    Public Property getSetCelular() As Integer
+    Public Property getSetCelular() As String
         Get
             Return celular
         End Get
-        Set(ByVal Value As Integer)
+        Set(ByVal Value As String)
             celular = Value
         End Set
     End Property
@@ -274,7 +274,6 @@ Public Class Empleado
         Dim diaN As Integer
         Dim anoE As Integer
         Dim num As Integer
-        Dim cel As Integer
         Dim tel As Integer
         Dim codi As Integer
 
@@ -296,9 +295,7 @@ Public Class Empleado
             tel = Integer.Parse(FrmEmpleado.telefono.Text)
         End If
 
-        If (FrmEmpleado.celular.Text.Length <> 0) Then
-            cel = Integer.Parse(FrmEmpleado.celular.Text)
-        End If
+
         If (FrmEmpleado.codigoP.Text.Length <> 0) Then
             codi = Integer.Parse(FrmEmpleado.codigoP.Text)
         End If
@@ -306,7 +303,7 @@ Public Class Empleado
 
         If FrmEmpleado.paterno.Text <> "" And FrmEmpleado.TextBox1.Text <> "" And FrmEmpleado.TextBox2.Text <> "" And FrmEmpleado.TextBox3.Text <> "" And
             FrmEmpleado.TextBox4.Text <> "" And diaN > 0 And FrmEmpleado.mes.Text <> "" And anoE > 0 And FrmEmpleado.genero.Text <> "" And FrmEmpleado.lugarN.Text <> "" And
-            FrmEmpleado.calle.Text <> "" And num > 0 And FrmEmpleado.colonia.Text <> "" And tel > 0 And cel > 0 And codi > 0 And FrmEmpleado.correo.Text <> "" And
+            FrmEmpleado.calle.Text <> "" And num > 0 And FrmEmpleado.colonia.Text <> "" And tel > 0 And celular > "" And codi > 0 And FrmEmpleado.correo.Text <> "" And
             FrmEmpleado.nombreUsuario.Text <> "" And FrmEmpleado.contrasena.Text <> "" And FrmEmpleado.tipoU.Text <> "" Then
 
 
@@ -315,7 +312,7 @@ Public Class Empleado
             strSql = "INSERT INTO empleados  " &
                             "VALUES(0,'" & FrmEmpleado.paterno.Text & "','" & FrmEmpleado.TextBox1.Text & "','" & FrmEmpleado.TextBox2.Text & "','" & FrmEmpleado.TextBox3.Text & "',
                                     '" & FrmEmpleado.TextBox4.Text & "'," & diaN & ",'" & FrmEmpleado.mes.Text & "'," & anoE & ",'" & FrmEmpleado.genero.Text & "','" & FrmEmpleado.lugarN.Text & "',
-                                    '" & FrmEmpleado.calle.Text & "'," & num & ", '" & FrmEmpleado.colonia.Text & "'," & tel & "," & cel & "," & codi & ",'" & FrmEmpleado.correo.Text & "',
+                                    '" & FrmEmpleado.calle.Text & "'," & num & ", '" & FrmEmpleado.colonia.Text & "'," & tel & "," & celular & "," & codi & ",'" & FrmEmpleado.correo.Text & "',
                                     '" & FrmEmpleado.nombreUsuario.Text & "','" & FrmEmpleado.contrasena.Text & "','" & FrmEmpleado.tipoU.Text & "');"
 
             cnx.objetoCommand(strSql)
@@ -347,7 +344,7 @@ Public Class Empleado
         Dim diaN As Integer
         Dim anoE As Integer
         Dim num As Integer
-        Dim cel As Integer
+
         Dim tel As Integer
         Dim codi As Integer
 
@@ -369,9 +366,7 @@ Public Class Empleado
             tel = Integer.Parse(FrmEmpleado.telefono.Text)
         End If
 
-        If (FrmEmpleado.celular.Text.Length <> 0) Then
-            cel = Integer.Parse(FrmEmpleado.celular.Text)
-        End If
+
         If (FrmEmpleado.codigoP.Text.Length <> 0) Then
             codi = Integer.Parse(FrmEmpleado.codigoP.Text)
         End If
@@ -379,7 +374,7 @@ Public Class Empleado
 
         If FrmEmpleado.paterno.Text <> "" And FrmEmpleado.TextBox1.Text <> "" And FrmEmpleado.TextBox2.Text <> "" And FrmEmpleado.TextBox3.Text <> "" And
             FrmEmpleado.TextBox4.Text <> "" And diaN > 0 And FrmEmpleado.mes.Text <> "" And anoE > 0 And FrmEmpleado.genero.Text <> "" And FrmEmpleado.lugarN.Text <> "" And
-            FrmEmpleado.calle.Text <> "" And num > 0 And FrmEmpleado.colonia.Text <> "" And tel > 0 And cel > 0 And codi > 0 And FrmEmpleado.correo.Text <> "" And
+            FrmEmpleado.calle.Text <> "" And num > 0 And FrmEmpleado.colonia.Text <> "" And tel > 0 And celular > 0 And codi > 0 And FrmEmpleado.correo.Text <> "" And
             FrmEmpleado.nombreUsuario.Text <> "" And FrmEmpleado.contrasena.Text <> "" And FrmEmpleado.tipoU.Text <> "" Then
 
             strSql = "UPDATE empleados set apPaterno= '" & FrmEmpleado.paterno.Text & "',apMaterno= '" & FrmEmpleado.TextBox1.Text & "',nombres = '" & FrmEmpleado.TextBox2.Text & "',curp = '" & FrmEmpleado.TextBox3.Text & "',rfc = '" & FrmEmpleado.TextBox4.Text & "',

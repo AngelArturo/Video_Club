@@ -5,7 +5,7 @@
         devoluciones.PoblarDataGridDevol(DGVdevo)
     End Sub
 
-    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
+    Private Sub Btn_Guardar_Click(sender As Object, e As EventArgs) Handles Btn_Guardar.Click
         If com_pelicula.Text = "" Then
             MessageBox.Show(" Selecciona la pelicula ")
         ElseIf estado.Text = "" Then
@@ -21,9 +21,9 @@
         'Limpiamos el contenido de las cajas de texto 
         idD.Text = ""
         com_pelicula.Text = ""
-            estado.Text = ""
-            'Ponemos el cursor en la caja de textos TxtClaveCarrera
-            com_pelicula.Focus()
+        estado.Text = ""
+        'Ponemos el cursor en la caja de textos TxtClaveCarrera
+        com_pelicula.Focus()
     End Sub
 
     Private Sub DGVdevo_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVdevo.CellContentClick
@@ -35,4 +35,6 @@
         com_pelicula.SelectedIndex = Convert.ToInt32(DGVdevo.Rows(renglon).Cells(1).Value) - 1
         estado.Text = DGVdevo.Rows(renglon).Cells(2).Value
     End Sub
+
+
 End Class
