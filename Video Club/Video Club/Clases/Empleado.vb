@@ -445,27 +445,27 @@ Public Class Empleado
         DGVempleados.DataSource = consultaTodosEmpleados()
         DGVempleados.Refresh()
         'Establecer ancho de cada columna del DataGridView
-        DGVempleados.Columns.Item(0).Width = 50
-        DGVempleados.Columns.Item(1).Width = 200
-        DGVempleados.Columns.Item(2).Width = 200
-        DGVempleados.Columns.Item(3).Width = 200
-        DGVempleados.Columns.Item(4).Width = 200
-        DGVempleados.Columns.Item(5).Width = 200
-        DGVempleados.Columns.Item(6).Width = 200
-        DGVempleados.Columns.Item(7).Width = 200
-        DGVempleados.Columns.Item(8).Width = 200
-        DGVempleados.Columns.Item(9).Width = 200
-        DGVempleados.Columns.Item(10).Width = 200
-        DGVempleados.Columns.Item(11).Width = 200
-        DGVempleados.Columns.Item(12).Width = 200
-        DGVempleados.Columns.Item(13).Width = 200
-        DGVempleados.Columns.Item(14).Width = 200
-        DGVempleados.Columns.Item(15).Width = 200
-        DGVempleados.Columns.Item(16).Width = 200
-        DGVempleados.Columns.Item(17).Width = 200
-        DGVempleados.Columns.Item(18).Width = 200
-        DGVempleados.Columns.Item(19).Width = 200
-        DGVempleados.Columns.Item(20).Width = 200
+        DGVempleados.Columns.Item(0).Width = 30
+        DGVempleados.Columns.Item(1).Width = 70
+        DGVempleados.Columns.Item(2).Width = 70
+        DGVempleados.Columns.Item(3).Width = 70
+        DGVempleados.Columns.Item(4).Width = 100
+        DGVempleados.Columns.Item(5).Width = 70
+        DGVempleados.Columns.Item(6).Width = 30
+        DGVempleados.Columns.Item(7).Width = 100
+        DGVempleados.Columns.Item(8).Width = 70
+        DGVempleados.Columns.Item(9).Width = 50
+        DGVempleados.Columns.Item(10).Width = 100
+        DGVempleados.Columns.Item(11).Width = 100
+        DGVempleados.Columns.Item(12).Width = 30
+        DGVempleados.Columns.Item(13).Width = 100
+        DGVempleados.Columns.Item(14).Width = 70
+        DGVempleados.Columns.Item(15).Width = 70
+        DGVempleados.Columns.Item(16).Width = 70
+        DGVempleados.Columns.Item(17).Width = 100
+        DGVempleados.Columns.Item(18).Width = 100
+        DGVempleados.Columns.Item(19).Width = 100
+        DGVempleados.Columns.Item(20).Width = 50
 
         cnx.cerrar()
 

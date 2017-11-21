@@ -169,9 +169,6 @@ Public Class Distribuidor
                       telefono= " & tel & ",celular = " & cel & ",correo= '" & FrmAddDistribuidor.Txt_Correo.Text & "'" &
                       "WHERE nombre=  '" & FrmAddDistribuidor.Txt_NombreDistribuidor.Text & "'"
 
-            MsgBox(strSql)
-
-
             cnx.objetoCommand(strSql)
             MessageBox.Show("Registro Modificado!")
 
@@ -212,13 +209,13 @@ Public Class Distribuidor
         DGVdistri.DataSource = consultaTodosDist()
         DGVdistri.Refresh()
         'Establecer ancho de cada columna del DataGridView
-        DGVdistri.Columns.Item(0).Width = 50
-        DGVdistri.Columns.Item(1).Width = 200
-        DGVdistri.Columns.Item(2).Width = 200
+        DGVdistri.Columns.Item(0).Width = 30
+        DGVdistri.Columns.Item(1).Width = 100
+        DGVdistri.Columns.Item(2).Width = 150
         DGVdistri.Columns.Item(3).Width = 200
-        DGVdistri.Columns.Item(4).Width = 200
-        DGVdistri.Columns.Item(5).Width = 200
-        DGVdistri.Columns.Item(6).Width = 200
+        DGVdistri.Columns.Item(4).Width = 70
+        DGVdistri.Columns.Item(5).Width = 70
+        DGVdistri.Columns.Item(6).Width = 100
         cnx.cerrar()
 
     End Sub

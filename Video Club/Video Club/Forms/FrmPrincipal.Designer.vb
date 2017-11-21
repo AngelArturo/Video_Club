@@ -166,12 +166,13 @@ Partial Class FrmPrincipal
         '
         Me.X.BackColor = System.Drawing.Color.Transparent
         Me.X.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.X.Dock = System.Windows.Forms.DockStyle.Right
         Me.X.FlatAppearance.BorderSize = 0
         Me.X.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.X.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed
         Me.X.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.X.Image = CType(resources.GetObject("X.Image"), System.Drawing.Image)
-        Me.X.Location = New System.Drawing.Point(1063, 1)
+        Me.X.Location = New System.Drawing.Point(1070, 0)
         Me.X.Name = "X"
         Me.X.Size = New System.Drawing.Size(25, 25)
         Me.X.TabIndex = 1
@@ -187,7 +188,7 @@ Partial Class FrmPrincipal
         Me.Minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Minimizar.Image = Global.Video_Club.My.Resources.Resources.__
         Me.Minimizar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Minimizar.Location = New System.Drawing.Point(1029, 1)
+        Me.Minimizar.Location = New System.Drawing.Point(1038, 2)
         Me.Minimizar.Name = "Minimizar"
         Me.Minimizar.Size = New System.Drawing.Size(25, 25)
         Me.Minimizar.TabIndex = 2
@@ -464,7 +465,7 @@ Partial Class FrmPrincipal
         Me.Btn_CancelarVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_CancelarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_CancelarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_CancelarVenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_CancelarVenta.Font = New System.Drawing.Font("Fineliner Script", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_CancelarVenta.ForeColor = System.Drawing.Color.Black
         Me.Btn_CancelarVenta.Image = Global.Video_Club.My.Resources.Resources.btnCancelar
         Me.Btn_CancelarVenta.ImageAlign = System.Drawing.ContentAlignment.TopCenter
@@ -485,7 +486,7 @@ Partial Class FrmPrincipal
         Me.Btn_Comprar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Btn_Comprar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Btn_Comprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Comprar.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Comprar.Font = New System.Drawing.Font("Fineliner Script", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Comprar.ForeColor = System.Drawing.Color.Black
         Me.Btn_Comprar.Image = Global.Video_Club.My.Resources.Resources.BtnComprar
         Me.Btn_Comprar.Location = New System.Drawing.Point(280, 320)
